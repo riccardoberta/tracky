@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Tracky{% endblock %}</title>
+  <meta name="description" content="Tracky personal movie and TV show library">
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/app-icon.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="{{ url_for('main.dashboard') }}" aria-label="Tracky dashboard">
+        <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="34" height="34">
+        <span>Tracky</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a class="{{ 'active' if active_page == 'dashboard' else '' }}" href="{{ url_for('main.dashboard') }}">Dashboard</a>
+        <a class="{{ 'active' if active_page == 'timeline' else '' }}" href="{{ url_for('main.timeline') }}">Timeline</a>
+        <a class="{{ 'active' if active_page == 'library' else '' }}" href="{{ url_for('main.library') }}">Library</a>
+        <a class="{{ 'active' if active_page == 'favorites' else '' }}" href="{{ url_for('main.favorites') }}">Favorites</a>
+        <a class="{{ 'active' if active_page == 'search' else '' }}" href="{{ url_for('main.search') }}">Search</a>
+        <a class="{{ 'active' if active_page == 'statistics' else '' }}" href="{{ url_for('main.statistics') }}">Statistics</a>
+      </nav>
+      <div class="sidebar-actions">
+        <button class="icon-button" type="button" data-theme-toggle aria-label="Toggle color theme" title="Theme">
+          <span class="sun-icon" aria-hidden="true"></span>
+        </button>
+        <form action="{{ url_for('auth.logout') }}" method="post">
+          <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+          <button class="text-button" type="submit">Sign out</button>
+        </form>
+      </div>
+    </aside>
+
+    <main class="main">
+      {% if config_warnings %}
+        <div class="notice-stack" aria-live="polite">
+          {% for warning in config_warnings %}
+            <p class="notice warning">{{ warning }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+          <div class="notice-stack" aria-live="polite">
+            {% for category, message in messages %}
+              <p class="notice {{ category }}">{{ message }}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ status_code }} &middot; Tracky{% endblock %}
+
+{% block content %}
+  <section class="error-page">
+    <p class="eyebrow">{{ status_code }}</p>
+    <h1>{{ title }}</h1>
+    <p>{{ message }}</p>
+    <a class="button primary" href="{{ url_for('main.dashboard') }}">Back to dashboard</a>
+  </section>
+{% endblock %}

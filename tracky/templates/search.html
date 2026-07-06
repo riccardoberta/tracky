@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% from "macros.html" import media_card %}
+
+{% block title %}Search &middot; Tracky{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Local and TMDb</p>
+      <h1>Search</h1>
+    </div>
+  </header>
+
+  <form class="search-panel" method="get">
+    <label>
+      <span>Title</span>
+      <input type="search" name="q" value="{{ query }}" placeholder="Search movies and TV shows" autofocus>
+    </label>
+    <label>
+      <span>Type</span>
+      <select name="type">
+        <option value="" {{ 'selected' if not selected_type else '' }}>All</option>
+        <option value="movie" {{ 'selected' if selected_type == 'movie' else '' }}>Movies</option>
+        <option value="tv" {{ 'selected' if selected_type == 'tv' else '' }}>TV Shows</option>
+      </select>
+    </label>
+    <button class="button primary" type="submit">Search</button>
+  </form>
+
+  {% if query %}
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Library matches</h2>
+        <span>{{ local_results|length }}</span>
+      </div>
+      {% if local_results %}
+        <div class="media-grid compact">
+          {% for item in local_results %}
+            {{ media_card(item) }}
+          {% endfor %}
+        </div>
+      {% else %}
+        <p class="empty-text">No local matches.</p>
+      {% endif %}
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>TMDb results</h2>
+      </div>
+      {% if tmdb_error %}
+        <p class="notice warning">{{ tmdb_error }}</p>
+      {% endif %}
+      {% if remote_results %}
+        <div class="remote-results">
+          {% for result in remote_results %}
+            <article class="remote-card">
+              {% if result.poster_path %}
+                <img src="{{ result.poster_path|image_url('w185') }}" alt="{{ result.title }} poster" loading="lazy">
+              {% else %}
+                <div class="poster-placeholder small">{{ result.title[:1] }}</div>
+              {% endif %}
+              <div>
+                <div class="media-card-topline">
+                  <span class="pill">{{ 'Movie' if result.media_type == 'movie' else 'TV Show' }}</span>
+                  {% if result.vote_average %}<span class="muted">TMDb {{ result.vote_average|round(1) }}</span>{% endif %}
+                </div>
+                <h3>{{ result.title }}</h3>
+                <p class="muted">{{ result.original_title or '' }}{% if result.date %} &middot; {{ result.date[:4] }}{% endif %}</p>
+                {% if result.overview %}<p>{{ result.overview }}</p>{% endif %}
+                <form class="inline-form" action="{{ url_for('main.import_from_tmdb') }}" method="post">
+                  <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+                  <input type="hidden" name="q" value="{{ query }}">
+                  <input type="hidden" name="media_type" value="{{ result.media_type }}">
+                  <input type="hidden" name="tmdb_id" value="{{ result.tmdb_id }}">
+                  <label>
+                    <span>Watched</span>
+                    <input type="date" name="watched_date">
+                  </label>
+                  <label class="checkbox-line">
+                    <input type="checkbox" name="favorite" value="1">
+                    <span>Favorite</span>
+                  </label>
+                  <button class="button secondary" type="submit">Add</button>
+                </form>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% elif not tmdb_error %}
+        <p class="empty-text">No TMDb results.</p>
+      {% endif %}
+    </section>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "macros.html" import metric, bar_chart %}
+
+{% block title %}Statistics &middot; Tracky{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Library analytics</p>
+      <h1>Statistics</h1>
+    </div>
+  </header>
+
+  <section class="metric-grid">
+    {{ metric('Movies watched', stats.total_movies) }}
+    {{ metric('TV shows watched', stats.total_shows) }}
+    {{ metric('Episodes watched', stats.episodes_watched) }}
+    {{ metric('Favorites', stats.favorites_count) }}
+    {{ metric('Average personal rating', stats.average_personal_rating) }}
+    {{ metric('Average TMDb rating', stats.average_tmdb_rating) }}
+  </section>
+
+  <div class="two-column">
+    {{ bar_chart('Movies watched by year', stats.movies_by_year) }}
+    {{ bar_chart('TV shows watched by year', stats.shows_by_year) }}
+    {{ bar_chart('Watching activity by month', stats.activity_by_month) }}
+    {{ bar_chart('Watching activity by year', stats.activity_by_year) }}
+    {{ bar_chart('Favorite genres', stats.favorite_genres) }}
+    {{ bar_chart('Most watched genres', stats.most_watched_genres) }}
+  </div>
+{% endblock %}

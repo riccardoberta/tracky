@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.title }} &middot; Tracky{% endblock %}
+
+{% block content %}
+  <article class="detail">
+    <div class="backdrop" {% if item.backdrop_path %}style="background-image: url('{{ item.backdrop_path|image_url('w1280') }}')"{% endif %}></div>
+    <div class="detail-grid">
+      <div class="detail-poster">
+        {% if item.poster_path %}
+          <img src="{{ item.poster_path|image_url('w500') }}" alt="{{ item.title }} poster">
+        {% else %}
+          <div class="poster-placeholder large">{{ item.title[:1] }}</div>
+        {% endif %}
+      </div>
+      <div class="detail-main">
+        <div class="media-card-topline">
+          <span class="pill">{{ 'Movie' if item.media_type == 'movie' else 'TV Show' }}</span>
+          {% if item.favorite %}<span class="favorite-mark">&#9733; Favorite</span>{% endif %}
+        </div>
+        <h1>{{ item.title }}</h1>
+        {% if item.original_title and item.original_title != item.title %}
+          <p class="muted">{{ item.original_title }}</p>
+        {% endif %}
+
+        <div class="detail-actions">
+          <a class="button primary" href="{{ url_for('main.media_edit', item_id=item.id) }}">Edit</a>
+          <form action="{{ url_for('main.toggle_favorite', item_id=item.id) }}" method="post">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+            <button class="button secondary" type="submit">{{ 'Unfavorite' if item.favorite else 'Favorite' }}</button>
+          </form>
+        </div>
+
+        {% if item.overview %}
+          <p class="overview">{{ item.overview }}</p>
+        {% endif %}
+
+        <dl class="metadata-grid">
+          <div><dt>Watched</dt><dd>{{ item.watched_date.strftime('%d %B %Y') if item.watched_date else 'Not set' }}</dd></div>
+          <div><dt>My rating</dt><dd>{{ item.personal_rating if item.personal_rating is not none else 'Not rated' }}</dd></div>
+          <div><dt>TMDb rating</dt><dd>{{ item.tmdb_rating|round(1) if item.tmdb_rating is not none else 'Unavailable' }}</dd></div>
+          <div><dt>TMDb votes</dt><dd>{{ item.tmdb_vote_count if item.tmdb_vote_count is not none else 'Unavailable' }}</dd></div>
+          <div><dt>{{ 'Director' if item.media_type == 'movie' else 'Creator' }}</dt><dd>{{ item.primary_people|join_names or 'Unavailable' }}</dd></div>
+          <div><dt>Release</dt><dd>{{ (item.release_date or item.first_air_date).strftime('%d %B %Y') if (item.release_date or item.first_air_date) else 'Unavailable' }}</dd></div>
+        </dl>
+
+        {% if item.genres %}
+          <div class="genre-row detail-genres">
+            {% for genre in item.genres %}
+              <span>{{ genre.name }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if item.cast %}
+          <section class="subsection">
+            <h2>Main cast</h2>
+            <p>{{ item.cast|join_names }}</p>
+          </section>
+        {% endif %}
+
+        {% if item.personal_notes %}
+          <section class="subsection">
+            <h2>Notes</h2>
+            <p>{{ item.personal_notes }}</p>
+          </section>
+        {% endif %}
+
+        {% if item.media_type == 'tv' and item.episodes %}
+          <section class="subsection">
+            <h2>Episodes watched</h2>
+            <div class="episode-list">
+              {% for episode in item.episodes if episode.is_watched %}
+                <div>
+                  <span>S{{ episode.season_number }} E{{ episode.episode_number }}</span>
+                  <strong>{{ episode.title or 'Episode' }}</strong>
+                  <small>{{ episode.watched_at.strftime('%d %b %Y') if episode.watched_at else '' }}</small>
+                </div>
+              {% endfor %}
+            </div>
+          </section>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+{% endblock %}

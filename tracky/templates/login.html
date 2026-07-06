@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in &middot; Tracky</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+</head>
+<body class="auth-body">
+  <main class="auth-panel">
+    <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="52" height="52">
+    <h1>Tracky</h1>
+    <p>Your personal media library.</p>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="notice-stack">
+          {% for category, message in messages %}
+            <p class="notice {{ category }}">{{ message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% if config_warnings %}
+      <div class="notice-stack">
+        {% for warning in config_warnings %}
+          <p class="notice warning">{{ warning }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <form method="post" class="auth-form">
+      <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+      <label>
+        <span>Username</span>
+        <input type="text" name="username" autocomplete="username" required autofocus>
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="password" autocomplete="current-password" required>
+      </label>
+      <button class="button primary wide" type="submit">Sign in</button>
+    </form>
+  </main>
+</body>
+</html>

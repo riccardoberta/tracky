@@ -1,0 +1,106 @@
+{% macro media_card(item) %}
+  <article class="media-card">
+    <a class="poster-link" href="{{ url_for('main.media_detail', item_id=item.id) }}" aria-label="{{ item.title }}">
+      {% if item.poster_path %}
+        <img src="{{ item.poster_path|image_url('w342') }}" alt="{{ item.title }} poster" loading="lazy">
+      {% else %}
+        <div class="poster-placeholder">{{ item.title[:1] }}</div>
+      {% endif %}
+    </a>
+    <div class="media-card-body">
+      <div class="media-card-topline">
+        <span class="pill">{{ 'Movie' if item.media_type == 'movie' else 'TV Show' }}</span>
+        {% if item.favorite %}<span class="favorite-mark" aria-label="Favorite">&#9733;</span>{% endif %}
+      </div>
+      <h2><a href="{{ url_for('main.media_detail', item_id=item.id) }}">{{ item.title }}</a></h2>
+      <p class="muted">
+        {% if item.year %}{{ item.year }}{% endif %}
+        {% if item.watched_date %}{% if item.year %} &middot; {% endif %}Watched {{ item.watched_date.strftime('%d %b %Y') }}{% endif %}
+      </p>
+      <div class="rating-row">
+        {% if item.personal_rating is not none %}
+          <span>My {{ item.personal_rating|round(1) }}</span>
+        {% endif %}
+        {% if item.tmdb_rating is not none %}
+          <span>TMDb {{ item.tmdb_rating|round(1) }}</span>
+        {% endif %}
+      </div>
+      {% if item.genres %}
+        <div class="genre-row">
+          {% for genre in item.genres[:3] %}
+            <span>{{ genre.name }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </article>
+{% endmacro %}
+
+{% macro filter_bar(genres) %}
+  <form class="filter-bar" method="get">
+    <label>
+      <span>Search</span>
+      <input type="search" name="q" value="{{ request.args.get('q', '') }}" placeholder="Title">
+    </label>
+    <label>
+      <span>Type</span>
+      <select name="type">
+        <option value="">All</option>
+        <option value="movie" {{ 'selected' if request.args.get('type') == 'movie' else '' }}>Movies</option>
+        <option value="tv" {{ 'selected' if request.args.get('type') == 'tv' else '' }}>TV Shows</option>
+      </select>
+    </label>
+    <label>
+      <span>Genre</span>
+      <select name="genre">
+        <option value="">All</option>
+        {% for genre in genres %}
+          <option value="{{ genre.name }}" {{ 'selected' if request.args.get('genre') == genre.name else '' }}>{{ genre.name }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>
+      <span>Min rating</span>
+      <input type="number" name="min_rating" value="{{ request.args.get('min_rating', '') }}" min="{{ score_min }}" max="{{ score_max }}" step="0.5">
+    </label>
+    <label>
+      <span>Year</span>
+      <input type="number" name="year" value="{{ request.args.get('year', '') }}" min="1900" max="2100">
+    </label>
+    <label class="checkbox-line">
+      <input type="checkbox" name="favorite" value="1" {{ 'checked' if request.args.get('favorite') == '1' else '' }}>
+      <span>Favorites</span>
+    </label>
+    <button class="button primary" type="submit">Apply</button>
+    <a class="button secondary" href="{{ request.path }}">Reset</a>
+  </form>
+{% endmacro %}
+
+{% macro metric(label, value, hint='') %}
+  <article class="metric">
+    <span>{{ label }}</span>
+    <strong>{{ value if value is not none else '&mdash;'|safe }}</strong>
+    {% if hint %}<small>{{ hint }}</small>{% endif %}
+  </article>
+{% endmacro %}
+
+{% macro bar_chart(title, rows) %}
+  <section class="chart-block">
+    <h2>{{ title }}</h2>
+    {% if rows %}
+      {% set max_value = rows|map(attribute='value')|max %}
+      <div class="bars">
+        {% for row in rows %}
+          {% set pct = (row.value / max_value * 100) if max_value else 0 %}
+          <div class="bar-row">
+            <span>{{ row.label }}</span>
+            <div class="bar-track"><div class="bar-fill" style="width: {{ pct }}%"></div></div>
+            <strong>{{ row.value }}</strong>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-text">No data yet.</p>
+    {% endif %}
+  </section>
+{% endmacro %}

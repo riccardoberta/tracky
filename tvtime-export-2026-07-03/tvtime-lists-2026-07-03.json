@@ -1,0 +1,29 @@
+[
+  {
+    "id": "a4c7512e-0237-4ede-829d-84c3697b1a3a",
+    "name": "Da vedere",
+    "description": "",
+    "is_public": true,
+    "created_at": "2026-01-10T22:38:47Z",
+    "items": [
+      {
+        "type": "movie",
+        "uuid": "9ec040f2-8807-4e86-b27a-2745d24fa5fa",
+        "name": "Bugonia",
+        "custom_order": 0
+      },
+      {
+        "type": "movie",
+        "uuid": "4406a7dd-dca4-4171-9e9a-c46911d5117e",
+        "name": "Eternity",
+        "custom_order": 1
+      },
+      {
+        "type": "movie",
+        "uuid": "446322bc-64ee-4e18-9dc4-f28033efc128",
+        "name": "Norimberga",
+        "custom_order": 2
+      }
+    ]
+  }
+]

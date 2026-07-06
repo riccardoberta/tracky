@@ -1,0 +1,5378 @@
+[
+  {
+    "id": {
+      "tvdb": 141757,
+      "imdb": "tt10287954"
+    },
+    "uuid": "ff289474-a383-45b7-8e4e-c066a17fa73b",
+    "created_at": "2020-12-12T22:12:50Z",
+    "title": "Rose Island",
+    "year": 2020,
+    "watched_at": "2020-12-12T22:12:50Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 349605,
+      "imdb": "tt19890316"
+    },
+    "uuid": "fe8cc849-ff44-4f2b-9734-efd5a39c1e5e",
+    "created_at": "2024-04-14T22:08:39Z",
+    "title": "What Happens Later",
+    "year": 2023,
+    "watched_at": "2024-04-14T22:08:39Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 332721,
+      "imdb": "tt12215252"
+    },
+    "uuid": "fe807faf-0aec-4a16-9963-061fdfea9fb3",
+    "created_at": "2022-11-21T22:08:08Z",
+    "title": "I Run To You",
+    "year": 2022,
+    "watched_at": "2022-11-21T22:08:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 153,
+      "imdb": "tt0330373"
+    },
+    "uuid": "fba77bbb-092b-4d99-a68a-af6a70f284e8",
+    "created_at": "2019-09-03T06:05:54Z",
+    "title": "Harry Potter and the Goblet of Fire",
+    "year": 2005,
+    "watched_at": "2019-09-03T06:05:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1435,
+      "imdb": "tt1396484"
+    },
+    "uuid": "fb158f35-6e8e-4693-bddc-2d35a26a889c",
+    "created_at": "2019-09-03T06:06:11Z",
+    "title": "It",
+    "year": 2017,
+    "watched_at": "2019-09-03T06:06:11Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 62,
+      "imdb": "tt3501632"
+    },
+    "uuid": "f812aad9-24b9-42cf-8f31-2e5bd2f7a0f9",
+    "created_at": "2019-09-03T06:03:24Z",
+    "title": "Thor: Ragnarok",
+    "year": 2017,
+    "watched_at": "2019-09-03T06:03:25Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 867,
+      "imdb": "tt0107290"
+    },
+    "uuid": "f7361386-0283-449e-bb93-f28b7c4e8bd0",
+    "created_at": "2019-09-03T06:09:46Z",
+    "title": "Jurassic Park",
+    "year": 1993,
+    "watched_at": "2019-09-03T06:09:46Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 336579,
+      "imdb": "tt14034614"
+    },
+    "uuid": "f62130c9-1659-40a8-bfb7-453bc20bcc2b",
+    "created_at": "2023-01-28T21:23:00Z",
+    "title": "Nostalgia",
+    "year": 2022,
+    "watched_at": "2023-01-28T21:23:00Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 349731,
+      "imdb": "tt15822942"
+    },
+    "uuid": "f5fcd32e-b40c-42c8-8b97-be4ec996fad3",
+    "created_at": "2026-01-24T21:51:33Z",
+    "title": "The Kiss",
+    "year": 2023,
+    "watched_at": "2026-01-24T21:51:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 4603,
+      "imdb": "tt6892206"
+    },
+    "uuid": "f5e03acb-52bb-4890-8e6e-01b15c64bcf5",
+    "created_at": "2020-05-31T21:44:15Z",
+    "title": "Napoli velata",
+    "year": 2017,
+    "watched_at": "2020-05-31T21:44:15Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 100633,
+      "imdb": "tt1468737"
+    },
+    "uuid": "f4d4d8f1-7c82-4697-b568-c970098b8930",
+    "created_at": "2026-01-04T23:49:27Z",
+    "title": "Stranger Things",
+    "year": 2013,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 343454,
+      "imdb": "tt12747748"
+    },
+    "uuid": "f49c5240-56e4-45c2-bfa5-8770937783a5",
+    "created_at": "2023-12-12T22:00:24Z",
+    "title": "Leave the World Behind",
+    "year": 2023,
+    "watched_at": "2023-12-12T22:00:24Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 294,
+      "imdb": "tt0109830"
+    },
+    "uuid": "f45eae51-04e4-4f68-89d7-29a9b8f89910",
+    "created_at": "2019-09-03T06:03:13Z",
+    "title": "Forrest Gump",
+    "year": 1994,
+    "watched_at": "2019-09-03T06:03:14Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 7344,
+      "imdb": "tt7735502"
+    },
+    "uuid": "f37d4f86-3466-46b8-9dfc-e648baddfd7d",
+    "created_at": "2021-11-27T19:32:05Z",
+    "title": "Il testimone invisibile",
+    "year": 2019,
+    "watched_at": "2021-11-27T19:32:05Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1889,
+      "imdb": "tt0125439"
+    },
+    "uuid": "f2e30b1d-6110-4198-b1e8-5b966f43ead1",
+    "created_at": "2025-03-28T21:26:24Z",
+    "title": "Notting Hill",
+    "year": 1999,
+    "watched_at": "2025-03-28T21:26:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 367987,
+      "imdb": "tt34886821"
+    },
+    "uuid": "f29970c9-4b8e-42d4-8a16-23326b4e6f4d",
+    "created_at": "2026-01-28T23:03:02Z",
+    "title": "La Grazia",
+    "year": 2026,
+    "watched_at": "2026-01-28T23:03:02Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 34389,
+      "imdb": "tt1582207"
+    },
+    "uuid": "f1b48cd8-ddda-448d-a52e-3bbcfddbe4c8",
+    "created_at": "2023-04-25T21:25:32Z",
+    "title": "The Jewel",
+    "year": 2011,
+    "watched_at": "2023-04-25T21:25:32Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 331994,
+      "imdb": "tt14247286"
+    },
+    "uuid": "f166066a-5f2d-4e30-8aa5-187d571772b5",
+    "created_at": "2022-01-07T21:52:07Z",
+    "title": "Four to Dinner",
+    "year": 2022,
+    "watched_at": "2022-01-07T21:52:07Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 635,
+      "imdb": "tt9495224"
+    },
+    "uuid": "f10ef4a2-73e0-49e9-9df7-9332a2985a79",
+    "created_at": "2019-09-03T06:07:41Z",
+    "title": "Black Mirror: Bandersnatch",
+    "year": 2018,
+    "watched_at": "2019-09-03T06:07:42Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 838,
+      "imdb": "tt0162222"
+    },
+    "uuid": "f0ad583e-a68c-43c9-8951-82b1615834eb",
+    "created_at": "2019-09-03T06:09:59Z",
+    "title": "Cast Away",
+    "year": 2001,
+    "watched_at": "2019-09-03T06:09:59Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 201,
+      "imdb": "tt0926084"
+    },
+    "uuid": "f00f5dda-cebe-496e-b43b-3dbcb2953dee",
+    "created_at": "2019-09-03T06:09:41Z",
+    "title": "Harry Potter and the Deathly Hallows: Part 1",
+    "year": 2010,
+    "watched_at": "2019-09-03T06:09:42Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 620,
+      "imdb": "tt4925292"
+    },
+    "uuid": "efc04207-77a0-4922-9d05-1c2c026a3d68",
+    "created_at": "2021-05-22T20:51:14Z",
+    "title": "Lady Bird",
+    "year": 2018,
+    "watched_at": "2021-05-22T20:51:14Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 112269,
+      "imdb": "tt0099785"
+    },
+    "uuid": "eeca34eb-a4c3-4e35-be6e-6c31f875ce56",
+    "created_at": "2019-09-03T06:09:54Z",
+    "title": "Home Alone",
+    "year": 1990,
+    "watched_at": "2019-09-03T06:09:55Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 144363,
+      "imdb": "tt3661210"
+    },
+    "uuid": "ee4faa4b-7775-4c68-81d8-f0b80e92d43a",
+    "created_at": "2021-03-21T22:14:12Z",
+    "title": "The Dig",
+    "year": 2021,
+    "watched_at": "2021-03-21T22:14:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1011,
+      "imdb": "tt0240772"
+    },
+    "uuid": "edfbff9f-4b84-4817-a6d5-a7df845a122d",
+    "created_at": "2025-08-22T05:41:19Z",
+    "title": "Ocean's Eleven",
+    "year": 2002,
+    "watched_at": "2025-08-22T05:41:19Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 421,
+      "imdb": "tt2278388"
+    },
+    "uuid": "ed072674-21a5-41be-8b99-ac4b49e9b95c",
+    "created_at": "2026-06-19T20:47:48Z",
+    "title": "The Grand Budapest Hotel",
+    "year": 2014,
+    "watched_at": "2026-06-19T20:47:48Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 57613,
+      "imdb": "tt1950186"
+    },
+    "uuid": "ec7e56de-b756-4691-908c-e5f994ec6a8b",
+    "created_at": "2023-12-29T20:25:28Z",
+    "title": "Ford v Ferrari",
+    "year": 2019,
+    "watched_at": "2023-12-29T20:25:33Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 13867,
+      "imdb": "tt3705388"
+    },
+    "uuid": "ec1e053e-23bb-4f3f-974e-9f329a792559",
+    "created_at": "2025-09-14T20:10:35Z",
+    "title": "An Italian Name",
+    "year": 2015,
+    "watched_at": "2025-09-14T20:10:35Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 73,
+      "imdb": "tt1677720"
+    },
+    "uuid": "eb6617d4-88ef-4b25-8c6e-67aa338fb2b5",
+    "created_at": "2019-09-03T06:05:48Z",
+    "title": "Ready Player One",
+    "year": 2018,
+    "watched_at": "2019-09-03T06:05:48Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 176248,
+      "imdb": "tt11892916"
+    },
+    "uuid": "eb00af42-da0c-4b61-b29b-5e5e8d96cb25",
+    "created_at": "2022-01-25T19:58:28Z",
+    "title": "Security",
+    "year": 2021,
+    "watched_at": "2022-01-25T19:58:28Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 357375,
+      "imdb": "tt15574124"
+    },
+    "uuid": "ea3a24e0-bad5-45d0-bc36-0c7d864b3455",
+    "created_at": "2026-04-10T20:42:14Z",
+    "title": "Peaky Blinders: The Immortal Man",
+    "year": 2026,
+    "watched_at": "2026-04-10T20:42:14Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 14251,
+      "imdb": "tt6398184"
+    },
+    "uuid": "e943ce86-78dc-40fc-9c56-786fda634124",
+    "created_at": "2019-11-04T21:34:36Z",
+    "title": "Downton Abbey",
+    "year": 2019,
+    "watched_at": "2019-11-04T21:34:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 159406,
+      "imdb": "tt11703710"
+    },
+    "uuid": "e862396e-8b97-4723-9497-1479f89aeb50",
+    "created_at": "2023-01-04T21:53:48Z",
+    "title": "Downton Abbey: A New Era",
+    "year": 2022,
+    "watched_at": "2023-01-04T21:53:48Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 59816,
+      "imdb": "tt6111574"
+    },
+    "uuid": "e742c732-e210-4bea-99aa-c442d0ea10fa",
+    "created_at": "2021-05-19T19:53:08Z",
+    "title": "The Woman in the Window",
+    "year": 2021,
+    "watched_at": "2021-05-19T19:53:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3282,
+      "imdb": "tt0119174"
+    },
+    "uuid": "e61ef547-d02b-415b-8b7b-89abde24d920",
+    "created_at": "2023-07-02T21:48:33Z",
+    "title": "The Game",
+    "year": 1997,
+    "watched_at": "2023-07-02T21:48:37Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 359644,
+      "imdb": "tt31998881"
+    },
+    "uuid": "e5ecf26c-a5e3-4322-a0f2-9e7988a19acd",
+    "created_at": "2025-12-18T22:24:04Z",
+    "title": "Oh. What. Fun.",
+    "year": 2025,
+    "watched_at": "2025-12-18T22:24:05Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 145805,
+      "imdb": "tt13061914"
+    },
+    "uuid": "e54e00fe-92f3-4c3e-973c-b9f6ec89f2d7",
+    "created_at": "2021-01-16T19:35:07Z",
+    "title": "Locked Down",
+    "year": 2021,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 336188,
+      "imdb": "tt10042788"
+    },
+    "uuid": "e2affe20-0b58-4e45-867d-6ef7c627e1d2",
+    "created_at": "2023-05-05T20:43:12Z",
+    "title": "Promises",
+    "year": 2021,
+    "watched_at": "2023-05-05T20:43:12Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 190,
+      "imdb": "tt0111161"
+    },
+    "uuid": "e068cebc-e885-4330-a6e1-e3325b09d35a",
+    "created_at": "2021-09-16T19:00:12Z",
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "watched_at": "2021-09-16T19:00:15Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 325,
+      "imdb": "tt0126029"
+    },
+    "uuid": "e0067488-637e-44fe-8192-1969e9773dd3",
+    "created_at": "2019-09-03T06:07:06Z",
+    "title": "Shrek",
+    "year": 2001,
+    "watched_at": "2019-09-03T06:07:07Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 154,
+      "imdb": "tt0304141"
+    },
+    "uuid": "dfe92d1c-0125-4f6d-a9d3-35443b5a9aac",
+    "created_at": "2019-09-03T06:01:22Z",
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "year": 2004,
+    "watched_at": "2019-09-03T06:01:22Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 187,
+      "imdb": "tt1228705"
+    },
+    "uuid": "df9d8522-d060-4277-b7c2-addceadf8fe3",
+    "created_at": "2019-09-03T06:07:17Z",
+    "title": "Iron Man 2",
+    "year": 2010,
+    "watched_at": "2019-09-03T06:07:17Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 299,
+      "imdb": "tt0088763"
+    },
+    "uuid": "ddff5475-56cd-444b-98e3-f4652038b273",
+    "created_at": "2019-09-03T06:05:43Z",
+    "title": "Back to the Future",
+    "year": 1985,
+    "watched_at": "2019-09-03T06:05:44Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 6495,
+      "imdb": "tt0112722"
+    },
+    "uuid": "d9df1791-d91d-402a-a79c-dcb67c29ad9f",
+    "created_at": "2025-09-08T20:53:08Z",
+    "title": "Copycat",
+    "year": 1995,
+    "watched_at": "2025-09-08T20:53:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 268,
+      "imdb": "tt0114369"
+    },
+    "uuid": "d94ec16c-643c-4127-81df-6d4d27af480f",
+    "created_at": "2025-08-22T05:56:11Z",
+    "title": "Se7en",
+    "year": 1995,
+    "watched_at": "2025-08-22T05:56:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1958,
+      "imdb": "tt2719848"
+    },
+    "uuid": "d8bc7843-e453-4809-8e63-f5a7a11d2890",
+    "created_at": "2021-07-20T22:21:10Z",
+    "title": "Everest",
+    "year": 2015,
+    "watched_at": "2021-07-20T22:21:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 653,
+      "imdb": "tt0104431"
+    },
+    "uuid": "d822a5cb-86f1-4ac2-a0c1-868b1590d888",
+    "created_at": "2023-01-02T21:16:30Z",
+    "title": "Home Alone 2: Lost in New York",
+    "year": 1992,
+    "watched_at": "2023-01-02T21:16:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 434,
+      "imdb": "tt0209144"
+    },
+    "uuid": "d7d086cc-73e0-4bad-a7ab-5b073cb2c107",
+    "created_at": "2023-08-25T22:40:06Z",
+    "title": "Memento",
+    "year": 2001,
+    "watched_at": "2023-08-25T22:40:06Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 99,
+      "imdb": "tt2527336"
+    },
+    "uuid": "d6423a20-d8dd-4521-8fd4-050713a7e9a3",
+    "created_at": "2019-09-03T06:06:15Z",
+    "title": "Star Wars: The Last Jedi",
+    "year": 2017,
+    "watched_at": "2019-09-03T06:06:15Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1538,
+      "imdb": "tt1401152"
+    },
+    "uuid": "d5ff471f-2da0-4882-bc64-774a95f9e38a",
+    "created_at": "2020-04-13T18:08:57Z",
+    "title": "Unknown",
+    "year": 2011,
+    "watched_at": "2020-04-13T18:08:57Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 698,
+      "imdb": "tt0086190"
+    },
+    "uuid": "d55e956e-20f4-4d9f-9bb2-186d2e999cd2",
+    "created_at": "2020-04-13T06:54:53Z",
+    "title": "Return of the Jedi",
+    "year": 2021,
+    "watched_at": "2020-04-13T06:55:07Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 180,
+      "imdb": "tt0458339"
+    },
+    "uuid": "d42b395b-4bba-4046-a682-d1c6a69fe663",
+    "created_at": "2019-09-03T06:10:11Z",
+    "title": "Captain America: The First Avenger",
+    "year": 2011,
+    "watched_at": "2019-09-03T06:10:11Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 68,
+      "imdb": "tt2250912"
+    },
+    "uuid": "d3ff6d88-18ba-4c55-9d6e-e00b4d3f956e",
+    "created_at": "2019-09-03T06:01:31Z",
+    "title": "Spider-Man: Homecoming",
+    "year": 2017,
+    "watched_at": "2019-09-03T06:01:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 146505,
+      "imdb": "tt5498354"
+    },
+    "uuid": "d3666060-12b1-491a-be7c-bfd6822de5c3",
+    "created_at": "2023-06-19T20:02:46Z",
+    "title": "Horizon Line",
+    "year": 2021,
+    "watched_at": "2023-06-19T20:02:46Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 213,
+      "imdb": "tt2488496"
+    },
+    "uuid": "d356ed86-effc-4d59-a145-727ae1b23546",
+    "created_at": "2020-04-13T06:54:10Z",
+    "title": "Star Wars: The Force Awakens",
+    "year": 2015,
+    "watched_at": "2020-04-13T06:56:03Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 364974,
+      "imdb": "tt35396529"
+    },
+    "uuid": "d3495a02-cae4-41ab-894f-e0d5cdd06b5d",
+    "created_at": "2025-09-24T06:46:13Z",
+    "title": "Mountainhead",
+    "year": 2025,
+    "watched_at": "2025-09-24T06:46:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 15030,
+      "imdb": "tt0102926"
+    },
+    "uuid": "d348f0c0-4f92-4c20-8887-90daa3b09d5c",
+    "created_at": "2025-08-22T05:55:57Z",
+    "title": "The Silence of the Lambs",
+    "year": 1991,
+    "watched_at": "2025-08-22T05:55:59Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1344,
+      "imdb": "tt0100405"
+    },
+    "uuid": "d276c15c-9f60-4c17-8ae2-826753a112d6",
+    "created_at": "2019-09-03T06:06:50Z",
+    "title": "Pretty Woman",
+    "year": 1990,
+    "watched_at": "2019-09-03T06:06:51Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 284,
+      "imdb": "tt0117060"
+    },
+    "uuid": "d230afda-20d5-411b-9785-d0c9435dc9b2",
+    "created_at": "2021-12-14T18:05:53Z",
+    "title": "Mission: Impossible",
+    "year": 1996,
+    "watched_at": "2021-12-14T18:05:53Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 234,
+      "imdb": "tt0110413"
+    },
+    "uuid": "d1fd6bc5-4760-4d6c-a8e5-de67140ecb78",
+    "created_at": "2019-09-03T06:09:32Z",
+    "title": "Léon: The Professional",
+    "year": 1995,
+    "watched_at": "2019-09-03T06:09:33Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 52001,
+      "imdb": "tt9603208"
+    },
+    "uuid": "d12ca7db-3404-468b-a5bc-90c89fa9289f",
+    "created_at": "2025-08-22T05:40:05Z",
+    "title": "Mission: Impossible - The Final Reckoning",
+    "year": 2025,
+    "watched_at": "2025-08-22T05:40:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1186,
+      "imdb": "tt2304933"
+    },
+    "uuid": "d129f6aa-d57d-40a7-8d01-02b10bcfb5ce",
+    "created_at": "2022-06-29T19:52:25Z",
+    "title": "The 5th Wave",
+    "year": 2016,
+    "watched_at": "2022-06-29T19:52:25Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2622,
+      "imdb": "tt2568862"
+    },
+    "uuid": "cfc9c062-cb70-4524-812f-ae5d9d67f5e1",
+    "created_at": "2025-04-11T20:04:35Z",
+    "title": "Going in Style",
+    "year": 2017,
+    "watched_at": "2025-04-11T20:04:35Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1498,
+      "imdb": "tt0107688"
+    },
+    "uuid": "cf82bdac-f096-45f2-9362-ae51e6e533d2",
+    "created_at": "2019-09-03T06:09:52Z",
+    "title": "The Nightmare Before Christmas",
+    "year": 1993,
+    "watched_at": "2019-09-03T06:09:53Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 6008,
+      "imdb": "tt0120148"
+    },
+    "uuid": "cf4f4945-54b7-445d-890a-34a7f032d8f8",
+    "created_at": "2020-12-28T22:05:16Z",
+    "title": "Sliding Doors",
+    "year": 1998,
+    "watched_at": "2020-12-28T22:05:19Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 247,
+      "imdb": "tt0137523"
+    },
+    "uuid": "ce626032-5db2-4570-919d-6b6aeaa95f8c",
+    "created_at": "2019-09-03T06:03:20Z",
+    "title": "Fight Club",
+    "year": 1999,
+    "watched_at": "2019-09-03T06:03:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 166019,
+      "imdb": "tt11564570"
+    },
+    "uuid": "ce245077-0b88-478c-9793-e20730be9b8c",
+    "created_at": "2023-01-03T22:00:55Z",
+    "title": "Glass Onion: A Knives Out Mystery",
+    "year": 2022,
+    "watched_at": "2023-01-03T22:00:55Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 173,
+      "imdb": "tt4196776"
+    },
+    "uuid": "cd4835d8-efa0-4fa2-bc8e-78e243702458",
+    "created_at": "2020-04-13T06:51:48Z",
+    "title": "Jason Bourne",
+    "year": 2016,
+    "watched_at": "2020-04-13T06:51:48Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131146,
+      "imdb": "tt9376612"
+    },
+    "uuid": "cd4489c7-5da3-4fd7-b8a1-47ee17bf7fc7",
+    "created_at": "2021-09-07T20:48:27Z",
+    "title": "Shang-Chi and the Legend of the Ten Rings",
+    "year": 2021,
+    "watched_at": "2021-09-07T20:48:27Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3369,
+      "imdb": "tt0373926"
+    },
+    "uuid": "cc0e79ab-467d-4394-993b-878a071a56b8",
+    "created_at": "2023-09-15T21:01:58Z",
+    "title": "The Interpreter",
+    "year": 2005,
+    "watched_at": "2023-09-15T21:01:58Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 441,
+      "imdb": "tt2543472"
+    },
+    "uuid": "cbc0feca-e21e-4a7b-aa3d-99ad96f4a7ca",
+    "created_at": "2019-09-03T06:06:48Z",
+    "title": "Wonder",
+    "year": 2017,
+    "watched_at": "2019-09-03T06:06:49Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 4047,
+      "imdb": "tt0304415"
+    },
+    "uuid": "cbbd2bea-fe1a-485f-982d-53eaf3861c96",
+    "created_at": "2025-01-24T23:35:13Z",
+    "title": "Mona Lisa Smile",
+    "year": 2003,
+    "watched_at": "2025-01-24T23:35:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 353602,
+      "imdb": "tt21191806"
+    },
+    "uuid": "c981e26c-702f-4c42-ae4d-44e970d3cc0f",
+    "created_at": "2025-01-23T20:15:42Z",
+    "title": "Back in Action",
+    "year": 2025,
+    "watched_at": "2025-01-23T20:15:42Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 9073,
+      "imdb": "tt5932728"
+    },
+    "uuid": "c82465ac-ad95-4b70-b6a7-637b2e9e7f22",
+    "created_at": "2023-01-17T21:00:37Z",
+    "title": "The Professor and the Madman",
+    "year": 2020,
+    "watched_at": "2023-01-17T21:00:41Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 210405,
+      "imdb": "tt3045628"
+    },
+    "uuid": "c6b22c24-7817-4b54-b177-4cae49ae2c66",
+    "created_at": "2025-03-28T21:17:15Z",
+    "title": "Holland",
+    "year": 2025,
+    "watched_at": "2025-03-28T21:17:15Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 145758,
+      "imdb": "tt9845564"
+    },
+    "uuid": "c68f6acc-69a6-4b09-95f4-6897ce05bef3",
+    "created_at": "2021-04-18T20:26:26Z",
+    "title": "Below Zero",
+    "year": 2021,
+    "watched_at": "2021-04-18T20:26:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1457,
+      "imdb": "tt0388795"
+    },
+    "uuid": "c63040f4-f54b-4288-a88f-2937a2b8dd92",
+    "created_at": "2019-09-03T06:08:35Z",
+    "title": "Brokeback Mountain",
+    "year": 2005,
+    "watched_at": "2019-09-03T06:08:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1310,
+      "imdb": "tt0128853"
+    },
+    "uuid": "c62e4cec-da01-4048-aebe-5f90dd727e49",
+    "created_at": "2022-02-23T22:40:35Z",
+    "title": "You've Got Mail",
+    "year": 1998,
+    "watched_at": "2022-02-23T22:40:35Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 157683,
+      "imdb": "tt2231874"
+    },
+    "uuid": "c54f7786-dee6-4169-b183-7b7bf930f741",
+    "created_at": "2022-10-19T20:56:55Z",
+    "title": "Every Breath You Take",
+    "year": 2021,
+    "watched_at": "2022-10-19T20:56:55Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 35214,
+      "imdb": "tt8946378"
+    },
+    "uuid": "c5278a9a-77c8-483f-9806-93559e3902e7",
+    "created_at": "2020-11-06T21:44:03Z",
+    "title": "Knives Out",
+    "year": 2019,
+    "watched_at": "2020-11-06T21:44:04Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 10747,
+      "imdb": "tt3809308"
+    },
+    "uuid": "c515705e-ac67-43df-8e64-d152919fc675",
+    "created_at": "2022-02-09T20:28:32Z",
+    "title": "The Legendary Giulia and Other Miracles",
+    "year": 2015,
+    "watched_at": "2022-02-09T20:28:32Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 134938,
+      "imdb": "tt10731256"
+    },
+    "uuid": "c4b7cfc4-b6fa-4cd2-826b-66ecda8c6634",
+    "created_at": "2023-09-18T20:57:55Z",
+    "title": "Don't Worry Darling",
+    "year": 2022,
+    "watched_at": "2023-09-18T20:57:55Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 159,
+      "imdb": "tt2096673"
+    },
+    "uuid": "c388061b-6d59-4e12-a512-dc175dc6716e",
+    "created_at": "2019-09-03T06:05:50Z",
+    "title": "Inside Out",
+    "year": 2015,
+    "watched_at": "2019-09-03T06:05:50Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 4029,
+      "imdb": "tt0104237"
+    },
+    "uuid": "c331cea2-eaec-4c1b-9c31-e083ee793b5d",
+    "created_at": "2022-07-11T20:04:49Z",
+    "title": "Damage",
+    "year": 1992,
+    "watched_at": "2022-07-11T20:04:49Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 173584,
+      "imdb": "tt12683830"
+    },
+    "uuid": "c079e523-2a7c-452a-b898-37ec3e7405f7",
+    "created_at": "2021-12-16T22:01:10Z",
+    "title": "The Hand of God",
+    "year": 2021,
+    "watched_at": "2021-12-16T22:01:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 842,
+      "imdb": "tt0372183"
+    },
+    "uuid": "c06224e0-9d30-4f3a-bc99-c50dd393b22a",
+    "created_at": "2020-04-13T06:52:32Z",
+    "title": "The Bourne Supremacy",
+    "year": 2004,
+    "watched_at": "2020-04-13T06:52:59Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 210,
+      "imdb": "tt5758778"
+    },
+    "uuid": "bf736dac-a178-48c8-a6cb-edc1180af631",
+    "created_at": "2019-09-03T06:08:20Z",
+    "title": "Skyscraper",
+    "year": 2018,
+    "watched_at": "2019-09-03T06:08:20Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 8,
+      "imdb": "tt4154756"
+    },
+    "uuid": "bf63e3d9-ee2d-4b7d-8a33-bde06f364456",
+    "created_at": "2019-09-03T06:04:35Z",
+    "title": "Avengers: Infinity War",
+    "year": 2018,
+    "watched_at": "2019-09-03T06:04:35Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 138100,
+      "imdb": "tt10272386"
+    },
+    "uuid": "bf18388a-73e7-4579-8568-a47cc1f3266e",
+    "created_at": "2022-01-09T21:43:01Z",
+    "title": "The Father",
+    "year": 2021,
+    "watched_at": "2022-01-09T21:43:01Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 26282,
+      "imdb": "tt6054846"
+    },
+    "uuid": "beb80be4-17ec-470c-b42d-5657cf0af255",
+    "created_at": "2021-09-10T20:44:45Z",
+    "title": "Amundsen",
+    "year": 2019,
+    "watched_at": "2021-09-10T20:44:45Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 165,
+      "imdb": "tt0499549"
+    },
+    "uuid": "bc5eb84f-6e5d-45b0-97c1-96bf401dd59f",
+    "created_at": "2019-09-03T06:04:19Z",
+    "title": "Avatar",
+    "year": 2009,
+    "watched_at": "2019-09-03T06:04:20Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131079,
+      "imdb": "tt0816692"
+    },
+    "uuid": "bc1542c4-e72f-4dd4-bb80-2d89bd6c6199",
+    "created_at": "2019-09-03T06:02:58Z",
+    "title": "Interstellar",
+    "year": 2014,
+    "watched_at": "2019-09-03T06:03:08Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 158118,
+      "imdb": "tt12789110"
+    },
+    "uuid": "bb7dfc53-4330-4eea-8b43-1e56c40286b2",
+    "created_at": "2021-06-14T18:55:31Z",
+    "title": "The Macaluso Sisters",
+    "year": 2021,
+    "watched_at": "2021-06-14T18:55:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 312226,
+      "imdb": "tt11389872"
+    },
+    "uuid": "bb15d16d-6f79-42c1-81bd-c673dc7537ee",
+    "created_at": "2024-05-19T21:07:07Z",
+    "title": "Kingdom of the Planet of the Apes",
+    "year": 2024,
+    "watched_at": "2024-05-19T21:07:07Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3131,
+      "imdb": "tt0108160"
+    },
+    "uuid": "bb153669-9583-4356-96b0-6e305e38879b",
+    "created_at": "2022-02-23T22:40:52Z",
+    "title": "Sleepless in Seattle",
+    "year": 1993,
+    "watched_at": "2022-02-23T22:40:52Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2324,
+      "imdb": "tt1734493"
+    },
+    "uuid": "b9ee63eb-644b-4e7c-b450-45e269ec73da",
+    "created_at": "2020-12-01T22:03:41Z",
+    "title": "Unlocked",
+    "year": 2017,
+    "watched_at": "2020-12-01T22:03:41Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2076,
+      "imdb": "tt0327056"
+    },
+    "uuid": "b92eded2-8a9f-4f12-a85b-76a7f0ae368b",
+    "created_at": "2025-08-22T05:55:42Z",
+    "title": "Mystic River",
+    "year": 2003,
+    "watched_at": "2025-08-22T05:55:45Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1854,
+      "imdb": "tt0822832"
+    },
+    "uuid": "b8f1f0c6-a24a-4c54-9056-486061b0d972",
+    "created_at": "2019-09-03T06:08:26Z",
+    "title": "Marley & Me",
+    "year": 2008,
+    "watched_at": "2019-09-03T06:08:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 83,
+      "imdb": "tt7775622"
+    },
+    "uuid": "b8e1d325-3709-4b7f-91c4-e331ac950457",
+    "created_at": "2020-04-13T06:46:10Z",
+    "title": "Free Solo",
+    "year": 2019,
+    "watched_at": "2020-04-13T06:46:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 6450,
+      "imdb": "tt3203620"
+    },
+    "uuid": "b8ce2b94-d587-4457-9600-55e73e20db9c",
+    "created_at": "2026-03-18T22:09:25Z",
+    "title": "The Dinner",
+    "year": 2017,
+    "watched_at": "2026-03-18T22:09:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 275,
+      "imdb": "tt0068646"
+    },
+    "uuid": "b797fe58-6ebe-4bcd-840d-f5fa0d51758e",
+    "created_at": "2025-08-22T05:40:57Z",
+    "title": "The Godfather",
+    "year": 1972,
+    "watched_at": "2025-08-22T05:40:57Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 118,
+      "imdb": "tt3498820"
+    },
+    "uuid": "b76dd8fe-8dfd-4a6a-b296-402dc39f077a",
+    "created_at": "2019-09-03T06:06:28Z",
+    "title": "Captain America: Civil War",
+    "year": 2016,
+    "watched_at": "2019-09-03T06:06:29Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 116,
+      "imdb": "tt0468569"
+    },
+    "uuid": "b6e6e8d7-15f5-419e-8f5d-8c9d33c8320f",
+    "created_at": "2019-09-03T06:03:32Z",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "watched_at": "2019-09-03T06:03:33Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1054,
+      "imdb": "tt0106977"
+    },
+    "uuid": "b6e53087-518f-4536-b68a-46a3f16356b7",
+    "created_at": "2023-07-13T21:42:26Z",
+    "title": "The Fugitive",
+    "year": 1993,
+    "watched_at": "2023-07-13T21:42:26Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2425,
+      "imdb": "tt0416320"
+    },
+    "uuid": "b660e29d-0caf-4afd-822d-c770d828c10c",
+    "created_at": "2022-10-31T16:23:52Z",
+    "title": "Match Point",
+    "year": 2005,
+    "watched_at": "2022-10-31T16:23:52Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 16721,
+      "imdb": "tt1745960"
+    },
+    "uuid": "b58f2f93-ea2f-4150-b7ca-33ff52c34339",
+    "created_at": "2022-05-30T21:24:09Z",
+    "title": "Top Gun: Maverick",
+    "year": 2022,
+    "watched_at": "2022-05-30T21:24:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 5024,
+      "imdb": "tt6105098"
+    },
+    "uuid": "b493c854-4b80-45fb-81ab-78dd92486883",
+    "created_at": "2019-09-03T06:01:44Z",
+    "title": "The Lion King",
+    "year": 2019,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1461,
+      "imdb": "tt0349903"
+    },
+    "uuid": "ae7e147b-abc1-4285-9181-3f8fbb1c030b",
+    "created_at": "2025-08-22T05:55:27Z",
+    "title": "Ocean's Twelve",
+    "year": 2004,
+    "watched_at": "2025-08-22T05:55:29Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 141456,
+      "imdb": "tt9421456"
+    },
+    "uuid": "ae4ccfeb-82ec-4811-a9e1-02923aa02db8",
+    "created_at": "2021-11-26T19:46:41Z",
+    "title": "You Came Back",
+    "year": 2020,
+    "watched_at": "2021-11-26T19:46:41Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 143127,
+      "imdb": "tt13354204"
+    },
+    "uuid": "ad4033e0-fabd-474b-bd7c-d45c90cad457",
+    "created_at": "2020-12-12T22:11:56Z",
+    "title": "Just Another Christmas",
+    "year": 2020,
+    "watched_at": "2020-12-12T22:11:56Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1240,
+      "imdb": "tt0120382"
+    },
+    "uuid": "acfcbfce-eda2-4143-a175-d442a75dea8c",
+    "created_at": "2019-09-03T06:05:52Z",
+    "title": "The Truman Show",
+    "year": 1998,
+    "watched_at": "2019-09-03T06:05:52Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 332792,
+      "imdb": "tt13456318"
+    },
+    "uuid": "acd27cf1-8797-4672-b97f-2cddf9deacf7",
+    "created_at": "2023-01-06T22:13:54Z",
+    "title": "Persuasion",
+    "year": 2022,
+    "watched_at": "2023-01-06T22:13:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 6494,
+      "imdb": "tt6146586"
+    },
+    "uuid": "ac2f2b25-caec-49be-aff6-e5d0baca3d50",
+    "created_at": "2019-09-03T06:03:39Z",
+    "title": "John Wick: Chapter 3 - Parabellum",
+    "year": 2019,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 607,
+      "imdb": "tt1670345"
+    },
+    "uuid": "ab756788-fd39-454f-bcaa-16811781dab0",
+    "created_at": "2019-09-03T06:08:09Z",
+    "title": "Now You See Me",
+    "year": 2013,
+    "watched_at": "2019-09-03T06:08:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 342946,
+      "imdb": "tt14364480"
+    },
+    "uuid": "ab60854c-c078-444c-a69e-e92d98b495a1",
+    "created_at": "2025-12-18T22:28:21Z",
+    "title": "Wake Up Dead Man: A Knives Out Mystery",
+    "year": 2025,
+    "watched_at": "2025-12-18T22:28:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1605,
+      "imdb": "tt0096874"
+    },
+    "uuid": "aaafe3da-d446-4677-afb2-09c81f31f505",
+    "created_at": "2019-09-03T06:09:01Z",
+    "title": "Back to the Future Part II",
+    "year": 1989,
+    "watched_at": "2019-09-03T06:09:02Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1395,
+      "imdb": "tt0327597"
+    },
+    "uuid": "aa72ab5f-74ee-4eba-8aba-217e2c22ff9b",
+    "created_at": "2019-09-03T06:06:05Z",
+    "title": "Coraline",
+    "year": 2009,
+    "watched_at": "2019-09-03T06:06:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 349494,
+      "imdb": "tt15205344"
+    },
+    "uuid": "aa6a2cc7-7923-4203-843f-b44e3cf0c197",
+    "created_at": "2024-03-22T21:43:54Z",
+    "title": "The Order of Time",
+    "year": 2023,
+    "watched_at": "2024-03-22T21:43:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 136523,
+      "imdb": "tt10342250"
+    },
+    "uuid": "aa5fd365-07b9-43b7-9cfa-a072a52e13fd",
+    "created_at": "2026-01-15T21:15:22Z",
+    "title": "È per il tuo bene",
+    "year": 2020,
+    "watched_at": "2026-01-15T21:15:23Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 149149,
+      "imdb": "tt13873302"
+    },
+    "uuid": "aa5fae8e-a46f-4289-9338-93e5f0f72eb1",
+    "created_at": "2022-06-28T20:01:26Z",
+    "title": "Against the Ice",
+    "year": 2022,
+    "watched_at": "2022-06-28T20:01:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 788,
+      "imdb": "tt3201640"
+    },
+    "uuid": "a94d0ba3-1cac-4d58-a215-d4dabacc5382",
+    "created_at": "2021-04-05T14:58:39Z",
+    "title": "Extinction",
+    "year": 2018,
+    "watched_at": "2021-04-05T14:58:39Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 227,
+      "imdb": "tt2126355"
+    },
+    "uuid": "a935c16b-9f2f-4353-9793-4c8f27840fae",
+    "created_at": "2021-07-03T20:01:33Z",
+    "title": "San Andreas",
+    "year": 2015,
+    "watched_at": "2021-07-03T20:01:33Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 357797,
+      "imdb": "tt31888477"
+    },
+    "uuid": "a5abd33c-d814-4932-9fcb-670d0440266c",
+    "created_at": "2025-09-26T21:12:19Z",
+    "title": "Downton Abbey: The Grand Finale",
+    "year": 2025,
+    "watched_at": "2025-09-26T21:12:22Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 219,
+      "imdb": "tt2543164"
+    },
+    "uuid": "a51f2623-1ecb-4ce6-bb46-494e0a8a59d8",
+    "created_at": "2019-09-03T06:08:54Z",
+    "title": "Arrival",
+    "year": 2016,
+    "watched_at": "2019-09-03T06:08:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 875,
+      "imdb": "tt0121766"
+    },
+    "uuid": "a3eb5217-89a9-4a5c-b699-7aadbae1865c",
+    "created_at": "2020-04-13T06:54:38Z",
+    "title": "Star Wars: Episode III – Revenge of the Sith",
+    "year": 2005,
+    "watched_at": "2020-04-13T06:55:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 144714,
+      "imdb": "tt6842770"
+    },
+    "uuid": "a39195fc-2971-4d6e-8267-314a0594fdc8",
+    "created_at": "2021-09-07T20:50:28Z",
+    "title": "Wild Mountain Thyme",
+    "year": 2021,
+    "watched_at": "2021-09-07T20:50:28Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 132120,
+      "imdb": "tt9392248"
+    },
+    "uuid": "a261651b-148b-49cd-b5fb-c74940cb6b80",
+    "created_at": "2020-02-24T06:18:37Z",
+    "title": "The Best Years",
+    "year": 2021,
+    "watched_at": "2020-02-24T06:18:37Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 4469,
+      "imdb": "tt0107943"
+    },
+    "uuid": "9ecb834b-b155-426e-bf22-4453f2f4feab",
+    "created_at": "2020-06-10T21:48:37Z",
+    "title": "The Remains of the Day",
+    "year": 1993,
+    "watched_at": "2020-06-10T21:48:44Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131274,
+      "imdb": "tt8515700"
+    },
+    "uuid": "9dac0600-4dd7-4746-9d16-d488174b40ec",
+    "created_at": "2021-02-14T15:54:19Z",
+    "title": "The Champion",
+    "year": 2020,
+    "watched_at": "2021-02-14T15:54:19Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 338728,
+      "imdb": "tt15083184"
+    },
+    "uuid": "9cda3964-03fb-4c80-8949-15f459204092",
+    "created_at": "2022-09-17T20:53:38Z",
+    "title": "I Came By",
+    "year": 2022,
+    "watched_at": "2022-09-17T20:53:38Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2138,
+      "imdb": "tt0105323"
+    },
+    "uuid": "9bccd5ea-003c-48db-86ff-6d4c40fe0925",
+    "created_at": "2025-10-28T22:18:21Z",
+    "title": "Scent of a Woman",
+    "year": 1992,
+    "watched_at": "2025-10-28T22:18:21Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 287533,
+      "imdb": "tt15398776"
+    },
+    "uuid": "9adb5ec5-a5c7-4cc8-8b10-b69f8944bfbf",
+    "created_at": "2023-08-25T22:40:20Z",
+    "title": "Oppenheimer",
+    "year": 2023,
+    "watched_at": "2023-08-25T22:40:20Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 195090,
+      "imdb": "tt14208870"
+    },
+    "uuid": "9ab1d808-f3f1-41ba-a1e2-6d2c1a36889a",
+    "created_at": "2023-07-30T20:47:16Z",
+    "title": "The Fabelmans",
+    "year": 2022,
+    "watched_at": "2023-07-30T20:47:16Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2263,
+      "imdb": "tt0163187"
+    },
+    "uuid": "9a12ffff-d5ad-4272-af34-c60a89fe6677",
+    "created_at": "2025-09-01T20:48:15Z",
+    "title": "Runaway Bride",
+    "year": 1999,
+    "watched_at": "2025-09-01T20:48:19Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 74152,
+      "imdb": ""
+    },
+    "uuid": "99cf453a-42ab-42e9-817a-9812e739cb1b",
+    "created_at": "2023-01-04T21:54:54Z",
+    "title": "Christmas at Downton Abbey",
+    "year": 2011,
+    "watched_at": "2023-01-04T21:54:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 145,
+      "imdb": "tt1211837"
+    },
+    "uuid": "98cc1928-fa5e-4c00-a0e7-762d1f73a1fc",
+    "created_at": "2019-09-03T06:05:20Z",
+    "title": "Doctor Strange",
+    "year": 2016,
+    "watched_at": "2019-09-03T06:05:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 12879,
+      "imdb": "tt2527338"
+    },
+    "uuid": "985b2cb5-c42c-410b-a762-c56df299710a",
+    "created_at": "2020-01-17T21:59:09Z",
+    "title": "Star Wars: The Rise of Skywalker",
+    "year": 2019,
+    "watched_at": "2020-01-17T21:59:12Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 169,
+      "imdb": "tt0133093"
+    },
+    "uuid": "978899c4-5194-4568-b922-0bd2874c4c1a",
+    "created_at": "2019-09-03T06:04:10Z",
+    "title": "The Matrix",
+    "year": 1999,
+    "watched_at": "2019-09-03T06:04:10Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 382,
+      "imdb": "tt0077631"
+    },
+    "uuid": "973b0d4b-b369-4206-81fb-6c4d218aa5c6",
+    "created_at": "2019-09-03T06:04:44Z",
+    "title": "Grease",
+    "year": 1978,
+    "watched_at": "2019-09-03T06:04:45Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1169,
+      "imdb": "tt0335266"
+    },
+    "uuid": "96cdc7bf-1943-448e-8715-58c76b1791c6",
+    "created_at": "2024-01-21T19:28:32Z",
+    "title": "Lost in Translation",
+    "year": 2004,
+    "watched_at": "2024-01-21T19:28:32Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 553,
+      "imdb": "tt0234215"
+    },
+    "uuid": "95bc823e-4707-445a-8cdb-fffc7c113977",
+    "created_at": "2021-09-14T11:22:09Z",
+    "title": "The Matrix Reloaded",
+    "year": 2003,
+    "watched_at": "2021-11-14T20:23:55Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 60,
+      "imdb": "tt3778644"
+    },
+    "uuid": "953e93f1-3016-4704-b6fd-fdb3518d993d",
+    "created_at": "2020-04-13T06:54:14Z",
+    "title": "Solo: A Star Wars Story",
+    "year": 2018,
+    "watched_at": "2020-04-13T06:55:57Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 409,
+      "imdb": "tt2184339"
+    },
+    "uuid": "945e21e3-e083-4e0a-ab5b-516ad15f2e96",
+    "created_at": "2022-10-31T22:10:16Z",
+    "title": "The Purge",
+    "year": 2013,
+    "watched_at": "2022-10-31T22:10:16Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 360700,
+      "imdb": "tt27543632"
+    },
+    "uuid": "9398fd72-c455-465a-b594-b6e248a5f594",
+    "created_at": "2026-01-10T22:30:31Z",
+    "title": "The Housemaid",
+    "year": 2026,
+    "watched_at": "2026-01-10T22:30:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 8789,
+      "imdb": "tt2465146"
+    },
+    "uuid": "936e5eae-1d73-4446-9155-43e03d1a67cd",
+    "created_at": "2026-01-27T20:38:53Z",
+    "title": "And So It Goes",
+    "year": 2014,
+    "watched_at": "2026-01-27T20:38:53Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 71,
+      "imdb": "tt0076759"
+    },
+    "uuid": "9329597a-693d-4df9-8855-f524e347fd92",
+    "created_at": "2020-04-13T06:54:53Z",
+    "title": "Star Wars",
+    "year": 2022,
+    "watched_at": "2020-04-13T06:55:14Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 228,
+      "imdb": "tt0110912"
+    },
+    "uuid": "927d1c54-aa30-48fa-964e-01170d2077cd",
+    "created_at": "2019-09-03T06:04:06Z",
+    "title": "Pulp Fiction",
+    "year": 1995,
+    "watched_at": "2019-09-03T06:04:07Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131117,
+      "imdb": "tt2948372"
+    },
+    "uuid": "91e579c9-7b9f-49a2-b63b-1e165f79d50b",
+    "created_at": "2021-01-16T19:32:02Z",
+    "title": "Soul",
+    "year": 2020,
+    "watched_at": "2021-01-16T19:32:02Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 89,
+      "imdb": "tt2294629"
+    },
+    "uuid": "919bfa79-f34f-470d-9472-d04016613b23",
+    "created_at": "2019-09-03T06:01:26Z",
+    "title": "Frozen",
+    "year": 2014,
+    "watched_at": "2019-09-03T06:01:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 281,
+      "imdb": "tt0458352"
+    },
+    "uuid": "903a576e-a716-4abc-b69b-3a1003d9d5af",
+    "created_at": "2019-09-03T06:05:58Z",
+    "title": "The Devil Wears Prada",
+    "year": 2006,
+    "watched_at": "2019-09-03T06:05:58Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 889,
+      "imdb": "tt2194499"
+    },
+    "uuid": "90162771-0478-460b-b921-5066587ba520",
+    "created_at": "2024-01-21T13:44:06Z",
+    "title": "About Time",
+    "year": 2013,
+    "watched_at": "2024-01-21T13:44:06Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 350238,
+      "imdb": "tt21800162"
+    },
+    "uuid": "8fdf3731-753a-49ca-aee7-0e47b6df4114",
+    "created_at": "2024-04-05T20:23:54Z",
+    "title": "There is Still Tomorrow",
+    "year": 2024,
+    "watched_at": "2024-04-05T20:23:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 500,
+      "imdb": "tt0121765"
+    },
+    "uuid": "8fc65596-1cfd-4fe1-a263-370f2c426f81",
+    "created_at": "2020-04-13T06:54:45Z",
+    "title": "Star Wars: Episode II – Attack of the Clones",
+    "year": 2002,
+    "watched_at": "2020-04-13T06:55:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 30294,
+      "imdb": "tt9603212"
+    },
+    "uuid": "8f160db4-d292-448f-be17-9001b3a18856",
+    "created_at": "2023-07-30T20:48:57Z",
+    "title": "Mission: Impossible – Dead Reckoning Part One",
+    "year": 2023,
+    "watched_at": "2023-07-30T20:48:57Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 6187,
+      "imdb": "tt1160419"
+    },
+    "uuid": "8ef12c09-c030-4ccf-ba3e-ed313393a427",
+    "created_at": "2021-09-23T16:52:57Z",
+    "title": "Dune: Part One",
+    "year": 2021,
+    "watched_at": "2021-11-14T20:23:01Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 137455,
+      "imdb": "tt6341832"
+    },
+    "uuid": "8e3f1c7a-3681-4823-8c50-a1dd11a6cfa6",
+    "created_at": "2021-06-18T21:08:22Z",
+    "title": "Oxygen",
+    "year": 2021,
+    "watched_at": "2021-06-18T21:08:22Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2655,
+      "imdb": "tt6679412"
+    },
+    "uuid": "8e282472-2eff-430c-bb77-a4e7bed12d47",
+    "created_at": "2020-06-09T20:59:00Z",
+    "title": "Forgive Us Our Debts",
+    "year": 2018,
+    "watched_at": "2020-06-09T20:59:00Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 990,
+      "imdb": "tt0369339"
+    },
+    "uuid": "8db585b9-8ebf-4630-8d8b-1ca7e9c68df4",
+    "created_at": "2022-09-05T21:07:31Z",
+    "title": "Collateral",
+    "year": 2004,
+    "watched_at": "2022-09-05T21:07:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 344251,
+      "imdb": "tt11378946"
+    },
+    "uuid": "8cfb0b06-8564-470e-b42e-475286ae60b3",
+    "created_at": "2026-05-10T16:11:23Z",
+    "title": "Michael",
+    "year": 2026,
+    "watched_at": "2026-05-10T16:11:23Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 419,
+      "imdb": "tt0172495"
+    },
+    "uuid": "8c4a0e12-e811-4729-b953-6f6074db9e5b",
+    "created_at": "2019-09-03T06:06:13Z",
+    "title": "Gladiator",
+    "year": 2000,
+    "watched_at": "2019-09-03T06:06:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 11880,
+      "imdb": "tt3237406"
+    },
+    "uuid": "8c29e88b-7762-4a74-8afd-7d53fc77066d",
+    "created_at": "2022-03-31T20:49:17Z",
+    "title": "Tutta colpa di Freud",
+    "year": 2014,
+    "watched_at": "2022-03-31T20:49:17Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 128,
+      "imdb": "tt0373889"
+    },
+    "uuid": "8acdf7f7-88d1-4e10-92d5-296f7b64c50e",
+    "created_at": "2019-09-03T06:06:25Z",
+    "title": "Harry Potter and the Order of the Phoenix",
+    "year": 2007,
+    "watched_at": "2019-09-03T06:06:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 70,
+      "imdb": "tt2737304"
+    },
+    "uuid": "8a142746-1fad-4c07-91c1-4cf970940c33",
+    "created_at": "2021-12-14T18:04:14Z",
+    "title": "Bird Box",
+    "year": 2018,
+    "watched_at": "2021-12-14T18:04:14Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 145486,
+      "imdb": "tt11214590"
+    },
+    "uuid": "898a5cae-f49a-4bf1-9479-b092d6922613",
+    "created_at": "2023-02-04T23:24:27Z",
+    "title": "House of Gucci",
+    "year": 2021,
+    "watched_at": "2023-02-04T23:24:27Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2201,
+      "imdb": "tt0105665"
+    },
+    "uuid": "8978dce4-3412-4d73-964d-d078d1e11449",
+    "created_at": "2025-08-22T05:42:41Z",
+    "title": "Twin Peaks: Fire Walk with Me",
+    "year": 1993,
+    "watched_at": "2025-08-22T05:42:41Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1205,
+      "imdb": "tt0089218"
+    },
+    "uuid": "88ed934d-3622-441a-b697-4d6c6a9dcbbc",
+    "created_at": "2019-09-03T06:10:31Z",
+    "title": "The Goonies",
+    "year": 1985,
+    "watched_at": "2019-09-03T06:10:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 141736,
+      "imdb": "tt10539608"
+    },
+    "uuid": "88ad17aa-f50c-4ced-9bc0-067b16f67acc",
+    "created_at": "2021-01-04T22:28:11Z",
+    "title": "The Midnight Sky",
+    "year": 2020,
+    "watched_at": "2021-01-04T22:28:11Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 351366,
+      "imdb": "tt26612950"
+    },
+    "uuid": "889e24fd-5605-427f-b273-eacb8f134cd3",
+    "created_at": "2025-10-07T20:25:13Z",
+    "title": "The Teachers' Lounge",
+    "year": 2024,
+    "watched_at": "2025-10-07T20:25:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 703,
+      "imdb": "tt0112573"
+    },
+    "uuid": "88272954-936b-434e-982c-6ac30c5ccf5a",
+    "created_at": "2022-04-23T05:09:44Z",
+    "title": "Braveheart",
+    "year": 1995,
+    "watched_at": "2022-04-23T05:09:44Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 351789,
+      "imdb": "tt21412402"
+    },
+    "uuid": "87ec4372-6d6a-4c58-b36a-aebff4618dfe",
+    "created_at": "2025-05-20T20:54:29Z",
+    "title": "100 Sundays",
+    "year": 2023,
+    "watched_at": "2025-05-20T20:54:29Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 334,
+      "imdb": "tt0120915"
+    },
+    "uuid": "8727b86b-59cd-437b-89a7-40d2003155df",
+    "created_at": "2020-04-13T06:54:47Z",
+    "title": "Star Wars: Episode I – The Phantom Menace",
+    "year": 1999,
+    "watched_at": "2020-04-13T06:55:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 253,
+      "imdb": "tt1587310"
+    },
+    "uuid": "8524d86e-11af-42b5-9637-1fa18664e218",
+    "created_at": "2019-09-03T06:04:51Z",
+    "title": "Maleficent",
+    "year": 2014,
+    "watched_at": "2019-09-03T06:04:52Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 158867,
+      "imdb": "tt14230458"
+    },
+    "uuid": "84143963-aa82-4f10-929d-111663bdb2fc",
+    "created_at": "2024-03-29T21:52:58Z",
+    "title": "Poor Things",
+    "year": 2024,
+    "watched_at": "2024-03-29T21:52:58Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 141557,
+      "imdb": "tt12142854"
+    },
+    "uuid": "83ca5086-31d6-4ec9-a891-6fff7ccb012e",
+    "created_at": "2021-01-05T23:19:22Z",
+    "title": "My Name Is Francesco Totti",
+    "year": 2020,
+    "watched_at": "2021-01-05T23:19:22Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 349202,
+      "imdb": "tt13274016"
+    },
+    "uuid": "8338447d-3641-43f2-bf25-24e9ea51cafe",
+    "created_at": "2023-11-09T12:39:18Z",
+    "title": "Reptile",
+    "year": 2023,
+    "watched_at": "2023-11-09T12:39:18Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 357687,
+      "imdb": "tt22767628"
+    },
+    "uuid": "82cb511c-1616-4a7e-bfd0-4b825223db94",
+    "created_at": "2026-01-06T21:01:57Z",
+    "title": "Blackwater Lane",
+    "year": 2024,
+    "watched_at": "2026-01-06T21:01:57Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 5578,
+      "imdb": "tt1185834"
+    },
+    "uuid": "81d1b821-fa34-46e2-84de-a7f1dfb1a56d",
+    "created_at": "2020-04-13T06:54:24Z",
+    "title": "Star Wars: The Clone Wars",
+    "year": 2008,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 134251,
+      "imdb": "tt10307440"
+    },
+    "uuid": "81a3a63c-af7c-46cd-a491-9d179f535536",
+    "created_at": "2020-04-13T06:51:16Z",
+    "title": "The Decline",
+    "year": 2020,
+    "watched_at": "2020-04-13T06:51:16Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 604,
+      "imdb": "tt0118799"
+    },
+    "uuid": "8057d93e-9f39-450a-96b6-461b1b14e652",
+    "created_at": "2019-09-03T06:05:25Z",
+    "title": "Life Is Beautiful",
+    "year": 1999,
+    "watched_at": "2019-09-03T06:05:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 45,
+      "imdb": "tt1270797"
+    },
+    "uuid": "7fb75a7c-5a36-4599-a1c4-be418f1b3ada",
+    "created_at": "2020-11-29T11:02:51Z",
+    "title": "Venom",
+    "year": 2018,
+    "watched_at": "2020-11-29T11:02:51Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 7663,
+      "imdb": "tt1703957"
+    },
+    "uuid": "7f3c1a85-5f05-461d-ab87-a6390a5e09e6",
+    "created_at": "2023-01-02T21:13:14Z",
+    "title": "Genius",
+    "year": 2016,
+    "watched_at": "2023-01-02T21:13:14Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 6587,
+      "imdb": "tt1687901"
+    },
+    "uuid": "7f221bc0-ab32-4465-a43e-5a5a6e1b497a",
+    "created_at": "2026-01-06T20:33:54Z",
+    "title": "The Awakening",
+    "year": 2011,
+    "watched_at": "2026-01-06T20:33:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 818,
+      "imdb": "tt0120755"
+    },
+    "uuid": "7e62af02-d4a7-47ae-aaf6-bd79cadd4d5e",
+    "created_at": "2021-12-14T18:06:05Z",
+    "title": "Mission: Impossible II",
+    "year": 2002,
+    "watched_at": "2021-12-14T18:06:20Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 154552,
+      "imdb": "tt9421570"
+    },
+    "uuid": "7b4bd41a-0483-4adf-90d6-8b995a065285",
+    "created_at": "2021-10-09T20:28:18Z",
+    "title": "The Guilty",
+    "year": 2021,
+    "watched_at": "2021-10-09T20:28:18Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1501,
+      "imdb": "tt5638642"
+    },
+    "uuid": "78ee9fb6-c710-44d3-bb2c-a25cc9c46c54",
+    "created_at": "2022-11-19T23:40:12Z",
+    "title": "The Ritual",
+    "year": 2017,
+    "watched_at": "2022-11-19T23:40:12Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3053,
+      "imdb": "tt1210166"
+    },
+    "uuid": "78dbfee8-7090-441d-aa95-fe3b3257e593",
+    "created_at": "2020-10-16T21:21:59Z",
+    "title": "Moneyball",
+    "year": 2011,
+    "watched_at": "2020-10-16T21:22:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 7644,
+      "imdb": "tt7286456"
+    },
+    "uuid": "78a0d677-5e7e-423d-a0ab-b669754885f1",
+    "created_at": "2019-09-03T06:09:19Z",
+    "title": "Joker",
+    "year": 2019,
+    "watched_at": "2019-10-08T16:56:43Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 18150,
+      "imdb": "tt0090570"
+    },
+    "uuid": "774900a0-ea94-4975-bafb-f21d89f3acfd",
+    "created_at": "2020-06-09T20:55:57Z",
+    "title": "84 Charing Cross Road",
+    "year": 1987,
+    "watched_at": "2020-06-09T20:55:57Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 132448,
+      "imdb": "tt10872600"
+    },
+    "uuid": "758d716d-5a34-4c48-8a79-4fa2416e2a91",
+    "created_at": "2021-12-20T19:56:48Z",
+    "title": "Spider-Man: No Way Home",
+    "year": 2021,
+    "watched_at": "2021-12-20T19:56:48Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 354841,
+      "imdb": "tt8542964"
+    },
+    "uuid": "7543c6bb-fd90-4b6b-b70c-68b65cc6775c",
+    "created_at": "2025-08-22T05:42:23Z",
+    "title": "Sleeping Dogs",
+    "year": 2024,
+    "watched_at": "2025-08-22T05:42:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2479,
+      "imdb": "tt4178092"
+    },
+    "uuid": "73ea1a99-605a-4707-9b32-58c4e8117cf2",
+    "created_at": "2026-01-09T22:04:32Z",
+    "title": "The Gift",
+    "year": 2015,
+    "watched_at": "2026-01-09T22:04:32Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 687,
+      "imdb": "tt0242653"
+    },
+    "uuid": "735bce3b-0e4f-4cc6-a691-98a2354925cc",
+    "created_at": "2021-09-14T11:22:10Z",
+    "title": "The Matrix Revolutions",
+    "year": 2003,
+    "watched_at": "2021-11-14T20:23:41Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 5881,
+      "imdb": "tt0195685"
+    },
+    "uuid": "734a82ba-ba86-46f2-94a5-751bd7543164",
+    "created_at": "2021-09-16T19:01:35Z",
+    "title": "Erin Brockovich",
+    "year": 2000,
+    "watched_at": "2021-09-16T19:01:35Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 290272,
+      "imdb": "tt15239678"
+    },
+    "uuid": "724d75e3-5d7c-4af6-a6b4-5f331cd4d0af",
+    "created_at": "2024-04-09T05:37:45Z",
+    "title": "Dune: Part Two",
+    "year": 2024,
+    "watched_at": "2024-04-09T05:37:45Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1768,
+      "imdb": "tt0416508"
+    },
+    "uuid": "71b872e5-0cba-4592-93d1-dafeb842cbea",
+    "created_at": "2026-01-06T20:36:02Z",
+    "title": "Becoming Jane",
+    "year": 2007,
+    "watched_at": "2026-01-06T20:36:02Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 67,
+      "imdb": "tt3896198"
+    },
+    "uuid": "701ea1ba-34df-4fa1-b4b1-29fc283c2d0c",
+    "created_at": "2019-09-03T06:05:28Z",
+    "title": "Guardians of the Galaxy Vol. 2",
+    "year": 2017,
+    "watched_at": "2019-09-03T06:05:29Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 240,
+      "imdb": "tt1590193"
+    },
+    "uuid": "6efb9411-3c3a-468e-b329-5dbad998cfac",
+    "created_at": "2021-12-14T21:46:40Z",
+    "title": "The Commuter",
+    "year": 2018,
+    "watched_at": "2021-12-14T21:46:40Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 798,
+      "imdb": "tt5776858"
+    },
+    "uuid": "6eab2f92-f5bb-45fa-b8ce-4ad784ecdd06",
+    "created_at": "2021-05-21T18:47:52Z",
+    "title": "Phantom Thread",
+    "year": 2018,
+    "watched_at": "2021-05-21T18:47:52Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1081,
+      "imdb": "tt0116695"
+    },
+    "uuid": "6e7c1be4-e1a1-47dc-a8c1-9267437a8d0a",
+    "created_at": "2023-01-10T17:10:35Z",
+    "title": "Jerry Maguire",
+    "year": 1996,
+    "watched_at": "2023-01-10T17:10:35Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 150207,
+      "imdb": "tt14060232"
+    },
+    "uuid": "6d758cec-a01b-4319-876b-dcb199c17e78",
+    "created_at": "2024-01-24T21:09:34Z",
+    "title": "Infinite Storm",
+    "year": 2022,
+    "watched_at": "2024-01-24T21:09:34Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 332749,
+      "imdb": "tt14540892"
+    },
+    "uuid": "6d2e740b-3f93-4a9d-8fac-a10091f03dd7",
+    "created_at": "2022-03-14T21:54:25Z",
+    "title": "The Invisible Thread",
+    "year": 2022,
+    "watched_at": "2022-03-14T21:54:25Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 7081,
+      "imdb": "tt2674454"
+    },
+    "uuid": "6ba53e91-c3bd-4a4e-a158-10b4797cb6da",
+    "created_at": "2019-10-16T06:44:11Z",
+    "title": "Churchill",
+    "year": 2017,
+    "watched_at": "2019-10-16T06:44:11Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 711,
+      "imdb": "tt1798709"
+    },
+    "uuid": "69eac434-2b1f-48af-ab17-f4d89e0e254d",
+    "created_at": "2019-09-03T06:10:07Z",
+    "title": "Her",
+    "year": 2014,
+    "watched_at": "2019-09-03T06:10:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 287553,
+      "imdb": "tt15655276"
+    },
+    "uuid": "69826c83-ef00-4b3d-a186-5dc5b74d0ff0",
+    "created_at": "2021-11-16T21:24:47Z",
+    "title": "Yara",
+    "year": 2021,
+    "watched_at": "2021-11-16T21:24:48Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 730,
+      "imdb": "tt0258463"
+    },
+    "uuid": "6950ad4e-fbb6-4831-84bd-d9a4ef94a025",
+    "created_at": "2020-04-13T06:52:26Z",
+    "title": "The Bourne Identity",
+    "year": 2002,
+    "watched_at": "2020-04-13T06:52:43Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 125840,
+      "imdb": "tt2235695"
+    },
+    "uuid": "69449e83-8ddd-4a95-9652-f007bef5b231",
+    "created_at": "2020-10-21T21:34:36Z",
+    "title": "Rebecca",
+    "year": 2020,
+    "watched_at": "2020-10-21T21:34:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 4444,
+      "imdb": "tt0107507"
+    },
+    "uuid": "68ab433e-ef8f-43a8-8b31-2479ed86c15e",
+    "created_at": "2023-11-15T21:57:30Z",
+    "title": "Manhattan Murder Mystery",
+    "year": 1993,
+    "watched_at": "2023-11-15T21:57:30Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 87378,
+      "imdb": "tt8338762"
+    },
+    "uuid": "689bafdc-cf4f-4d96-9ce3-a4af74afd748",
+    "created_at": "2022-03-12T21:23:21Z",
+    "title": "The Nest",
+    "year": 2021,
+    "watched_at": "2022-03-12T21:23:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1804,
+      "imdb": "tt1598778"
+    },
+    "uuid": "677738e1-54d3-47ac-afaf-5c0a7277e6ee",
+    "created_at": "2022-01-28T19:54:03Z",
+    "title": "Contagion",
+    "year": 2011,
+    "watched_at": "2022-01-28T19:54:03Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 141491,
+      "imdb": "tt6772802"
+    },
+    "uuid": "666cc74a-8e05-4ef7-b7d2-02f982284907",
+    "created_at": "2020-11-26T22:02:04Z",
+    "title": "Hillbilly Elegy",
+    "year": 2020,
+    "watched_at": "2020-11-26T22:02:04Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 337840,
+      "imdb": "tt14641542"
+    },
+    "uuid": "65d33d61-4eb3-41d8-9747-6a3ebebbc4b6",
+    "created_at": "2022-12-30T06:29:51Z",
+    "title": "The Eight Mountains",
+    "year": 2023,
+    "watched_at": "2022-12-30T06:29:51Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 7507,
+      "imdb": "tt3503406"
+    },
+    "uuid": "657951fa-bef1-4434-8daf-d3c347f57539",
+    "created_at": "2022-06-21T20:40:33Z",
+    "title": "The Whole Truth",
+    "year": 2016,
+    "watched_at": "2022-06-21T20:40:33Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 355416,
+      "imdb": "tt30144839"
+    },
+    "uuid": "64a608a4-fe51-4c50-8f52-3f0049721669",
+    "created_at": "2025-10-04T21:37:01Z",
+    "title": "One Battle After Another",
+    "year": 2025,
+    "watched_at": "2025-10-04T21:37:01Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 968,
+      "imdb": "tt7280898"
+    },
+    "uuid": "642633c7-06c3-4b76-854e-9a9a2aa1cd32",
+    "created_at": "2021-04-22T20:48:10Z",
+    "title": "22 July",
+    "year": 2018,
+    "watched_at": "2021-04-22T20:48:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 13538,
+      "imdb": "tt4712810"
+    },
+    "uuid": "627dde5c-dfc2-436f-99ac-418c223e9511",
+    "created_at": "2026-06-20T20:31:43Z",
+    "title": "Now You See Me: Now You Don't",
+    "year": 2025,
+    "watched_at": "2026-06-20T20:31:46Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 350029,
+      "imdb": "tt26047818"
+    },
+    "uuid": "62760786-25a6-4b64-8cf8-b75f0b7c9ddb",
+    "created_at": "2025-11-14T22:27:01Z",
+    "title": "Anyone But You",
+    "year": 2024,
+    "watched_at": "2025-11-14T22:27:01Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 30526,
+      "imdb": "tt8579674"
+    },
+    "uuid": "6254be80-6383-4767-961e-2f13d98e2676",
+    "created_at": "2026-04-25T18:52:42Z",
+    "title": "1917",
+    "year": 2020,
+    "watched_at": "2026-04-25T18:52:42Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 558,
+      "imdb": "tt1130884"
+    },
+    "uuid": "622dc8a7-48fb-444b-98ed-6c7c831dbe6c",
+    "created_at": "2025-08-27T21:41:31Z",
+    "title": "Shutter Island",
+    "year": 2010,
+    "watched_at": "2025-08-27T21:41:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3764,
+      "imdb": "tt0164334"
+    },
+    "uuid": "61fd9e62-c2f6-4431-a59d-5e7284c20923",
+    "created_at": "2022-08-27T20:47:44Z",
+    "title": "Along Came a Spider",
+    "year": 2001,
+    "watched_at": "2022-08-27T20:47:44Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 652,
+      "imdb": "tt0770828"
+    },
+    "uuid": "61a18174-11ff-453c-ae53-5beefa08be03",
+    "created_at": "2019-09-03T06:10:15Z",
+    "title": "Man of Steel",
+    "year": 2013,
+    "watched_at": "2019-09-03T06:10:16Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 46622,
+      "imdb": "tt7657566"
+    },
+    "uuid": "617b2dd3-690c-4690-8111-0276739abe69",
+    "created_at": "2022-07-24T22:02:44Z",
+    "title": "Death on the Nile",
+    "year": 2022,
+    "watched_at": "2022-07-24T22:03:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 146549,
+      "imdb": "tt11428926"
+    },
+    "uuid": "61247767-5a25-470a-9263-dadc4c9eb6ec",
+    "created_at": "2021-03-20T07:16:59Z",
+    "title": "The Last Paradiso",
+    "year": 2021,
+    "watched_at": "2021-03-20T07:16:59Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 468,
+      "imdb": "tt0795421"
+    },
+    "uuid": "60f98289-c78f-4047-b21f-fa6d851d3d38",
+    "created_at": "2019-09-03T06:10:21Z",
+    "title": "Mamma Mia!",
+    "year": 2008,
+    "watched_at": "2019-09-03T06:10:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 882,
+      "imdb": "tt5246700"
+    },
+    "uuid": "6095041b-afe9-4dac-8dfc-dea008a6c4dd",
+    "created_at": "2020-02-11T05:38:59Z",
+    "title": "How It Ends",
+    "year": 2018,
+    "watched_at": "2020-02-11T05:38:59Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 332567,
+      "imdb": "tt13133936"
+    },
+    "uuid": "606832f6-840e-4f5d-afde-35587b789737",
+    "created_at": "2022-08-26T20:50:20Z",
+    "title": "The Desperate Hour",
+    "year": 2022,
+    "watched_at": "2022-08-26T20:50:20Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3904,
+      "imdb": "tt5727282"
+    },
+    "uuid": "604d0a3a-ddb9-4a0d-af75-93caceb6e746",
+    "created_at": "2021-06-03T19:25:23Z",
+    "title": "Borg vs McEnroe",
+    "year": 2017,
+    "watched_at": "2021-06-03T19:25:23Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3392,
+      "imdb": "tt4901306"
+    },
+    "uuid": "5fcc7168-d15f-4010-9477-3d6c0db97589",
+    "created_at": "2023-09-24T20:34:26Z",
+    "title": "Perfect Strangers",
+    "year": 2016,
+    "watched_at": "2023-09-24T20:34:26Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 137359,
+      "imdb": "tt7149730"
+    },
+    "uuid": "5f634e56-f172-4e3e-8d18-dd28aef6476d",
+    "created_at": "2023-09-18T20:54:44Z",
+    "title": "The Silencing",
+    "year": 2020,
+    "watched_at": "2023-09-18T20:54:44Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 313177,
+      "imdb": "tt11563598"
+    },
+    "uuid": "5ecf3be0-a18d-4fe2-9866-0ce25e819752",
+    "created_at": "2025-05-11T21:08:09Z",
+    "title": "A Complete Unknown",
+    "year": 2025,
+    "watched_at": "2025-05-11T21:08:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 27759,
+      "imdb": "tt3480822"
+    },
+    "uuid": "5e14cbcf-c9b3-4f82-b6df-9f68cdc0beb6",
+    "created_at": "2021-12-05T18:13:23Z",
+    "title": "Black Widow",
+    "year": 2021,
+    "watched_at": "2021-12-05T18:13:23Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2723,
+      "imdb": "tt0114069"
+    },
+    "uuid": "5bed17bc-ecdb-4983-84f3-7540e706e42c",
+    "created_at": "2022-02-12T22:23:19Z",
+    "title": "Outbreak",
+    "year": 1995,
+    "watched_at": "2022-02-12T22:23:20Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 22211,
+      "imdb": "tt5606664"
+    },
+    "uuid": "5b9f0df1-c726-4703-8b00-f0249682aaf3",
+    "created_at": "2022-01-08T22:59:02Z",
+    "title": "Doctor Sleep",
+    "year": 2019,
+    "watched_at": "2022-01-08T22:59:02Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3216,
+      "imdb": "tt0101540"
+    },
+    "uuid": "5ac6ace9-cf78-49bb-a01e-7bbcd3f62ad9",
+    "created_at": "2022-01-17T22:36:17Z",
+    "title": "Cape Fear",
+    "year": 1991,
+    "watched_at": "2022-01-17T22:36:17Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 63,
+      "imdb": "tt0295297"
+    },
+    "uuid": "5a432bdc-e493-410b-bee8-af93095c6fcf",
+    "created_at": "2019-09-03T06:01:22Z",
+    "title": "Harry Potter and the Chamber of Secrets",
+    "year": 2002,
+    "watched_at": "2019-09-03T06:01:22Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 4402,
+      "imdb": "tt0280380"
+    },
+    "uuid": "5a115a8b-6a31-4438-a6da-8d0ee284ba62",
+    "created_at": "2022-05-09T20:09:28Z",
+    "title": "Trapped",
+    "year": 2002,
+    "watched_at": "2022-05-09T20:09:28Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 337249,
+      "imdb": "tt9764362"
+    },
+    "uuid": "5824927a-da2e-4057-bb42-94cd2fb5f240",
+    "created_at": "2023-01-20T22:10:34Z",
+    "title": "The Menu",
+    "year": 2022,
+    "watched_at": "2023-01-20T22:10:34Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 6958,
+      "imdb": "tt1535970"
+    },
+    "uuid": "57aeebb5-c40d-41f9-9cc7-5e21a6d57e0f",
+    "created_at": "2022-09-04T21:14:09Z",
+    "title": "The Ledge",
+    "year": 2011,
+    "watched_at": "2022-09-04T21:14:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 640,
+      "imdb": "tt2283362"
+    },
+    "uuid": "578c78b0-6510-46ec-b741-3f685d4f53d8",
+    "created_at": "2019-09-03T06:06:39Z",
+    "title": "Jumanji: Welcome to the Jungle",
+    "year": 2017,
+    "watched_at": "2019-09-03T06:06:40Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1579,
+      "imdb": "tt1193138"
+    },
+    "uuid": "573a0474-c6df-4c70-96ea-e31c5d777642",
+    "created_at": "2020-06-12T05:33:23Z",
+    "title": "Up in the Air",
+    "year": 2009,
+    "watched_at": "2020-06-12T05:33:23Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 367,
+      "imdb": "tt3748528"
+    },
+    "uuid": "554efc3f-2640-45f2-8fd3-41fe03118f32",
+    "created_at": "2019-09-03T06:08:51Z",
+    "title": "Rogue One: A Star Wars Story",
+    "year": 2016,
+    "watched_at": "2019-09-03T06:08:52Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131199,
+      "imdb": "tt9243946"
+    },
+    "uuid": "552a9d30-cbf8-4a84-93b8-e7f10622fb2e",
+    "created_at": "2019-10-16T06:44:58Z",
+    "title": "El Camino: A Breaking Bad Movie",
+    "year": 2019,
+    "watched_at": "2019-11-04T21:33:55Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1478,
+      "imdb": "tt1194173"
+    },
+    "uuid": "54156de4-f1f0-43f5-a26d-6a3c5f73c40f",
+    "created_at": "2020-04-13T06:52:33Z",
+    "title": "The Bourne Legacy",
+    "year": 2012,
+    "watched_at": "2020-04-13T06:53:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3606,
+      "imdb": "tt0098635"
+    },
+    "uuid": "539ef1e1-b629-4a94-8b60-2d9805271cf9",
+    "created_at": "2021-04-05T15:08:44Z",
+    "title": "When Harry Met Sally…",
+    "year": 1989,
+    "watched_at": "2021-04-05T15:08:44Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 340169,
+      "imdb": "tt15229674"
+    },
+    "uuid": "52874a7f-3d40-4e16-8aa9-db55e64208bb",
+    "created_at": "2023-01-02T21:16:06Z",
+    "title": "My name is Vendetta",
+    "year": 2022,
+    "watched_at": "2023-01-02T21:16:07Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 827,
+      "imdb": "tt0317919"
+    },
+    "uuid": "527adc31-6d16-4526-b122-50257353867a",
+    "created_at": "2021-12-14T18:06:06Z",
+    "title": "Mission: Impossible III",
+    "year": 2006,
+    "watched_at": "2021-12-14T18:06:15Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 308,
+      "imdb": "tt0120689"
+    },
+    "uuid": "520a6008-ecef-4bc2-b4dd-56a29f2c1e40",
+    "created_at": "2021-01-16T19:38:33Z",
+    "title": "The Green Mile",
+    "year": 2000,
+    "watched_at": "2021-01-16T19:38:33Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 466,
+      "imdb": "tt0080684"
+    },
+    "uuid": "5170f78f-b0df-487e-9402-e2ce9dce04ca",
+    "created_at": "2020-04-13T06:54:51Z",
+    "title": "The Empire Strikes Back",
+    "year": 2021,
+    "watched_at": "2020-04-13T06:55:00Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 4158,
+      "imdb": "tt0113117"
+    },
+    "uuid": "514fee03-971b-45dd-96fd-754843221618",
+    "created_at": "2021-04-05T15:09:09Z",
+    "title": "French Kiss",
+    "year": 1995,
+    "watched_at": "2021-04-05T15:09:09Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 288,
+      "imdb": "tt3110958"
+    },
+    "uuid": "50c4ba03-8cd6-4748-8c46-5b7a28c1e66f",
+    "created_at": "2019-09-03T06:09:50Z",
+    "title": "Now You See Me 2",
+    "year": 2016,
+    "watched_at": "2019-09-03T06:09:51Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 139739,
+      "imdb": "tt8945942"
+    },
+    "uuid": "502bb33f-0c02-4e5c-bad7-cda7506924cc",
+    "created_at": "2023-06-19T20:45:27Z",
+    "title": "Centigrade",
+    "year": 2020,
+    "watched_at": "2023-06-19T20:45:27Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 490,
+      "imdb": "tt3402236"
+    },
+    "uuid": "4f878d32-be02-436c-8a65-bb7c748449fd",
+    "created_at": "2022-07-24T22:02:42Z",
+    "title": "Murder on the Orient Express",
+    "year": 2017,
+    "watched_at": "2022-07-24T22:02:59Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 203197,
+      "imdb": "tt10072662"
+    },
+    "uuid": "4f745f3c-2f06-4e12-b0d7-c2130a32c487",
+    "created_at": "2021-10-19T20:52:21Z",
+    "title": "Un drago a forma di nuvola",
+    "year": 2021,
+    "watched_at": "2021-10-19T20:52:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 157630,
+      "imdb": "tt10738536"
+    },
+    "uuid": "4ed6b9a3-8495-4f16-a167-d5c635d3e875",
+    "created_at": "2022-02-25T22:41:31Z",
+    "title": "Delicious",
+    "year": 2021,
+    "watched_at": "2022-02-25T22:41:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 358944,
+      "imdb": "tt22740896"
+    },
+    "uuid": "4eb1eac0-4e3f-4f09-9407-7fdfe40db47d",
+    "created_at": "2026-01-13T19:54:43Z",
+    "title": "People We Meet on Vacation",
+    "year": 2026,
+    "watched_at": "2026-01-13T19:54:43Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 761,
+      "imdb": "tt1568346"
+    },
+    "uuid": "4e899b2d-d7ec-4ef6-9f28-8dc6ee684b3e",
+    "created_at": "2021-01-16T22:48:19Z",
+    "title": "The Girl with the Dragon Tattoo",
+    "year": 2012,
+    "watched_at": "2021-01-16T22:48:19Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 14725,
+      "imdb": "tt7139936"
+    },
+    "uuid": "4e32715e-fa50-41c5-92e6-ee430c14a264",
+    "created_at": "2020-06-20T21:13:57Z",
+    "title": "A Rainy Day in New York",
+    "year": 2020,
+    "watched_at": "2020-06-20T21:14:04Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 26592,
+      "imdb": "tt5217644"
+    },
+    "uuid": "4dcdc765-9973-4386-b186-1cfc7fd9ba71",
+    "created_at": "2023-09-24T20:33:23Z",
+    "title": "Dobbiamo parlare",
+    "year": 2015,
+    "watched_at": "2023-09-24T20:33:23Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 363177,
+      "imdb": "tt26657236"
+    },
+    "uuid": "4b9a7d19-1da3-443c-a2a5-4d50c43c9324",
+    "created_at": "2026-06-12T21:45:34Z",
+    "title": "Backrooms",
+    "year": 2026,
+    "watched_at": "2026-06-12T21:45:34Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 135888,
+      "imdb": "tt7616584"
+    },
+    "uuid": "4b4fa3ba-e3c3-4254-94cf-e95b748dcaf6",
+    "created_at": "2021-03-23T21:48:36Z",
+    "title": "The big jump",
+    "year": 2019,
+    "watched_at": "2021-03-23T21:48:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 347579,
+      "imdb": "tt21308888"
+    },
+    "uuid": "4b002a03-a9b7-4e3b-8f1e-f61db75c7687",
+    "created_at": "2023-08-30T13:14:08Z",
+    "title": "Paradise",
+    "year": 2023,
+    "watched_at": "2023-08-30T13:14:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 377,
+      "imdb": "tt0110357"
+    },
+    "uuid": "4ae4c259-b063-4330-a688-0eb3fc619855",
+    "created_at": "2019-09-03T06:04:48Z",
+    "title": "The Lion King",
+    "year": 1994,
+    "watched_at": "2019-09-03T06:04:48Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 13242,
+      "imdb": "tt2427968"
+    },
+    "uuid": "4a9e5bf4-9d47-4830-9bf9-72e1bfca744f",
+    "created_at": "2020-11-14T22:51:02Z",
+    "title": "Una famiglia perfetta",
+    "year": 2012,
+    "watched_at": "2020-11-14T22:51:02Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 369385,
+      "imdb": "tt5179884"
+    },
+    "uuid": "492dfa1c-8820-4c4c-a5fb-233fcbf318e0",
+    "created_at": "2026-04-16T20:57:08Z",
+    "title": "My Tennis Maestro",
+    "year": 2025,
+    "watched_at": "2026-04-16T20:57:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 484,
+      "imdb": "tt2381249"
+    },
+    "uuid": "4929b925-6c6d-4bad-979a-b53e4ecfa486",
+    "created_at": "2021-12-14T18:06:09Z",
+    "title": "Mission: Impossible – Rogue Nation",
+    "year": 2015,
+    "watched_at": "2021-12-14T18:06:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 253583,
+      "imdb": "tt11233960"
+    },
+    "uuid": "491ca29f-e4c6-4733-a1a6-ac3fd6dd8f9b",
+    "created_at": "2021-12-23T18:51:50Z",
+    "title": "The Unforgivable",
+    "year": 2021,
+    "watched_at": "2021-12-23T18:51:56Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 341,
+      "imdb": "tt5726616"
+    },
+    "uuid": "488b1c2a-9ace-42e7-a987-6c43d20d6af1",
+    "created_at": "2020-12-29T21:31:28Z",
+    "title": "Call Me by Your Name",
+    "year": 2018,
+    "watched_at": "2020-12-29T21:31:28Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 728,
+      "imdb": "tt0097165"
+    },
+    "uuid": "484ed7c2-b6cd-48e8-a65b-1fb8d8ad8792",
+    "created_at": "2019-09-03T06:05:13Z",
+    "title": "Dead Poets Society",
+    "year": 1989,
+    "watched_at": "2019-09-03T06:05:14Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 158110,
+      "imdb": "tt4273800"
+    },
+    "uuid": "483ad46c-b6ff-4e37-a10f-d51e4bf12319",
+    "created_at": "2022-11-12T21:28:52Z",
+    "title": "The Good Nurse",
+    "year": 2022,
+    "watched_at": "2022-11-12T21:28:52Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 792,
+      "imdb": "tt2179136"
+    },
+    "uuid": "48327a5f-b266-4247-a10a-dd1f5e722b39",
+    "created_at": "2023-12-29T18:57:09Z",
+    "title": "American Sniper",
+    "year": 2015,
+    "watched_at": "2023-12-29T18:57:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 59,
+      "imdb": "tt2395427"
+    },
+    "uuid": "480032ef-e2f2-4d4a-804b-edb08e08ff79",
+    "created_at": "2019-09-03T06:04:41Z",
+    "title": "Avengers: Age of Ultron",
+    "year": 2015,
+    "watched_at": "2019-09-03T06:04:42Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131281,
+      "imdb": "tt6723592"
+    },
+    "uuid": "4790b6de-47d3-4a56-bdd6-2ca2ec610386",
+    "created_at": "2020-09-09T20:06:54Z",
+    "title": "Tenet",
+    "year": 2020,
+    "watched_at": "2020-09-09T20:06:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 338363,
+      "imdb": "tt15325794"
+    },
+    "uuid": "4729ac63-1a1f-4d2c-a741-9ff46b16a382",
+    "created_at": "2023-01-02T21:15:35Z",
+    "title": "Fall",
+    "year": 2022,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 31321,
+      "imdb": "tt5247042"
+    },
+    "uuid": "46a49fec-e97f-4f46-835b-e211b9f5b65d",
+    "created_at": "2022-12-10T11:36:57Z",
+    "title": "Darkweb",
+    "year": 2016,
+    "watched_at": "2022-12-10T11:36:57Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 700,
+      "imdb": "tt0816711"
+    },
+    "uuid": "44f6dc76-5643-4d94-83ae-5368d8f64c32",
+    "created_at": "2021-04-25T20:31:44Z",
+    "title": "World War Z",
+    "year": 2013,
+    "watched_at": "2021-04-25T20:31:44Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 829,
+      "imdb": "tt0073195"
+    },
+    "uuid": "445b0250-ca75-45fe-9618-b446d1220103",
+    "created_at": "2025-09-01T20:47:16Z",
+    "title": "Jaws",
+    "year": 1975,
+    "watched_at": "2025-09-01T20:47:16Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 146527,
+      "imdb": "tt10962368"
+    },
+    "uuid": "44197889-197c-4267-994c-5b1805fc8288",
+    "created_at": "2021-05-21T20:56:38Z",
+    "title": "Things Heard & Seen",
+    "year": 2021,
+    "watched_at": "2021-05-21T20:56:38Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 141495,
+      "imdb": "tt11286314"
+    },
+    "uuid": "43a49c9f-9bc5-4e18-98b5-a93b8dca2d3f",
+    "created_at": "2022-01-03T22:20:10Z",
+    "title": "Don't Look Up",
+    "year": 2021,
+    "watched_at": "2022-01-03T22:20:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3289,
+      "imdb": "tt7608028"
+    },
+    "uuid": "438759b7-eb04-453e-8bb3-d94b860a0384",
+    "created_at": "2023-06-19T20:02:13Z",
+    "title": "The Open House",
+    "year": 2018,
+    "watched_at": "2023-06-19T20:02:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1933,
+      "imdb": "tt0109831"
+    },
+    "uuid": "42a15d7d-5510-47a9-a93f-1a6833cf004e",
+    "created_at": "2022-02-23T22:40:10Z",
+    "title": "Four Weddings and a Funeral",
+    "year": 1994,
+    "watched_at": "2022-02-23T22:40:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2,
+      "imdb": "tt1727824"
+    },
+    "uuid": "4273cc26-528e-463e-814e-534e3e50eceb",
+    "created_at": "2021-01-01T22:47:04Z",
+    "title": "Bohemian Rhapsody",
+    "year": 2018,
+    "watched_at": "2021-01-01T22:47:04Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 132908,
+      "imdb": "tt9214832"
+    },
+    "uuid": "4214d798-5604-4984-adac-70a7dcafe935",
+    "created_at": "2021-04-11T06:04:07Z",
+    "title": "Emma.",
+    "year": 2020,
+    "watched_at": "2021-04-11T06:04:07Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 357795,
+      "imdb": "tt32376165"
+    },
+    "uuid": "420732e1-a14c-40eb-b8ca-d7a77d096869",
+    "created_at": "2025-11-14T22:32:21Z",
+    "title": "A House of Dynamite",
+    "year": 2025,
+    "watched_at": "2025-11-14T22:32:24Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 358476,
+      "imdb": "tt16431404"
+    },
+    "uuid": "4092db24-8f8e-4c26-97c8-f4f7b34338fb",
+    "created_at": "2026-04-24T20:09:10Z",
+    "title": "Apex",
+    "year": 2026,
+    "watched_at": "2026-04-24T20:09:11Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 384,
+      "imdb": "tt1229238"
+    },
+    "uuid": "3f3601ce-80dc-4569-80b3-16027a061c4b",
+    "created_at": "2021-12-14T18:06:28Z",
+    "title": "Mission: Impossible – Ghost Protocol",
+    "year": 2012,
+    "watched_at": "2021-12-14T18:06:28Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 123,
+      "imdb": "tt0800369"
+    },
+    "uuid": "3e9efaa3-41f7-4380-9ed5-9541537b63aa",
+    "created_at": "2019-09-03T06:09:21Z",
+    "title": "Thor",
+    "year": 2011,
+    "watched_at": "2019-09-03T06:09:22Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2928,
+      "imdb": "tt0108071"
+    },
+    "uuid": "3de101ad-36b5-475b-b686-4e8eb6c75664",
+    "created_at": "2021-01-07T21:20:57Z",
+    "title": "The Secret Garden",
+    "year": 1993,
+    "watched_at": "2021-01-07T21:20:57Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 157282,
+      "imdb": "tt12361974"
+    },
+    "uuid": "3d9af89d-c6bf-4f3a-b91e-e5587302b6ef",
+    "created_at": "2021-04-05T15:04:16Z",
+    "title": "Zack Snyder's Justice League",
+    "year": 2021,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 158,
+      "imdb": "tt2975590"
+    },
+    "uuid": "3d914e7d-1718-45c3-ad42-689573bc0d38",
+    "created_at": "2019-09-03T06:04:17Z",
+    "title": "Batman v Superman: Dawn of Justice",
+    "year": 2016,
+    "watched_at": "2019-09-03T06:04:18Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 7620,
+      "imdb": "tt0083284"
+    },
+    "uuid": "3c85ce0b-fc12-4b50-95da-0e9b113688f7",
+    "created_at": "2023-01-02T21:15:55Z",
+    "title": "Victory",
+    "year": 1981,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1116,
+      "imdb": "tt4731136"
+    },
+    "uuid": "3b75f277-cfe2-4b5d-b98b-5d27790c9390",
+    "created_at": "2026-06-27T21:32:21Z",
+    "title": "A Cure for Wellness",
+    "year": 2017,
+    "watched_at": "2026-06-27T21:32:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2364,
+      "imdb": "tt0278504"
+    },
+    "uuid": "39f52e17-d17b-49db-8aff-7c41ee7c6909",
+    "created_at": "2023-08-23T05:31:10Z",
+    "title": "Insomnia",
+    "year": 2002,
+    "watched_at": "2023-08-23T05:31:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 107,
+      "imdb": "tt0120737"
+    },
+    "uuid": "398a37af-09b6-4abb-8901-6279ece8e66e",
+    "created_at": "2019-09-03T06:07:02Z",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 2001,
+    "watched_at": "2019-09-03T06:07:02Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 22,
+      "imdb": "tt4912910"
+    },
+    "uuid": "36fe4361-a182-4992-a439-5bfa03124ddc",
+    "created_at": "2021-12-14T18:06:35Z",
+    "title": "Mission: Impossible – Fallout",
+    "year": 2018,
+    "watched_at": "2021-12-14T18:06:35Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131147,
+      "imdb": "tt9032400"
+    },
+    "uuid": "367e1269-4e8e-4e79-80a0-5246091803cf",
+    "created_at": "2021-11-14T20:20:30Z",
+    "title": "Eternals",
+    "year": 2021,
+    "watched_at": "2021-11-14T20:20:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 16937,
+      "imdb": "tt8514690"
+    },
+    "uuid": "361d1aa0-181a-48da-a944-503e31b776a5",
+    "created_at": "2020-12-30T21:28:54Z",
+    "title": "Dreamfools",
+    "year": 2018,
+    "watched_at": "2020-12-30T21:29:49Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 256,
+      "imdb": "tt0266543"
+    },
+    "uuid": "35d392d8-8616-4be4-a2cd-4122781a4090",
+    "created_at": "2019-09-03T06:10:36Z",
+    "title": "Finding Nemo",
+    "year": 2003,
+    "watched_at": "2019-09-03T06:10:37Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 965,
+      "imdb": "tt1843866"
+    },
+    "uuid": "3577ca1c-ee06-4e71-b380-5b98697c50cb",
+    "created_at": "2019-09-03T06:05:46Z",
+    "title": "Captain America: The Winter Soldier",
+    "year": 2014,
+    "watched_at": "2019-09-03T06:05:46Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131498,
+      "imdb": "tt9872556"
+    },
+    "uuid": "34b24437-870f-4873-ba08-4e6b0b02bee5",
+    "created_at": "2021-04-04T18:45:21Z",
+    "title": "Ordinary Happiness",
+    "year": 2019,
+    "watched_at": "2021-04-04T18:45:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 516,
+      "imdb": "tt0910970"
+    },
+    "uuid": "33be00a7-655d-4e9f-9b35-393873a7001b",
+    "created_at": "2019-09-03T06:06:33Z",
+    "title": "WALL·E",
+    "year": 2008,
+    "watched_at": "2019-09-03T06:06:33Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 8996,
+      "imdb": "tt0449487"
+    },
+    "uuid": "33632316-a796-49cd-a000-85a8dc75f60d",
+    "created_at": "2022-02-08T21:42:00Z",
+    "title": "Passengers",
+    "year": 2008,
+    "watched_at": "2022-02-08T21:42:00Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 461,
+      "imdb": "tt4857264"
+    },
+    "uuid": "32c1c675-363a-4541-87cd-0b9abb11ae01",
+    "created_at": "2022-01-26T19:36:05Z",
+    "title": "The Invisible Guest",
+    "year": 2017,
+    "watched_at": "2022-01-26T19:45:25Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 44,
+      "imdb": "tt1571234"
+    },
+    "uuid": "32038c69-7d8b-4099-b2fe-ba6e7e118500",
+    "created_at": "2022-01-27T22:03:36Z",
+    "title": "Mortal Engines",
+    "year": 2018,
+    "watched_at": "2022-01-27T22:03:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 11592,
+      "imdb": "tt5598110"
+    },
+    "uuid": "31cb515e-2147-4e44-bdcb-8ad91268f012",
+    "created_at": "2022-02-20T21:06:01Z",
+    "title": "In the Shadow of Iris",
+    "year": 2016,
+    "watched_at": "2022-02-20T21:06:01Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 807,
+      "imdb": "tt0416449"
+    },
+    "uuid": "2f68b166-032a-4520-8413-2cddd87812f5",
+    "created_at": "2019-09-03T06:06:56Z",
+    "title": "300",
+    "year": 2007,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 350412,
+      "imdb": "tt1312221"
+    },
+    "uuid": "2e98b178-85dd-49db-b8b4-e4b4437dcb83",
+    "created_at": "2025-11-14T22:21:52Z",
+    "title": "Frankenstein",
+    "year": 2025,
+    "watched_at": "2025-11-14T22:21:52Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 355631,
+      "imdb": "tt27534307"
+    },
+    "uuid": "2e90c8b2-a539-470e-bab4-29bf227ffaeb",
+    "created_at": "2026-03-16T21:13:38Z",
+    "title": "Speak No Evil",
+    "year": 2024,
+    "watched_at": "2026-03-16T21:13:38Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1182,
+      "imdb": "tt0144084"
+    },
+    "uuid": "2d34449a-15c6-4f88-909c-f0b0f4399d03",
+    "created_at": "2022-12-02T21:45:51Z",
+    "title": "American Psycho",
+    "year": 2000,
+    "watched_at": "2022-12-02T21:45:51Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 369472,
+      "imdb": "tt33382323"
+    },
+    "uuid": "2cd222dc-d998-4ea5-9037-f47fe5728500",
+    "created_at": "2026-03-19T21:11:50Z",
+    "title": "The Holy Boy",
+    "year": 2026,
+    "watched_at": "2026-03-19T21:11:50Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 142,
+      "imdb": "tt1201607"
+    },
+    "uuid": "2c41a188-b550-44be-bb6b-c0d1c9604744",
+    "created_at": "2019-09-03T06:06:21Z",
+    "title": "Harry Potter and the Deathly Hallows: Part 2",
+    "year": 2011,
+    "watched_at": "2019-09-03T06:06:22Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1865,
+      "imdb": "tt2209764"
+    },
+    "uuid": "2b1580d2-3244-4186-8458-db37edff0f9a",
+    "created_at": "2022-07-13T18:52:03Z",
+    "title": "Transcendence",
+    "year": 2014,
+    "watched_at": "2022-07-13T18:52:03Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 330689,
+      "imdb": "tt7475578"
+    },
+    "uuid": "2a91801e-7a29-4435-b8f7-9c8857a1a209",
+    "created_at": "2026-04-21T20:59:32Z",
+    "title": "Munich: The Edge of War",
+    "year": 2022,
+    "watched_at": "2026-04-21T20:59:33Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1582,
+      "imdb": "tt0119468"
+    },
+    "uuid": "2a2ce813-8ad0-4d52-b7a1-f3f34c511ad1",
+    "created_at": "2024-10-26T21:07:19Z",
+    "title": "Kiss the Girls",
+    "year": 1997,
+    "watched_at": "2024-10-26T21:07:19Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 689,
+      "imdb": "tt0414387"
+    },
+    "uuid": "2a266221-5fd8-469d-9bd9-e980f4028abc",
+    "created_at": "2019-09-03T06:04:12Z",
+    "title": "Pride & Prejudice",
+    "year": 2005,
+    "watched_at": "2019-09-03T06:04:12Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2523,
+      "imdb": "tt0142688"
+    },
+    "uuid": "2a111140-4334-4a95-a243-9ed4b47d9948",
+    "created_at": "2022-12-02T21:44:06Z",
+    "title": "The Ninth Gate",
+    "year": 1999,
+    "watched_at": "2022-12-02T21:44:07Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 332290,
+      "imdb": "tt11847972"
+    },
+    "uuid": "29431c7b-70eb-4fc8-a37d-3a510b299152",
+    "created_at": "2022-01-19T21:56:08Z",
+    "title": "Breaking Up in Rome",
+    "year": 2022,
+    "watched_at": "2022-01-19T21:56:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 322722,
+      "imdb": "tt2939804"
+    },
+    "uuid": "293993f0-ef3d-4e6e-a87e-4b7decfebf7f",
+    "created_at": "2022-09-25T19:46:30Z",
+    "title": "A Faithful Husband",
+    "year": 2014,
+    "watched_at": "2022-09-25T19:46:30Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 8952,
+      "imdb": "tt7063210"
+    },
+    "uuid": "2803e54f-937d-453a-a907-37a4aeb4dce7",
+    "created_at": "2020-06-04T18:52:09Z",
+    "title": "The Place",
+    "year": 2017,
+    "watched_at": "2020-06-04T18:52:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2115,
+      "imdb": "tt1601913"
+    },
+    "uuid": "264f950a-642a-4ff4-ba9e-5bc8ec823b59",
+    "created_at": "2021-07-20T22:19:18Z",
+    "title": "The Grey",
+    "year": 2011,
+    "watched_at": "2021-07-20T22:19:18Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 340843,
+      "imdb": "tt13654226"
+    },
+    "uuid": "25c0204d-1120-4831-b28a-edff67efb555",
+    "created_at": "2026-04-23T20:17:13Z",
+    "title": "The Gorge",
+    "year": 2025,
+    "watched_at": "2026-04-23T20:17:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 590,
+      "imdb": "tt0407887"
+    },
+    "uuid": "257cff0f-0aa8-4541-85c4-0e45c98eed7b",
+    "created_at": "2024-01-09T06:47:07Z",
+    "title": "The Departed",
+    "year": 2006,
+    "watched_at": "2024-01-09T06:47:07Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 336482,
+      "imdb": "tt1136617"
+    },
+    "uuid": "24f9ecc7-40e5-401f-b3c4-dd85e0ad0f0e",
+    "created_at": "2026-06-21T20:28:27Z",
+    "title": "The Killer",
+    "year": 2023,
+    "watched_at": "2026-06-21T20:28:27Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 358148,
+      "imdb": "tt32159989"
+    },
+    "uuid": "243734de-1246-4138-8a8d-79a7c9a5b366",
+    "created_at": "2025-12-15T21:59:05Z",
+    "title": "After the Hunt",
+    "year": 2025,
+    "watched_at": "2025-12-15T21:59:05Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 187998,
+      "imdb": "tt9110904"
+    },
+    "uuid": "2420eac8-9610-4840-b785-0bf82268143c",
+    "created_at": "2022-02-16T21:48:00Z",
+    "title": "Three Floors",
+    "year": 2021,
+    "watched_at": "2022-02-16T21:48:00Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 905,
+      "imdb": "tt0092099"
+    },
+    "uuid": "23a876c6-b148-4470-ac48-db6b16a06f7a",
+    "created_at": "2022-05-30T21:24:32Z",
+    "title": "Top Gun",
+    "year": 1986,
+    "watched_at": "2022-05-30T21:24:32Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 133959,
+      "imdb": "tt8594376"
+    },
+    "uuid": "23a286fb-5657-409f-966e-aacf9fae7564",
+    "created_at": "2020-12-12T22:08:10Z",
+    "title": "Into the Labyrinth",
+    "year": 2019,
+    "watched_at": "2020-12-12T22:08:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3104,
+      "imdb": "tt0274497"
+    },
+    "uuid": "20189032-7ba0-4d95-bcc7-56ff0019ed24",
+    "created_at": "2022-06-08T18:13:23Z",
+    "title": "His Secret Life",
+    "year": 2001,
+    "watched_at": "2022-06-08T18:13:29Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 130,
+      "imdb": "tt2267998"
+    },
+    "uuid": "1fdaf5e4-9452-45ea-9b9f-4dfc2f5ed3a8",
+    "created_at": "2019-09-03T06:10:28Z",
+    "title": "Gone Girl",
+    "year": 2014,
+    "watched_at": "2019-09-03T06:10:29Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 352977,
+      "imdb": "tt27395353"
+    },
+    "uuid": "1f17b940-40a7-4ea9-8a40-9f55ec9bc8c7",
+    "created_at": "2024-06-25T21:40:30Z",
+    "title": "50 km/h",
+    "year": 2024,
+    "watched_at": "2024-06-25T21:40:30Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131527,
+      "imdb": "tt9203694"
+    },
+    "uuid": "1e898052-73ce-4ae3-af49-6bb316b9f74c",
+    "created_at": "2021-06-18T20:49:11Z",
+    "title": "Stowaway",
+    "year": 2021,
+    "watched_at": "2021-06-18T20:49:11Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 370627,
+      "imdb": "tt36741457"
+    },
+    "uuid": "1e0e61eb-80bc-4b23-8f97-b8e05a21b36a",
+    "created_at": "2026-02-04T20:02:03Z",
+    "title": "The Big Fake",
+    "year": 2026,
+    "watched_at": "2026-02-04T20:02:04Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 356784,
+      "imdb": "tt7130300"
+    },
+    "uuid": "1da58856-435b-429d-a925-3b73656d3250",
+    "created_at": "2025-10-11T20:11:22Z",
+    "title": "The Woman in Cabin 10",
+    "year": 2025,
+    "watched_at": "2025-10-11T20:11:22Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 188,
+      "imdb": "tt1300854"
+    },
+    "uuid": "1d3702a3-2863-408a-bfd8-5c8d15b5e623",
+    "created_at": "2021-04-05T15:08:25Z",
+    "title": "Iron Man 3",
+    "year": 2013,
+    "watched_at": "2022-02-16T06:25:06Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 389,
+      "imdb": "tt0993846"
+    },
+    "uuid": "1cc095b8-64b8-4709-9122-512d5e65ecb6",
+    "created_at": "2019-09-03T06:04:32Z",
+    "title": "The Wolf of Wall Street",
+    "year": 2014,
+    "watched_at": "2019-09-03T06:04:33Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 20220,
+      "imdb": "tt3281548"
+    },
+    "uuid": "1c7e689e-a973-4661-9c67-4b1752443bb6",
+    "created_at": "2020-12-27T21:01:37Z",
+    "title": "Little Women",
+    "year": 2019,
+    "watched_at": "2020-12-27T21:01:37Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2965,
+      "imdb": "tt0463998"
+    },
+    "uuid": "1c42b9d3-dcc4-4cc5-9428-77c7072d3921",
+    "created_at": "2025-04-14T20:41:33Z",
+    "title": "Freedom Writers",
+    "year": 2007,
+    "watched_at": "2025-04-14T20:41:34Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 336228,
+      "imdb": "tt15715020"
+    },
+    "uuid": "1c40bcfb-c6cc-462e-860e-4feade62b33b",
+    "created_at": "2026-05-21T21:00:40Z",
+    "title": "3/19",
+    "year": 2021,
+    "watched_at": "2026-05-21T21:00:38Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 113,
+      "imdb": "tt1375666"
+    },
+    "uuid": "1be8d227-5d39-4561-8dfa-7520b8c51d0f",
+    "created_at": "2019-09-03T06:03:36Z",
+    "title": "Inception",
+    "year": 2010,
+    "watched_at": "2019-09-03T06:03:36Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 133337,
+      "imdb": "tt2180339"
+    },
+    "uuid": "1a586675-935d-4aed-bda1-b97920d72afa",
+    "created_at": "2022-07-07T20:19:09Z",
+    "title": "Deep Water",
+    "year": 2022,
+    "watched_at": "2022-07-07T20:19:09Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 108,
+      "imdb": "tt0371746"
+    },
+    "uuid": "19715abe-817e-424f-8caa-2d6f13165f2d",
+    "created_at": "2019-09-03T06:04:27Z",
+    "title": "Iron Man",
+    "year": 2008,
+    "watched_at": "2019-09-03T06:04:27Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 5267,
+      "imdb": "tt1371150"
+    },
+    "uuid": "19630944-c273-4aac-be68-c22329980ebf",
+    "created_at": "2026-01-22T21:26:25Z",
+    "title": "This Is Where I Leave You",
+    "year": 2014,
+    "watched_at": "2026-01-22T21:26:25Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 350,
+      "imdb": "tt5690360"
+    },
+    "uuid": "18c6a61b-d93a-443c-b6b4-109f32cfa775",
+    "created_at": "2022-08-19T21:33:53Z",
+    "title": "Slender Man",
+    "year": 2018,
+    "watched_at": "2022-08-19T21:33:53Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 5477,
+      "imdb": "tt0106246"
+    },
+    "uuid": "18c503b8-2579-44b0-947b-bd138cff2c93",
+    "created_at": "2020-04-13T06:48:05Z",
+    "title": "Alive",
+    "year": 1993,
+    "watched_at": "2020-04-13T06:48:15Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 32426,
+      "imdb": "tt9419884"
+    },
+    "uuid": "1854e2b9-2c28-4999-aedc-4cb212c700f7",
+    "created_at": "2022-06-08T18:18:02Z",
+    "title": "Doctor Strange in the Multiverse of Madness",
+    "year": 2022,
+    "watched_at": "2022-06-08T18:18:02Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 287476,
+      "imdb": "tt13982526"
+    },
+    "uuid": "1812e4f0-18b6-4143-8306-fb39b330b7ac",
+    "created_at": "2021-11-04T21:23:36Z",
+    "title": "At the Edge of Evil",
+    "year": 2021,
+    "watched_at": "2021-11-04T21:23:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1380,
+      "imdb": "tt4761916"
+    },
+    "uuid": "178f2d24-5ddc-482c-a841-22b0044a6edd",
+    "created_at": "2022-12-10T11:37:10Z",
+    "title": "Unfriended: Dark Web",
+    "year": 2018,
+    "watched_at": "2022-12-10T11:37:10Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1475,
+      "imdb": "tt0405159"
+    },
+    "uuid": "163b3932-281f-4bbe-bf85-66a0f9abcc1e",
+    "created_at": "2023-10-11T21:36:14Z",
+    "title": "Million Dollar Baby",
+    "year": 2005,
+    "watched_at": "2023-10-11T21:36:20Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 534,
+      "imdb": "tt0382932"
+    },
+    "uuid": "1533de7a-b620-4ce2-a72e-5f15ef96478d",
+    "created_at": "2019-09-03T06:07:34Z",
+    "title": "Ratatouille",
+    "year": 2007,
+    "watched_at": "2019-09-03T06:07:35Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 8794,
+      "imdb": "tt8772262"
+    },
+    "uuid": "14f4c921-7cef-430c-b252-482fa1a09a87",
+    "created_at": "2022-08-18T20:01:06Z",
+    "title": "Midsommar",
+    "year": 2019,
+    "watched_at": "2022-08-18T20:01:06Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 66,
+      "imdb": "tt0241527"
+    },
+    "uuid": "14f33354-bc8d-498c-88c7-942e6d0bddee",
+    "created_at": "2019-09-03T06:04:21Z",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "year": 2001,
+    "watched_at": "2019-09-03T06:04:22Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 5164,
+      "imdb": "tt0337741"
+    },
+    "uuid": "14da8249-5df6-45f0-8a99-2c28e515e025",
+    "created_at": "2025-04-10T21:18:53Z",
+    "title": "Something's Gotta Give",
+    "year": 2003,
+    "watched_at": "2025-04-10T21:18:53Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 145536,
+      "imdb": "tt10016180"
+    },
+    "uuid": "131b22e2-eb48-4648-b450-e68256df18d3",
+    "created_at": "2022-08-28T21:40:45Z",
+    "title": "The Little Things",
+    "year": 2021,
+    "watched_at": "2022-08-28T21:40:45Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1250,
+      "imdb": "tt0092890"
+    },
+    "uuid": "1310f817-82c4-46e1-8ba7-bf6d07164e81",
+    "created_at": "2019-09-03T06:05:37Z",
+    "title": "Dirty Dancing",
+    "year": 1987,
+    "watched_at": "2019-09-03T06:05:37Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 31,
+      "imdb": "tt0848228"
+    },
+    "uuid": "1242f357-989f-47ed-8a3d-bb1c8b6aaf33",
+    "created_at": "2019-09-03T06:04:04Z",
+    "title": "The Avengers",
+    "year": 2012,
+    "watched_at": "2019-09-03T06:04:05Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 566,
+      "imdb": "tt0099487"
+    },
+    "uuid": "11b1b419-92c5-4064-af45-4f45b7cd09f5",
+    "created_at": "2019-09-03T06:09:35Z",
+    "title": "Edward Scissorhands",
+    "year": 1991,
+    "watched_at": "2019-09-03T06:09:36Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 10,
+      "imdb": "tt4154664"
+    },
+    "uuid": "11992369-0507-45bb-8d41-2ad22e2604b7",
+    "created_at": "2019-09-03T06:01:46Z",
+    "title": "Captain Marvel",
+    "year": 2019,
+    "watched_at": "2020-04-13T06:45:34Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131590,
+      "imdb": "tt10838180"
+    },
+    "uuid": "1186a4ed-0cca-4d7a-9ede-f0beef202edb",
+    "created_at": "2022-01-14T20:06:20Z",
+    "title": "The Matrix Resurrections",
+    "year": 2021,
+    "watched_at": "2022-01-14T20:06:20Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1707,
+      "imdb": "tt6952960"
+    },
+    "uuid": "11462f58-cf83-4178-a6f1-f6f810f80c94",
+    "created_at": "2020-11-08T19:50:16Z",
+    "title": "The Kindergarten Teacher",
+    "year": 2018,
+    "watched_at": "2020-11-08T19:50:16Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 351292,
+      "imdb": "tt13397574"
+    },
+    "uuid": "0fdea9e3-fc8d-4212-9326-0f7b6eb35550",
+    "created_at": "2025-12-13T22:19:08Z",
+    "title": "Mothers' Instinct",
+    "year": 2024,
+    "watched_at": "2025-12-13T22:19:08Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 3649,
+      "imdb": "tt4061010"
+    },
+    "uuid": "0f783632-fa8b-4582-a55d-877802356d54",
+    "created_at": "2025-03-20T21:23:55Z",
+    "title": "Blackway",
+    "year": 2015,
+    "watched_at": "2025-03-20T21:23:55Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 109021,
+      "imdb": "tt9239814"
+    },
+    "uuid": "0f2aa179-56ee-4bec-95e7-88842f318031",
+    "created_at": "2023-07-16T21:38:26Z",
+    "title": "Guests in the Villa",
+    "year": 2019,
+    "watched_at": "2023-07-16T21:38:28Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1398,
+      "imdb": "tt0407304"
+    },
+    "uuid": "0eb326b9-040b-450b-b83f-697812092f8c",
+    "created_at": "2021-12-14T18:05:30Z",
+    "title": "War of the Worlds",
+    "year": 2005,
+    "watched_at": "2021-12-14T18:05:30Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 181,
+      "imdb": "tt0417741"
+    },
+    "uuid": "0c7c7acc-d9c2-41b2-a855-42cf8c91a9e9",
+    "created_at": "2019-09-03T06:08:59Z",
+    "title": "Harry Potter and the Half-Blood Prince",
+    "year": 2009,
+    "watched_at": "2019-09-03T06:09:00Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1421,
+      "imdb": "tt0440963"
+    },
+    "uuid": "0c3c780f-d759-4447-9bc7-567299191c19",
+    "created_at": "2020-04-13T06:52:27Z",
+    "title": "The Bourne Ultimatum",
+    "year": 2007,
+    "watched_at": "2020-04-13T06:52:55Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 706,
+      "imdb": "tt0114746"
+    },
+    "uuid": "0bfd21bc-8fe1-4933-902f-4f77389c3e38",
+    "created_at": "2022-01-08T15:24:31Z",
+    "title": "12 Monkeys",
+    "year": 1996,
+    "watched_at": "2022-01-08T15:24:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 21233,
+      "imdb": "tt7315484"
+    },
+    "uuid": "0bd9faea-fb23-4d1d-bba2-ee5d8c6c6582",
+    "created_at": "2021-07-04T21:35:45Z",
+    "title": "The Silence",
+    "year": 2019,
+    "watched_at": "2021-07-04T21:35:45Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 2125,
+      "imdb": "tt0119643"
+    },
+    "uuid": "0ba99c67-dfe1-4701-9d9a-63c657ccf266",
+    "created_at": "2023-07-22T20:23:31Z",
+    "title": "Meet Joe Black",
+    "year": 1998,
+    "watched_at": "2023-07-22T20:23:31Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 564,
+      "imdb": "tt0367594"
+    },
+    "uuid": "0af2fefc-53d8-4ce3-abf8-4783a91d0ef5",
+    "created_at": "2019-09-03T06:05:33Z",
+    "title": "Charlie and the Chocolate Factory",
+    "year": 2005,
+    "watched_at": "2019-09-03T06:05:34Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 1968,
+      "imdb": "tt0457433"
+    },
+    "uuid": "09dd9d53-5dfb-4f11-8a17-5e92fdf3b427",
+    "created_at": "2024-11-22T22:37:54Z",
+    "title": "Perfect Stranger",
+    "year": 2007,
+    "watched_at": "2024-11-22T22:37:54Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 365786,
+      "imdb": "tt30064085"
+    },
+    "uuid": "09cc47b4-bd74-45de-b5cd-1a8d96d15b8f",
+    "created_at": "2025-08-17T18:26:13Z",
+    "title": "La vita da grandi",
+    "year": 2025,
+    "watched_at": "2025-08-17T18:26:13Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 148,
+      "imdb": "tt4154796"
+    },
+    "uuid": "08c1f0a2-581f-476c-bbd8-643a7426635f",
+    "created_at": "2019-09-03T06:01:24Z",
+    "title": "Avengers: Endgame",
+    "year": 2019,
+    "watched_at": "2019-09-03T06:01:24Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 336947,
+      "imdb": "tt14174940"
+    },
+    "uuid": "0760134e-4e7b-4e7d-8c07-2b397d3ffa0c",
+    "created_at": "2022-07-18T20:35:21Z",
+    "title": "Interceptor",
+    "year": 2022,
+    "watched_at": "2022-07-18T20:35:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 579,
+      "imdb": "tt0081505"
+    },
+    "uuid": "073a4a0b-a70f-4550-90b3-f25f746c7ad6",
+    "created_at": "2021-09-16T19:02:35Z",
+    "title": "The Shining",
+    "year": 1980,
+    "watched_at": "2021-09-16T19:02:35Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 131601,
+      "imdb": "tt1051906"
+    },
+    "uuid": "057cbbd3-1456-48dc-9992-602423789866",
+    "created_at": "2021-04-11T21:20:44Z",
+    "title": "The Invisible Man",
+    "year": 2020,
+    "watched_at": "2021-04-11T21:20:44Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 231,
+      "imdb": "tt0120338"
+    },
+    "uuid": "050ea6f8-fb27-46d3-b78b-4da4b6b76783",
+    "created_at": "2019-09-03T06:01:21Z",
+    "title": "Titanic",
+    "year": 1998,
+    "watched_at": "2019-09-03T06:01:21Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 11564,
+      "imdb": "tt1838603"
+    },
+    "uuid": "04ea2ea6-86d8-4e1a-bb9a-4a0b0039f6a9",
+    "created_at": "2026-03-02T21:18:05Z",
+    "title": "Mr. Morgan's Last Love",
+    "year": 2013,
+    "watched_at": "2026-03-02T21:18:05Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 5488,
+      "imdb": "tt2066051"
+    },
+    "uuid": "0491d71e-d719-4be7-9a87-9b4968e55c84",
+    "created_at": "2019-09-03T06:06:02Z",
+    "title": "Rocketman",
+    "year": 2019,
+    "watched_at": null,
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 245490,
+      "imdb": "tt15413054"
+    },
+    "uuid": "0441f33a-b8d5-41db-8583-a6b91eacae61",
+    "created_at": "2022-07-29T21:10:15Z",
+    "title": "Cloudy Mountain",
+    "year": 2021,
+    "watched_at": "2022-07-29T21:10:16Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 74,
+      "imdb": "tt0167260"
+    },
+    "uuid": "041dd5fb-baa2-4a7d-a017-d004b605f700",
+    "created_at": "2019-09-03T06:07:04Z",
+    "title": "The Lord of the Rings: The Return of the King",
+    "year": 2003,
+    "watched_at": "2019-09-03T06:07:04Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 182181,
+      "imdb": "tt14817272"
+    },
+    "uuid": "03850ef0-3300-42bb-8fc0-7e9b96ffb536",
+    "created_at": "2022-09-03T20:38:23Z",
+    "title": "The Weekend Away",
+    "year": 2022,
+    "watched_at": "2022-09-03T20:38:24Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 9098,
+      "imdb": "tt4650414"
+    },
+    "uuid": "036b53b8-d21d-473c-bc90-bae5ae23060b",
+    "created_at": "2021-09-09T20:19:05Z",
+    "title": "Summertime",
+    "year": 2016,
+    "watched_at": "2021-09-09T20:19:05Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 5448,
+      "imdb": "tt1421051"
+    },
+    "uuid": "03213f93-3d0d-491a-b3c9-c3db996b019d",
+    "created_at": "2021-09-07T21:46:12Z",
+    "title": "Somewhere",
+    "year": 2011,
+    "watched_at": "2021-09-07T21:46:12Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 4726,
+      "imdb": "tt0110367"
+    },
+    "uuid": "02fedb76-5fb3-406c-b52e-ffb45fb54eb4",
+    "created_at": "2020-12-27T21:02:10Z",
+    "title": "Little Women",
+    "year": 1995,
+    "watched_at": "2020-12-27T21:02:10Z",
+    "is_watched": true,
+    "is_favorite": true,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 287406,
+      "imdb": "tt12383460"
+    },
+    "uuid": "01de8e05-f801-4ba6-b92a-b51e70db90f7",
+    "created_at": "2022-03-04T20:47:39Z",
+    "title": "Hypnotic",
+    "year": 2021,
+    "watched_at": "2022-03-04T20:47:39Z",
+    "is_watched": true,
+    "is_favorite": false,
+    "rewatch_count": 0
+  },
+  {
+    "id": {
+      "tvdb": 8397,
+      "imdb": "tt6045466"
+    },
+    "uuid": "1f11eca9-903d-43b6-96cb-6c2c5f10a05e",
+    "created_at": "2026-01-29T20:48:00Z",
+    "title": "Madame",
+    "year": 2017,
+    "watched_at": "2026-01-29T20:48:00Z",
+    "is_watched": false,
+    "is_favorite": false,
+    "rewatch_count": 0
+  }
+]

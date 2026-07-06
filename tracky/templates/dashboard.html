@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% from "macros.html" import media_card, metric, bar_chart %}
+
+{% block title %}Dashboard &middot; Tracky{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Personal library</p>
+      <h1>Dashboard</h1>
+    </div>
+    <a class="button primary" href="{{ url_for('main.search') }}">Add watched item</a>
+  </header>
+
+  <section class="metric-grid">
+    {{ metric('Movies watched', stats.total_movies) }}
+    {{ metric('TV shows watched', stats.total_shows) }}
+    {{ metric('Episodes watched', stats.episodes_watched) }}
+    {{ metric('Favorites', stats.favorites_count) }}
+  </section>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <h2>Recent timeline</h2>
+      <a href="{{ url_for('main.timeline') }}">View all</a>
+    </div>
+    {% if recent_items %}
+      <div class="media-grid compact">
+        {% for item in recent_items %}
+          {{ media_card(item) }}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-text">No watched items yet.</p>
+    {% endif %}
+  </section>
+
+  <div class="two-column">
+    {{ bar_chart('Watching activity by year', stats.activity_by_year) }}
+    {{ bar_chart('Most watched genres', stats.most_watched_genres) }}
+  </div>
+
+  <section class="content-section">
+    <div class="section-heading">
+      <h2>Favorites</h2>
+      <a href="{{ url_for('main.favorites') }}">View all</a>
+    </div>
+    {% if favorites %}
+      <div class="media-grid compact">
+        {% for item in favorites %}
+          {{ media_card(item) }}
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="empty-text">No favorites yet.</p>
+    {% endif %}
+  </section>
+{% endblock %}

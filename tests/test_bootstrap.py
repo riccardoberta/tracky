@@ -1,0 +1,98 @@
+from __future__ import annotations
+
+import json
+
+from tracky.extensions import db
+from tracky.models import Episode, MediaItem, MediaList, WatchEvent
+from tracky.services.bootstrap import bootstrap_from_tvtime
+
+
+def test_tvtime_bootstrap_is_idempotent(app, tmp_path):
+    export_dir = tmp_path / "exports"
+    export_dir.mkdir()
+    (export_dir / "tvtime-movies.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": {"tvdb": 10, "imdb": "tt001"},
+                    "uuid": "movie-uuid",
+                    "created_at": "2024-01-02T20:00:00Z",
+                    "title": "Original Movie",
+                    "year": 2024,
+                    "watched_at": "2024-01-02T20:00:00Z",
+                    "is_watched": True,
+                    "is_favorite": True,
+                    "rewatch_count": 0,
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (export_dir / "tvtime-series.json").write_text(
+        json.dumps(
+            [
+                {
+                    "uuid": "show-uuid",
+                    "id": {"tvdb": 20, "imdb": None},
+                    "created_at": "2023-01-01T10:00:00Z",
+                    "title": "A Show",
+                    "is_favorite": False,
+                    "seasons": [
+                        {
+                            "number": 1,
+                            "is_specials": False,
+                            "episodes": [
+                                {
+                                    "id": {"tvdb": 201, "imdb": None},
+                                    "number": 1,
+                                    "name": "Pilot",
+                                    "special": False,
+                                    "is_watched": True,
+                                    "watched_at": "2023-03-04 21:30:00",
+                                    "rewatch_count": 0,
+                                    "watched_count": 1,
+                                }
+                            ],
+                        }
+                    ],
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (export_dir / "tvtime-lists.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "list-1",
+                    "name": "Watchlist",
+                    "description": "",
+                    "is_public": False,
+                    "created_at": "2025-01-01T00:00:00Z",
+                    "items": [{"type": "movie", "uuid": "movie-uuid", "name": "Original Movie", "custom_order": 0}],
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    with app.app_context():
+        first = bootstrap_from_tvtime(str(export_dir))
+        second = bootstrap_from_tvtime(str(export_dir))
+
+        assert first.movies == 1
+        assert first.shows == 1
+        assert second.movies == 0
+        assert second.shows == 0
+        assert MediaItem.query.count() == 2
+        assert Episode.query.count() == 1
+        assert WatchEvent.query.count() == 2
+        assert MediaList.query.count() == 1
+
+        movie = MediaItem.query.filter_by(media_type="movie").one()
+        assert movie.favorite is True
+        assert movie.watched_date.isoformat() == "2024-01-02"
+
+        show = MediaItem.query.filter_by(media_type="tv").one()
+        assert show.watched_date.isoformat() == "2023-03-04"
+        db.session.rollback()

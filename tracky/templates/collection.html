@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% from "macros.html" import media_card, filter_bar %}
+
+{% block title %}{{ title }} &middot; Tracky{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">{{ sort_label }}</p>
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle }}</p>
+    </div>
+  </header>
+
+  {% if show_filters %}
+    {{ filter_bar(genres) }}
+  {% endif %}
+
+  {% if items %}
+    <div class="media-grid">
+      {% for item in items %}
+        {{ media_card(item) }}
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="empty-text">No items match the current view.</p>
+  {% endif %}
+{% endblock %}

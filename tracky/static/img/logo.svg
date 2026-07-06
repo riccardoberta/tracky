@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Tracky logo</title>
+  <desc id="desc">A minimal monogram combining a play marker and a tracked timeline.</desc>
+  <rect width="160" height="160" rx="36" fill="#181816"/>
+  <path d="M49 43h62c9.9 0 18 8.1 18 18v38c0 9.9-8.1 18-18 18H49c-9.9 0-18-8.1-18-18V61c0-9.9 8.1-18 18-18Z" fill="#F7F6F2"/>
+  <path d="M71 65v30l27-15-27-15Z" fill="#D9A441"/>
+  <path d="M46 127h68" stroke="#D9A441" stroke-width="10" stroke-linecap="round"/>
+  <path d="M46 127h29" stroke="#F7F6F2" stroke-width="10" stroke-linecap="round"/>
+</svg>

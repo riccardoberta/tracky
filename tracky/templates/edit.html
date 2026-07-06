@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block title %}Edit {{ item.title }} &middot; Tracky{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">{{ 'Movie' if item.media_type == 'movie' else 'TV Show' }}</p>
+      <h1>Edit {{ item.title }}</h1>
+    </div>
+    <a class="button secondary" href="{{ url_for('main.media_detail', item_id=item.id) }}">Cancel</a>
+  </header>
+
+  <form class="edit-form" method="post">
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+
+    <section>
+      <h2>Metadata</h2>
+      <div class="form-grid">
+        <label>
+          <span>Italian title</span>
+          <input name="italian_title" value="{{ item.italian_title }}" required>
+        </label>
+        <label>
+          <span>Original title</span>
+          <input name="original_title" value="{{ item.original_title or '' }}">
+        </label>
+        <label>
+          <span>{{ 'Release date' if item.media_type == 'movie' else 'First air date' }}</span>
+          <input type="date" name="release_date" value="{{ (item.release_date or item.first_air_date).isoformat() if (item.release_date or item.first_air_date) else '' }}">
+        </label>
+        <label>
+          <span>Genres</span>
+          <input name="genres" value="{{ item.genres|join_names }}">
+        </label>
+        <label>
+          <span>{{ 'Director' if item.media_type == 'movie' else 'Creator' }}</span>
+          <input name="primary_people" value="{{ item.primary_people|join_names }}">
+        </label>
+        <label>
+          <span>Main cast</span>
+          <input name="cast" value="{{ item.cast|join_names }}">
+        </label>
+        <label>
+          <span>TMDb rating</span>
+          <input type="number" name="tmdb_rating" value="{{ item.tmdb_rating if item.tmdb_rating is not none else '' }}" min="0" max="10" step="0.1">
+        </label>
+        <label>
+          <span>TMDb vote count</span>
+          <input type="number" name="tmdb_vote_count" value="{{ item.tmdb_vote_count if item.tmdb_vote_count is not none else '' }}" min="0">
+        </label>
+        <label class="full">
+          <span>Poster path or URL</span>
+          <input name="poster_path" value="{{ item.poster_path or '' }}">
+        </label>
+        <label class="full">
+          <span>Backdrop path or URL</span>
+          <input name="backdrop_path" value="{{ item.backdrop_path or '' }}">
+        </label>
+        <label class="full">
+          <span>Overview</span>
+          <textarea name="overview" rows="6">{{ item.overview or '' }}</textarea>
+        </label>
+      </div>
+    </section>
+
+    <section>
+      <h2>Personal information</h2>
+      <div class="form-grid">
+        <label>
+          <span>Watched date</span>
+          <input type="date" name="watched_date" value="{{ item.watched_date.isoformat() if item.watched_date else '' }}">
+        </label>
+        <label>
+          <span>Personal rating</span>
+          <input type="number" name="personal_rating" value="{{ item.personal_rating if item.personal_rating is not none else '' }}" min="{{ score_min }}" max="{{ score_max }}" step="0.5">
+        </label>
+        <label class="checkbox-line form-check">
+          <input type="checkbox" name="favorite" value="1" {{ 'checked' if item.favorite else '' }}>
+          <span>Favorite</span>
+        </label>
+        <label class="full">
+          <span>Notes</span>
+          <textarea name="personal_notes" rows="5">{{ item.personal_notes or '' }}</textarea>
+        </label>
+      </div>
+    </section>
+
+    <div class="form-actions">
+      <button class="button primary" type="submit">Save changes</button>
+    </div>
+  </form>
+{% endblock %}
