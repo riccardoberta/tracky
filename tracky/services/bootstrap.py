@@ -51,7 +51,9 @@ def run_bootstrap_if_needed() -> BootstrapReport:
         else:
             report.add_warning("TV Time bootstrap already completed; skipped local import.")
 
-        if Setting.get("tmdb_enrichment_completed") != "true":
+        if not current_app.config.get("TRACKY_ENRICH_ON_STARTUP", True):
+            report.add_warning("TMDb startup enrichment skipped by TRACKY_ENRICH_ON_STARTUP.")
+        elif Setting.get("tmdb_enrichment_completed") != "true":
             client = TMDbClient(
                 current_app.config.get("TMDB_API_KEY"),
                 language=current_app.config.get("TRACKY_TMDB_LANGUAGE", "it-IT"),

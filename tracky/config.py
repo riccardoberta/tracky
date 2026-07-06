@@ -26,6 +26,12 @@ def _int_env(name: str, default: int) -> int:
         return default
 
 
+def _default_database_url() -> str:
+    if _bool_env("VERCEL", False):
+        return "sqlite:////tmp/tracky.sqlite3"
+    return f"sqlite:///{BASE_DIR / 'instance' / 'tracky.sqlite3'}"
+
+
 class Config:
     load_dotenv(BASE_DIR / ".env")
 
@@ -34,16 +40,14 @@ class Config:
     APP_PASSWORD_HASH = os.getenv("APP_PASSWORD_HASH")
     TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
-    SQLALCHEMY_DATABASE_URI = os.getenv(
-        "DATABASE_URL",
-        f"sqlite:///{BASE_DIR / 'instance' / 'tracky.sqlite3'}",
-    )
+    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL") or _default_database_url()
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     PERSONAL_SCORE_MIN = _int_env("PERSONAL_SCORE_MIN", 1)
     PERSONAL_SCORE_MAX = _int_env("PERSONAL_SCORE_MAX", 10)
 
     TRACKY_AUTO_BOOTSTRAP = _bool_env("TRACKY_AUTO_BOOTSTRAP", True)
+    TRACKY_ENRICH_ON_STARTUP = _bool_env("TRACKY_ENRICH_ON_STARTUP", not _bool_env("VERCEL", False))
     TRACKY_EXPORT_DIR = os.getenv("TRACKY_EXPORT_DIR", str(BASE_DIR / "tvtime-export-2026-07-03"))
     TRACKY_TMDB_LANGUAGE = os.getenv("TRACKY_TMDB_LANGUAGE", "it-IT")
 

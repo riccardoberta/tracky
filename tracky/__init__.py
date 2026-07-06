@@ -5,7 +5,7 @@ from pathlib import Path
 from flask import Flask, abort, flash, redirect, request, session, url_for
 from werkzeug.exceptions import HTTPException
 
-from .config import Config
+from .config import BASE_DIR, Config
 from .extensions import db
 from .models import User
 from .services.bootstrap import bootstrap_from_tvtime, enrich_missing_metadata, run_bootstrap_if_needed
@@ -16,7 +16,7 @@ from .utils import ensure_csrf_token, image_url, join_names, score_range
 def create_app(config_object: type[Config] = Config) -> Flask:
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config_object)
-    Path(app.instance_path).mkdir(parents=True, exist_ok=True)
+    _prepare_sqlite_path(app)
 
     db.init_app(app)
 
@@ -111,6 +111,17 @@ def create_app(config_object: type[Config] = Config) -> Flask:
                 app.logger.warning("Bootstrap skipped: %s", exc)
 
     return app
+
+
+def _prepare_sqlite_path(app: Flask) -> None:
+    database_uri = str(app.config.get("SQLALCHEMY_DATABASE_URI", ""))
+    if database_uri == "sqlite:///:memory:" or not database_uri.startswith("sqlite:///"):
+        return
+    path_text = database_uri.removeprefix("sqlite:///").split("?", 1)[0]
+    database_path = Path(path_text)
+    if not database_path.is_absolute():
+        database_path = BASE_DIR / database_path
+    database_path.parent.mkdir(parents=True, exist_ok=True)
 
 
 def _ensure_configured_user(app: Flask) -> None:

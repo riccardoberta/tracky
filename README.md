@@ -99,6 +99,7 @@ DATABASE_URL=sqlite:///instance/tracky.sqlite3
 PERSONAL_SCORE_MIN=1
 PERSONAL_SCORE_MAX=10
 TRACKY_AUTO_BOOTSTRAP=true
+TRACKY_ENRICH_ON_STARTUP=true
 TRACKY_EXPORT_DIR=tvtime-export-2026-07-03
 TRACKY_TMDB_LANGUAGE=it-IT
 ```
@@ -156,7 +157,7 @@ The project includes:
 
 Set the same environment variables in Vercel project settings. The default Vercel Python entry point imports the Flask app from `tracky.create_app()`.
 
-Important SQLite note: Vercel serverless storage is not designed as a durable writable filesystem. This app remains SQLite-based as requested. For a personal library that changes often, the most reliable deployment is a small persistent host or a mounted persistent volume. For Vercel, bootstrap locally and deploy a populated database only if your runtime strategy preserves that file.
+Important SQLite note: Vercel serverless storage is not designed as a durable writable filesystem. When `DATABASE_URL` is not set and `VERCEL` is present, Tracky uses `sqlite:////tmp/tracky.sqlite3` so the function can start, but that file is ephemeral. For a permanent personal library on Vercel, use a SQLite-compatible remote database such as Turso/libSQL. Also keep `TRACKY_ENRICH_ON_STARTUP=false` on Vercel; TMDb search and manual imports still work, but long enrichment jobs should not run during serverless startup.
 
 ## Testing
 
