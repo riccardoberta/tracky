@@ -40,6 +40,15 @@ class BootstrapReport:
         self.warnings.append(message)
 
 
+@dataclass
+class EnrichmentReport:
+    processed: int = 0
+    enriched: int = 0
+    skipped: int = 0
+    failed: int = 0
+    remaining: int = 0
+
+
 def run_bootstrap_if_needed() -> BootstrapReport:
     report = BootstrapReport()
     if not current_app.config.get("TRACKY_AUTO_BOOTSTRAP", True):
@@ -95,14 +104,35 @@ def bootstrap_from_tvtime(export_dir: str | None = None) -> BootstrapReport:
     return report
 
 
-def enrich_missing_metadata(client: TMDbClient) -> int:
-    enriched = 0
-    items = MediaItem.query.filter(
+def missing_metadata_query():
+    return MediaItem.query.filter(
         MediaItem.media_type.in_(("movie", "tv")),
-        or_(MediaItem.tmdb_id.is_(None), MediaItem.overview.is_(None), MediaItem.poster_path.is_(None)),
-    ).order_by(MediaItem.id.asc()).all()
+        or_(
+            MediaItem.tmdb_id.is_(None),
+            MediaItem.overview.is_(None),
+            MediaItem.poster_path.is_(None),
+            MediaItem.tmdb_rating.is_(None),
+        ),
+    )
+
+
+def missing_metadata_count() -> int:
+    return missing_metadata_query().count()
+
+
+def enrich_missing_metadata(client: TMDbClient) -> int:
+    return enrich_metadata_batch(client, limit=None).enriched
+
+
+def enrich_metadata_batch(client: TMDbClient, limit: int | None = 10) -> EnrichmentReport:
+    report = EnrichmentReport()
+    query = missing_metadata_query().order_by(MediaItem.id.asc())
+    if limit is not None:
+        query = query.limit(limit)
+    items = query.all()
 
     for item in items:
+        report.processed += 1
         try:
             tmdb_id = item.tmdb_id
             if tmdb_id is None and item.imdb_id:
@@ -110,16 +140,19 @@ def enrich_missing_metadata(client: TMDbClient) -> int:
             if tmdb_id is None:
                 tmdb_id = client.best_match(item.original_title or item.italian_title, item.year, item.media_type)
             if tmdb_id is None:
+                report.skipped += 1
                 continue
             details = client.details(tmdb_id, item.media_type)
             apply_tmdb_details(item, details)
-            enriched += 1
+            report.enriched += 1
             db.session.commit()
         except TMDbError as exc:
             current_app.logger.warning("TMDb enrichment failed for %s: %s", item.title, exc)
+            report.failed += 1
             db.session.rollback()
             continue
-    return enriched
+    report.remaining = missing_metadata_count()
+    return report
 
 
 def apply_tmdb_details(item: MediaItem, details: dict[str, Any]) -> None:

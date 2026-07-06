@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "macros.html" import metric %}
+
+{% block title %}Metadata &middot; Tracky{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">TMDb enrichment</p>
+      <h1>Metadata</h1>
+      <p>Fill missing posters, backdrops, ratings, genres, directors, creators, and cast in small batches.</p>
+    </div>
+  </header>
+
+  <section class="metric-grid">
+    {{ metric('Items missing metadata', missing_count) }}
+    {{ metric('TMDb configured', 'Yes' if tmdb_configured else 'No') }}
+  </section>
+
+  <section class="content-section maintenance-panel">
+    <h2>Batch enrichment</h2>
+    {% if not tmdb_configured %}
+      <p class="notice warning">Set TMDB_API_KEY in your environment variables, then redeploy before running enrichment.</p>
+    {% elif missing_count == 0 %}
+      <p class="notice success">All library items have TMDb metadata.</p>
+    {% else %}
+      <form class="inline-form" action="{{ url_for('main.enrich_metadata') }}" method="post">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+        <label>
+          <span>Items per run</span>
+          <select name="batch_size">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+            <option value="25">25</option>
+          </select>
+        </label>
+        <button class="button primary" type="submit">Enrich next batch</button>
+      </form>
+      <p class="muted">On Vercel, repeat this action until the remaining count reaches zero. Small batches avoid serverless cold-start timeouts.</p>
+    {% endif %}
+  </section>
+{% endblock %}

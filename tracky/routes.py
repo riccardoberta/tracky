@@ -6,8 +6,8 @@ from flask import Blueprint, current_app, flash, redirect, render_template, requ
 from sqlalchemy import func, or_
 
 from .extensions import db
-from .models import Genre, MediaItem, WatchEvent
-from .services.bootstrap import apply_tmdb_details
+from .models import Genre, MediaItem, Setting, WatchEvent
+from .services.bootstrap import apply_tmdb_details, enrich_metadata_batch, missing_metadata_count
 from .services.statistics import build_statistics
 from .services.tmdb import TMDbClient, TMDbError
 from .utils import parse_date_field, safe_float, safe_int, split_names, utc_now
@@ -185,6 +185,43 @@ def toggle_favorite(item_id: int):
 @main_bp.route("/statistics")
 def statistics():
     return render_template("statistics.html", stats=build_statistics(), active_page="statistics")
+
+
+@main_bp.route("/metadata")
+def metadata():
+    client = _tmdb_client()
+    return render_template(
+        "metadata.html",
+        missing_count=missing_metadata_count(),
+        tmdb_configured=client.configured,
+        active_page="metadata",
+    )
+
+
+@main_bp.route("/metadata/enrich", methods=["POST"])
+def enrich_metadata():
+    client = _tmdb_client()
+    if not client.configured:
+        flash("TMDb enrichment requires TMDB_API_KEY.", "error")
+        return redirect(url_for("main.metadata"))
+
+    batch_size = safe_int(request.form.get("batch_size")) or 10
+    batch_size = max(1, min(batch_size, 25))
+    report = enrich_metadata_batch(client, limit=batch_size)
+    if report.remaining == 0:
+        Setting.set("tmdb_enrichment_completed", "true")
+        Setting.set("tmdb_enrichment_completed_at", utc_now().isoformat())
+        db.session.commit()
+
+    flash(
+        (
+            f"TMDb enrichment processed {report.processed} items: "
+            f"{report.enriched} enriched, {report.skipped} skipped, {report.failed} failed. "
+            f"{report.remaining} remaining."
+        ),
+        "success" if report.failed == 0 else "warning",
+    )
+    return redirect(url_for("main.metadata"))
 
 
 def _filtered_media_query():

@@ -127,7 +127,7 @@ flask --app run.py run --debug
 
 Open `http://127.0.0.1:5000`.
 
-On first execution, Tracky creates the SQLite database, imports the TV Time export, and enriches records through TMDb when the key is configured.
+On first execution, Tracky creates the SQLite database, imports the TV Time export, and enriches records through TMDb when the key is configured and `TRACKY_ENRICH_ON_STARTUP=true`.
 
 ## Bootstrap From TV Time
 
@@ -158,6 +158,8 @@ The project includes:
 Set the same environment variables in Vercel project settings. The default Vercel Python entry point imports the Flask app from `tracky.create_app()`.
 
 Important SQLite note: Vercel serverless storage is not designed as a durable writable filesystem. When `DATABASE_URL` is not set and `VERCEL` is present, Tracky uses `sqlite:////tmp/tracky.sqlite3` so the function can start, but that file is ephemeral. For a permanent personal library on Vercel, use a SQLite-compatible remote database such as Turso/libSQL. Also keep `TRACKY_ENRICH_ON_STARTUP=false` on Vercel; TMDb search and manual imports still work, but long enrichment jobs should not run during serverless startup.
+
+After the first Vercel deployment, sign in and open `Metadata`. Use `Enrich next batch` repeatedly to fill posters, ratings, genres, cast, and backdrops from TMDb in small serverless-safe batches.
 
 ## Testing
 
