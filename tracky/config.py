@@ -48,6 +48,8 @@ class Config:
 
     TRACKY_AUTO_BOOTSTRAP = _bool_env("TRACKY_AUTO_BOOTSTRAP", True)
     TRACKY_ENRICH_ON_STARTUP = _bool_env("TRACKY_ENRICH_ON_STARTUP", not _bool_env("VERCEL", False))
+    TRACKY_USE_SEED_DATABASE = _bool_env("TRACKY_USE_SEED_DATABASE", _bool_env("VERCEL", False))
+    TRACKY_SEED_DATABASE_PATH = os.getenv("TRACKY_SEED_DATABASE_PATH", str(BASE_DIR / "data" / "tracky.seed.sqlite3"))
     TRACKY_EXPORT_DIR = os.getenv("TRACKY_EXPORT_DIR", str(BASE_DIR / "tvtime-export-2026-07-03"))
     TRACKY_TMDB_LANGUAGE = os.getenv("TRACKY_TMDB_LANGUAGE", "it-IT")
 

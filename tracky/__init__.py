@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import shutil
 from pathlib import Path
 
 from flask import Flask, abort, flash, redirect, request, session, url_for
@@ -16,7 +17,8 @@ from .utils import ensure_csrf_token, image_url, join_names, score_range
 def create_app(config_object: type[Config] = Config) -> Flask:
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config_object)
-    _prepare_sqlite_path(app)
+    database_path = _prepare_sqlite_path(app)
+    _copy_seed_database_if_needed(app, database_path)
 
     db.init_app(app)
 
@@ -113,15 +115,35 @@ def create_app(config_object: type[Config] = Config) -> Flask:
     return app
 
 
-def _prepare_sqlite_path(app: Flask) -> None:
+def _prepare_sqlite_path(app: Flask) -> Path | None:
+    database_path = _sqlite_database_path(app)
+    if database_path is None:
+        return None
+    database_path.parent.mkdir(parents=True, exist_ok=True)
+    return database_path
+
+
+def _sqlite_database_path(app: Flask) -> Path | None:
     database_uri = str(app.config.get("SQLALCHEMY_DATABASE_URI", ""))
     if database_uri == "sqlite:///:memory:" or not database_uri.startswith("sqlite:///"):
-        return
+        return None
     path_text = database_uri.removeprefix("sqlite:///").split("?", 1)[0]
     database_path = Path(path_text)
     if not database_path.is_absolute():
         database_path = BASE_DIR / database_path
-    database_path.parent.mkdir(parents=True, exist_ok=True)
+    return database_path
+
+
+def _copy_seed_database_if_needed(app: Flask, database_path: Path | None) -> None:
+    if database_path is None or not app.config.get("TRACKY_USE_SEED_DATABASE", False):
+        return
+    if database_path.exists():
+        return
+    seed_path = Path(str(app.config.get("TRACKY_SEED_DATABASE_PATH", "")))
+    if not seed_path.is_absolute():
+        seed_path = BASE_DIR / seed_path
+    if seed_path.exists() and seed_path.resolve() != database_path.resolve():
+        shutil.copy2(seed_path, database_path)
 
 
 def _ensure_configured_user(app: Flask) -> None:

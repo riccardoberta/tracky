@@ -147,6 +147,34 @@ tvtime-export-2026-07-03/
 
 The import is idempotent. Running it more than once does not create duplicate media items, episodes, lists, or watch events.
 
+## Building a Seed Database
+
+For serverless deployments, you can build the initial SQLite database once during development and commit only that seed database:
+
+```bash
+TMDB_API_KEY=your-tmdb-api-key python scripts/build_seed_database.py --force --require-tmdb
+```
+
+The script writes:
+
+```text
+data/tracky.seed.sqlite3
+```
+
+It imports the TV Time export once, enriches imported records with TMDb once, and stores the resulting database as a deployable seed. After this succeeds, the TV Time export files are no longer needed at runtime.
+
+On Vercel, use:
+
+```env
+TRACKY_AUTO_BOOTSTRAP=false
+TRACKY_ENRICH_ON_STARTUP=false
+TRACKY_USE_SEED_DATABASE=true
+TRACKY_SEED_DATABASE_PATH=data/tracky.seed.sqlite3
+DATABASE_URL=sqlite:////tmp/tracky.sqlite3
+```
+
+When the function starts, Tracky copies the committed seed database into `/tmp/tracky.sqlite3`. This makes the initial library available without shipping the raw TV Time export. The `/tmp` copy is still ephemeral, so edits made on Vercel are not permanent until you move to a durable SQLite-compatible database such as Turso/libSQL.
+
 ## Vercel Deployment
 
 The project includes:

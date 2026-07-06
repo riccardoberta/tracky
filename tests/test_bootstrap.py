@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import json
+import sqlite3
 
 from tracky.extensions import db
-from tracky.models import Episode, MediaItem, MediaList, WatchEvent
+from tracky import create_app
+from tracky.models import Episode, MediaItem, MediaList, Setting, WatchEvent
 from tracky.services.bootstrap import bootstrap_from_tvtime
+from tests.conftest import TestConfig
 
 
 def test_tvtime_bootstrap_is_idempotent(app, tmp_path):
@@ -96,3 +99,31 @@ def test_tvtime_bootstrap_is_idempotent(app, tmp_path):
         show = MediaItem.query.filter_by(media_type="tv").one()
         assert show.watched_date.isoformat() == "2023-03-04"
         db.session.rollback()
+
+
+def test_seed_database_is_copied_to_runtime_sqlite_path(tmp_path):
+    seed_path = tmp_path / "tracky.seed.sqlite3"
+    runtime_path = tmp_path / "runtime.sqlite3"
+
+    connection = sqlite3.connect(seed_path)
+    connection.execute(
+        "CREATE TABLE settings (key VARCHAR(120) PRIMARY KEY, value TEXT, updated_at DATETIME NOT NULL)"
+    )
+    connection.execute(
+        "INSERT INTO settings (key, value, updated_at) VALUES (?, ?, ?)",
+        ("seed_marker", "copied", "2026-01-01 00:00:00"),
+    )
+    connection.commit()
+    connection.close()
+
+    class RuntimeConfig(TestConfig):
+        SQLALCHEMY_DATABASE_URI = f"sqlite:///{runtime_path}"
+        TRACKY_AUTO_BOOTSTRAP = False
+        TRACKY_USE_SEED_DATABASE = True
+        TRACKY_SEED_DATABASE_PATH = str(seed_path)
+
+    app = create_app(RuntimeConfig)
+
+    assert runtime_path.exists()
+    with app.app_context():
+        assert Setting.get("seed_marker") == "copied"
