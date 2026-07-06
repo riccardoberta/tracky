@@ -1,12 +1,13 @@
 # Tracky
 
-Tracky is a personal movie and TV show tracker built with Python, Flask, SQLAlchemy, SQLite, Jinja2, HTML, CSS, and minimal vanilla JavaScript. It imports a TV Time export once, enriches movies and shows with TMDb metadata in Italian when available, and gives one authenticated user a permanent media library with timeline, library, favorites, search, item details, editing, and statistics.
+Tracky is a personal movie and TV show tracker built with Python, Flask, SQLAlchemy, SQLite, Jinja2, HTML, CSS, and minimal vanilla JavaScript. It ships with a prebuilt SQLite seed database generated once from a TV Time export and enriched once with TMDb metadata, then gives one authenticated user a personal media library with timeline, library, favorites, search, item details, editing, and statistics.
 
 ## Features
 
 - Session-based authentication with credentials from configuration.
 - No public registration.
-- TV Time bootstrap from the bundled export files.
+- Prebuilt SQLite seed database generated from TV Time and TMDb.
+- Optional one-time TV Time bootstrap for rebuilding the seed locally.
 - Idempotent import of movies, series, lists, episodes, watch history, favorites, IMDb IDs, TVDB IDs, and TV Time UUIDs.
 - TMDb enrichment by IMDb ID first, then title search.
 - Editable metadata and personal fields after import.
@@ -59,7 +60,7 @@ tracky/
   static/                     CSS, JavaScript, logo, favicon, app icon
   templates/                  Jinja2 templates
 tests/                        Automated tests
-tvtime-export-2026-07-03/     Bootstrap export data
+data/tracky.seed.sqlite3       Prebuilt seed database
 ```
 
 ## Installation
@@ -100,6 +101,8 @@ PERSONAL_SCORE_MIN=1
 PERSONAL_SCORE_MAX=10
 TRACKY_AUTO_BOOTSTRAP=true
 TRACKY_ENRICH_ON_STARTUP=true
+TRACKY_USE_SEED_DATABASE=false
+TRACKY_SEED_DATABASE_PATH=data/tracky.seed.sqlite3
 TRACKY_EXPORT_DIR=tvtime-export-2026-07-03
 TRACKY_TMDB_LANGUAGE=it-IT
 ```
@@ -113,7 +116,7 @@ Create a TMDb account and generate an API key from the TMDb developer settings. 
 - Fetch Italian localized titles and overviews.
 - Fetch original titles, genres, directors or creators, cast, release dates, ratings, vote counts, posters, and backdrops.
 
-If `TMDB_API_KEY` is missing, Tracky still imports the TV Time export and shows a friendly warning. Enrichment can be run later with:
+If `TMDB_API_KEY` is missing, TMDb search and enrichment are disabled. Enrichment can be run later with:
 
 ```bash
 flask --app run.py bootstrap
@@ -127,22 +130,18 @@ flask --app run.py run --debug
 
 Open `http://127.0.0.1:5000`.
 
-On first execution, Tracky creates the SQLite database, imports the TV Time export, and enriches records through TMDb when the key is configured and `TRACKY_ENRICH_ON_STARTUP=true`.
+On first execution, Tracky creates the SQLite database. If `TRACKY_USE_SEED_DATABASE=true`, it copies `data/tracky.seed.sqlite3` into the configured runtime SQLite path. If `TRACKY_AUTO_BOOTSTRAP=true`, it can instead import a local TV Time export.
 
 ## Bootstrap From TV Time
 
-The application expects files matching these patterns in `TRACKY_EXPORT_DIR`:
+The raw TV Time export is not shipped with the app anymore. To rebuild the seed database, place a TV Time export directory locally and set `TRACKY_EXPORT_DIR` or pass `--export-dir`.
+
+The importer expects files matching these patterns:
 
 ```text
 tvtime-movies*.json
 tvtime-series*.json
 tvtime-lists*.json
-```
-
-The bundled export is already in:
-
-```text
-tvtime-export-2026-07-03/
 ```
 
 The import is idempotent. Running it more than once does not create duplicate media items, episodes, lists, or watch events.
@@ -152,7 +151,7 @@ The import is idempotent. Running it more than once does not create duplicate me
 For serverless deployments, you can build the initial SQLite database once during development and commit only that seed database:
 
 ```bash
-TMDB_API_KEY=your-tmdb-api-key python scripts/build_seed_database.py --force --require-tmdb
+TMDB_API_KEY=your-tmdb-api-key python scripts/build_seed_database.py --export-dir path/to/tvtime-export --force --require-tmdb
 ```
 
 The script writes:
@@ -161,7 +160,7 @@ The script writes:
 data/tracky.seed.sqlite3
 ```
 
-It imports the TV Time export once, enriches imported records with TMDb once, and stores the resulting database as a deployable seed. After this succeeds, the TV Time export files are no longer needed at runtime.
+The current seed is already committed at `data/tracky.seed.sqlite3`. It imports the TV Time export once, enriches imported records with TMDb once, and stores the resulting database as a deployable seed. The TV Time export files are not needed at runtime.
 
 On Vercel, use:
 
@@ -187,7 +186,7 @@ Set the same environment variables in Vercel project settings. The default Verce
 
 Important SQLite note: Vercel serverless storage is not designed as a durable writable filesystem. When `DATABASE_URL` is not set and `VERCEL` is present, Tracky uses `sqlite:////tmp/tracky.sqlite3` so the function can start, but that file is ephemeral. For a permanent personal library on Vercel, use a SQLite-compatible remote database such as Turso/libSQL. Also keep `TRACKY_ENRICH_ON_STARTUP=false` on Vercel; TMDb search and manual imports still work, but long enrichment jobs should not run during serverless startup.
 
-After the first Vercel deployment, sign in and open `Metadata`. Use `Enrich next batch` repeatedly to fill posters, ratings, genres, cast, and backdrops from TMDb in small serverless-safe batches.
+The committed seed database already contains the initial TMDb metadata. The `Metadata` page remains available for future manual enrichment, but it is not required for the initial deployment.
 
 ## Testing
 

@@ -107,6 +107,15 @@ class TMDbClient:
     def details(self, tmdb_id: int, media_type: str) -> dict[str, Any]:
         append = "credits,external_ids"
         payload = self._get(f"/{media_type}/{tmdb_id}", append_to_response=append)
+        fallback_payload = None
+        if self.language.lower() != "en-us" and not payload.get("overview"):
+            fallback_client = TMDbClient(
+                self.api_key,
+                language="en-US",
+                session=self.session,
+                timeout=self.timeout,
+            )
+            fallback_payload = fallback_client._get(f"/{media_type}/{tmdb_id}", append_to_response=append)
         credits = payload.get("credits") or {}
         cast = [
             {"name": person.get("name"), "tmdb_id": person.get("id")}
@@ -140,7 +149,7 @@ class TMDbClient:
             "imdb_id": external_ids.get("imdb_id"),
             "italian_title": italian_title or original_title or "Untitled",
             "original_title": original_title,
-            "overview": payload.get("overview"),
+            "overview": payload.get("overview") or (fallback_payload or {}).get("overview"),
             "genres": [genre.get("name") for genre in payload.get("genres", []) if genre.get("name")],
             "primary_people": primary_people,
             "cast": cast,

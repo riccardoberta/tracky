@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -108,7 +109,6 @@ def missing_metadata_query():
     return MediaItem.query.filter(
         MediaItem.media_type.in_(("movie", "tv")),
         or_(
-            MediaItem.tmdb_id.is_(None),
             MediaItem.overview.is_(None),
             MediaItem.poster_path.is_(None),
             MediaItem.tmdb_rating.is_(None),
@@ -138,12 +138,16 @@ def enrich_metadata_batch(client: TMDbClient, limit: int | None = 10) -> Enrichm
             if tmdb_id is None and item.imdb_id:
                 tmdb_id = client.find_by_imdb(item.imdb_id, item.media_type)
             if tmdb_id is None:
-                tmdb_id = client.best_match(item.original_title or item.italian_title, item.year, item.media_type)
+                for title, year in _title_candidates(item):
+                    tmdb_id = client.best_match(title, year, item.media_type)
+                    if tmdb_id is not None:
+                        break
             if tmdb_id is None:
                 report.skipped += 1
                 continue
             details = client.details(tmdb_id, item.media_type)
-            apply_tmdb_details(item, details)
+            assign_tmdb_id = not _tmdb_id_conflicts(item, details.get("tmdb_id") or tmdb_id)
+            apply_tmdb_details(item, details, assign_tmdb_id=assign_tmdb_id)
             report.enriched += 1
             db.session.commit()
         except TMDbError as exc:
@@ -155,8 +159,9 @@ def enrich_metadata_batch(client: TMDbClient, limit: int | None = 10) -> Enrichm
     return report
 
 
-def apply_tmdb_details(item: MediaItem, details: dict[str, Any]) -> None:
-    item.tmdb_id = details.get("tmdb_id") or item.tmdb_id
+def apply_tmdb_details(item: MediaItem, details: dict[str, Any], assign_tmdb_id: bool = True) -> None:
+    if assign_tmdb_id:
+        item.tmdb_id = details.get("tmdb_id") or item.tmdb_id
     item.imdb_id = details.get("imdb_id") or item.imdb_id
     item.italian_title = details.get("italian_title") or item.italian_title
     item.original_title = details.get("original_title") or item.original_title
@@ -175,6 +180,44 @@ def apply_tmdb_details(item: MediaItem, details: dict[str, Any]) -> None:
     primary_role = "director" if item.media_type == "movie" else "creator"
     _set_people_from_tmdb(item, primary_role, details.get("primary_people") or [])
     _set_people_from_tmdb(item, "cast", details.get("cast") or [])
+
+
+def _tmdb_id_conflicts(item: MediaItem, tmdb_id: int | None) -> bool:
+    if tmdb_id is None:
+        return False
+    return (
+        MediaItem.query.filter(
+            MediaItem.media_type == item.media_type,
+            MediaItem.tmdb_id == tmdb_id,
+            MediaItem.id != item.id,
+        ).first()
+        is not None
+    )
+
+
+def _title_candidates(item: MediaItem) -> list[tuple[str, int | None]]:
+    candidates: list[tuple[str, int | None]] = []
+    for title in (item.original_title, item.italian_title):
+        if not title:
+            continue
+        _append_title_candidate(candidates, title, item.year)
+
+        year_match = re.search(r"\((19\d{2}|20\d{2})\)", title)
+        if year_match:
+            cleaned_title = re.sub(r"\s*\((19\d{2}|20\d{2})\)\s*", " ", title).strip()
+            _append_title_candidate(candidates, cleaned_title, int(year_match.group(1)))
+
+        suffix_match = re.search(r"\s*\(([A-Za-z]{2,})\)\s*$", title)
+        if suffix_match:
+            cleaned_title = re.sub(r"\s*\([A-Za-z]{2,}\)\s*$", "", title).strip()
+            _append_title_candidate(candidates, cleaned_title, item.year)
+    return candidates
+
+
+def _append_title_candidate(candidates: list[tuple[str, int | None]], title: str, year: int | None) -> None:
+    clean_title = " ".join(title.split())
+    if clean_title and (clean_title, year) not in candidates:
+        candidates.append((clean_title, year))
 
 
 def _set_people_from_tmdb(item: MediaItem, role: str, people: list[dict[str, Any]]) -> None:

@@ -6,7 +6,7 @@ import sqlite3
 from tracky.extensions import db
 from tracky import create_app
 from tracky.models import Episode, MediaItem, MediaList, Setting, WatchEvent
-from tracky.services.bootstrap import bootstrap_from_tvtime
+from tracky.services.bootstrap import bootstrap_from_tvtime, enrich_metadata_batch, missing_metadata_count
 from tests.conftest import TestConfig
 
 
@@ -127,3 +127,47 @@ def test_seed_database_is_copied_to_runtime_sqlite_path(tmp_path):
     assert runtime_path.exists()
     with app.app_context():
         assert Setting.get("seed_marker") == "copied"
+
+
+def test_tmdb_enrichment_handles_duplicate_tmdb_matches(app):
+    class DuplicateTMDbClient:
+        configured = True
+
+        def find_by_imdb(self, imdb_id, expected_type):
+            return 500
+
+        def best_match(self, title, year, media_type):
+            return 500
+
+        def details(self, tmdb_id, media_type):
+            return {
+                "tmdb_id": tmdb_id,
+                "imdb_id": "tt500",
+                "italian_title": "Shared Match",
+                "original_title": "Shared Match",
+                "overview": "Metadata copied from TMDb.",
+                "genres": ["Drama"],
+                "primary_people": [{"name": "Director One", "tmdb_id": 1}],
+                "cast": [{"name": "Actor One", "tmdb_id": 2}],
+                "date": "2020-01-01",
+                "tmdb_rating": 7.1,
+                "tmdb_vote_count": 100,
+                "poster_path": "/poster.jpg",
+                "backdrop_path": "/backdrop.jpg",
+            }
+
+    with app.app_context():
+        db.session.add_all(
+            [
+                MediaItem(media_type="movie", italian_title="Local A", original_title="Local A"),
+                MediaItem(media_type="movie", italian_title="Local B", original_title="Local B"),
+            ]
+        )
+        db.session.commit()
+
+        report = enrich_metadata_batch(DuplicateTMDbClient(), limit=2)
+
+        assert report.enriched == 2
+        assert missing_metadata_count() == 0
+        assert MediaItem.query.filter_by(tmdb_id=500).count() == 1
+        assert MediaItem.query.filter_by(poster_path="/poster.jpg").count() == 2
