@@ -7,3 +7,6 @@ __pycache__/
 instance/*.sqlite3
 instance/*.sqlite
 instance/*.db
+data/*.sqlite3
+data/*.sqlite
+data/*.db

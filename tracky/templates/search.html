@@ -75,7 +75,19 @@
                   <input type="hidden" name="tmdb_id" value="{{ result.tmdb_id }}">
                   <label>
                     <span>Watched</span>
-                    <input type="date" name="watched_date">
+                    <input type="date" name="watched_date" value="{{ today_date }}">
+                  </label>
+                  <label>
+                    <span>My score</span>
+                    <input
+                      type="number"
+                      name="personal_rating"
+                      value="{{ default_personal_rating }}"
+                      min="{{ score_min }}"
+                      max="{{ score_max }}"
+                      step="0.1"
+                      required
+                    >
                   </label>
                   <label class="checkbox-line">
                     <input type="checkbox" name="favorite" value="1">

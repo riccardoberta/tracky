@@ -17,7 +17,6 @@ class TestConfig(Config):
     APP_USERNAME = "owner"
     APP_PASSWORD_HASH = generate_password_hash("correct-password")
     TMDB_API_KEY = None
-    TRACKY_AUTO_BOOTSTRAP = False
     PERSONAL_SCORE_MIN = 1
     PERSONAL_SCORE_MAX = 10
 
@@ -26,7 +25,6 @@ class TestConfig(Config):
 def app(tmp_path):
     class RuntimeConfig(TestConfig):
         SQLALCHEMY_DATABASE_URI = f"sqlite:///{tmp_path / 'tracky-test.sqlite3'}"
-        TRACKY_EXPORT_DIR = str(tmp_path / "exports")
 
     app = create_app(RuntimeConfig)
     yield app

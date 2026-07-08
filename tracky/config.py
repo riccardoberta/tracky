@@ -32,6 +32,29 @@ def _default_database_url() -> str:
     return f"sqlite:///{BASE_DIR / 'instance' / 'tracky.sqlite3'}"
 
 
+def normalize_database_url(database_url: str) -> str:
+    if database_url.startswith("postgres://"):
+        database_url = "postgresql://" + database_url.removeprefix("postgres://")
+    if database_url.startswith("postgresql://"):
+        database_url = "postgresql+psycopg://" + database_url.removeprefix("postgresql://")
+    if not database_url.startswith("sqlite:///") or database_url.startswith("sqlite:////"):
+        return database_url
+    path_text = database_url.removeprefix("sqlite:///").split("?", 1)[0]
+    if path_text == ":memory:":
+        return database_url
+    query_text = ""
+    if "?" in database_url:
+        query_text = "?" + database_url.split("?", 1)[1]
+    return f"sqlite:///{BASE_DIR / path_text}{query_text}"
+
+
+def _database_url() -> str:
+    configured_url = os.getenv("DATABASE_URL")
+    if not configured_url:
+        return _default_database_url()
+    return normalize_database_url(configured_url)
+
+
 class Config:
     load_dotenv(BASE_DIR / ".env")
 
@@ -40,17 +63,14 @@ class Config:
     APP_PASSWORD_HASH = os.getenv("APP_PASSWORD_HASH")
     TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
-    SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL") or _default_database_url()
+    SQLALCHEMY_DATABASE_URI = _database_url()
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    DATABASE_URL_CONFIGURED = bool(os.getenv("DATABASE_URL"))
+    RUNNING_ON_VERCEL = _bool_env("VERCEL", False)
 
     PERSONAL_SCORE_MIN = _int_env("PERSONAL_SCORE_MIN", 1)
     PERSONAL_SCORE_MAX = _int_env("PERSONAL_SCORE_MAX", 10)
 
-    TRACKY_AUTO_BOOTSTRAP = _bool_env("TRACKY_AUTO_BOOTSTRAP", True)
-    TRACKY_ENRICH_ON_STARTUP = _bool_env("TRACKY_ENRICH_ON_STARTUP", not _bool_env("VERCEL", False))
-    TRACKY_USE_SEED_DATABASE = _bool_env("TRACKY_USE_SEED_DATABASE", _bool_env("VERCEL", False))
-    TRACKY_SEED_DATABASE_PATH = os.getenv("TRACKY_SEED_DATABASE_PATH", str(BASE_DIR / "data" / "tracky.seed.sqlite3"))
-    TRACKY_EXPORT_DIR = os.getenv("TRACKY_EXPORT_DIR", str(BASE_DIR / "tvtime-export-2026-07-03"))
     TRACKY_TMDB_LANGUAGE = os.getenv("TRACKY_TMDB_LANGUAGE", "it-IT")
 
     SESSION_COOKIE_HTTPONLY = True

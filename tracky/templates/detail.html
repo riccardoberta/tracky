@@ -25,6 +25,14 @@
 
         <div class="detail-actions">
           <a class="button primary" href="{{ url_for('main.media_edit', item_id=item.id) }}">Edit</a>
+          {% if item.tmdb_id %}
+            <a
+              class="button secondary"
+              href="https://www.themoviedb.org/{{ 'movie' if item.media_type == 'movie' else 'tv' }}/{{ item.tmdb_id }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Open on TMDb</a>
+          {% endif %}
           <form action="{{ url_for('main.toggle_favorite', item_id=item.id) }}" method="post">
             <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
             <button class="button secondary" type="submit">{{ 'Unfavorite' if item.favorite else 'Favorite' }}</button>
@@ -66,20 +74,6 @@
           </section>
         {% endif %}
 
-        {% if item.media_type == 'tv' and item.episodes %}
-          <section class="subsection">
-            <h2>Episodes watched</h2>
-            <div class="episode-list">
-              {% for episode in item.episodes if episode.is_watched %}
-                <div>
-                  <span>S{{ episode.season_number }} E{{ episode.episode_number }}</span>
-                  <strong>{{ episode.title or 'Episode' }}</strong>
-                  <small>{{ episode.watched_at.strftime('%d %b %Y') if episode.watched_at else '' }}</small>
-                </div>
-              {% endfor %}
-            </div>
-          </section>
-        {% endif %}
       </div>
     </div>
   </article>

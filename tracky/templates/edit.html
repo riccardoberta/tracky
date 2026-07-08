@@ -8,11 +8,12 @@
       <p class="eyebrow">{{ 'Movie' if item.media_type == 'movie' else 'TV Show' }}</p>
       <h1>Edit {{ item.title }}</h1>
     </div>
-    <a class="button secondary" href="{{ url_for('main.media_detail', item_id=item.id) }}">Cancel</a>
+    <a class="button secondary" href="{{ return_url }}">Cancel</a>
   </header>
 
   <form class="edit-form" method="post">
     <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="next" value="{{ return_url }}">
 
     <section>
       <h2>Metadata</h2>

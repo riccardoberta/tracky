@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Check &middot; Tracky{% endblock %}
+
+{% block content %}
+  <header class="page-header">
+    <div>
+      <p class="eyebrow">Library maintenance</p>
+      <h1>Check</h1>
+      <p>Review TMDb matches and personal scores item by item.</p>
+    </div>
+    <span class="pill">{{ checked_count }} / {{ total_count }} checked</span>
+  </header>
+
+  {% if item %}
+    <article class="check-layout">
+      <aside class="check-poster">
+        {% if item.poster_path %}
+          <img src="{{ item.poster_path|image_url('w500') }}" alt="{{ item.title }} poster">
+        {% else %}
+          <div class="poster-placeholder large">{{ item.title[:1] }}</div>
+        {% endif %}
+      </aside>
+
+      <section class="check-panel">
+        <div class="media-card-topline">
+          <span class="pill">{{ 'Movie' if item.media_type == 'movie' else 'TV Show' }}</span>
+          {% if item.favorite %}<span class="favorite-mark">&#9733; Favorite</span>{% endif %}
+        </div>
+
+        <h2>{{ item.title }}</h2>
+        {% if item.original_title and item.original_title != item.title %}
+          <p class="muted">{{ item.original_title }}</p>
+        {% endif %}
+
+        <dl class="metadata-grid">
+          <div><dt>Year</dt><dd>{{ item.year or 'Unavailable' }}</dd></div>
+          <div><dt>Watched</dt><dd>{{ item.watched_date.strftime('%d %B %Y') if item.watched_date else 'Not set' }}</dd></div>
+          <div><dt>TMDb ID</dt><dd>{{ item.tmdb_id or 'Not set' }}</dd></div>
+          <div><dt>TMDb rating</dt><dd>{{ item.tmdb_rating|round(1) if item.tmdb_rating is not none else 'Unavailable' }}</dd></div>
+          <div><dt>TMDb votes</dt><dd>{{ item.tmdb_vote_count if item.tmdb_vote_count is not none else 'Unavailable' }}</dd></div>
+          <div><dt>{{ 'Director' if item.media_type == 'movie' else 'Creator' }}</dt><dd>{{ item.primary_people|join_names or 'Unavailable' }}</dd></div>
+        </dl>
+
+        {% if item.overview %}
+          <p class="overview">{{ item.overview }}</p>
+        {% endif %}
+
+        <label class="check-score">
+          <span>My score</span>
+          <input
+            data-check-score
+            type="number"
+            min="{{ score_min }}"
+            max="{{ score_max }}"
+            step="0.1"
+            value="{{ item.personal_rating if item.personal_rating is not none else '' }}"
+            placeholder="{{ score_min }}-{{ score_max }}"
+            required
+          >
+        </label>
+
+        <div class="detail-actions check-actions">
+          {% if previous_item %}
+            <a class="button secondary" href="{{ url_for('main.check_item', item_id=previous_item.id) }}">Previous</a>
+          {% else %}
+            <span class="button secondary disabled">Previous</span>
+          {% endif %}
+
+          <form id="check-ok-form" action="{{ url_for('main.check_mark_ok', item_id=item.id) }}" method="post">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+            <input data-check-score-target type="hidden" name="personal_rating">
+            <button class="button primary" type="submit">Looks right, save and next</button>
+          </form>
+
+          <button class="button secondary" type="button" data-check-correction-toggle>Wrong TMDb match</button>
+
+          <a
+            class="button secondary"
+            href="{{ url_for('main.media_edit', item_id=item.id, next=url_for('main.check_item', item_id=item.id)) }}"
+          >Edit all details</a>
+
+          {% if next_item %}
+            <a class="button secondary" href="{{ url_for('main.check_item', item_id=next_item.id) }}">Next</a>
+          {% else %}
+            <span class="button secondary disabled">Next</span>
+          {% endif %}
+
+          {% if current_tmdb_url %}
+            <a class="button secondary" href="{{ current_tmdb_url }}" target="_blank" rel="noopener noreferrer">Open current TMDb</a>
+          {% endif %}
+
+          <form action="{{ url_for('main.check_delete_item', item_id=item.id) }}" method="post">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+            <button
+              class="button danger"
+              type="submit"
+              data-confirm="Delete this item permanently from Tracky?"
+            >Delete</button>
+          </form>
+        </div>
+
+        <form class="check-correction" data-check-correction action="{{ url_for('main.check_correct_item', item_id=item.id) }}" method="post">
+          <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+          <input data-check-score-target type="hidden" name="personal_rating">
+          <label>
+            <span>Correct TMDb URL</span>
+            <input
+              type="text"
+              name="tmdb_url"
+              placeholder="https://www.themoviedb.org/movie/12345 or https://www.themoviedb.org/tv/12345"
+              required
+            >
+          </label>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Update from TMDb and next</button>
+          </div>
+        </form>
+      </section>
+    </article>
+  {% else %}
+    <section class="content-section">
+      <p class="empty-text">There are no items to check yet.</p>
+    </section>
+  {% endif %}
+{% endblock %}

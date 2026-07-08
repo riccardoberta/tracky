@@ -4,6 +4,7 @@ from datetime import date, datetime
 from typing import Iterable
 
 from sqlalchemy import CheckConstraint, UniqueConstraint, func
+from sqlalchemy.sql.elements import ColumnElement
 
 from .extensions import db
 from .utils import utc_now
@@ -83,7 +84,6 @@ class MediaItem(TimestampMixin, db.Model):
     tmdb_id = db.Column(db.Integer, nullable=True, index=True)
     tvdb_id = db.Column(db.Integer, nullable=True, index=True)
     imdb_id = db.Column(db.String(32), nullable=True, index=True)
-    tvtime_uuid = db.Column(db.String(80), unique=True, nullable=True, index=True)
 
     italian_title = db.Column(db.String(300), nullable=False, index=True)
     original_title = db.Column(db.String(300), nullable=True, index=True)
@@ -102,7 +102,6 @@ class MediaItem(TimestampMixin, db.Model):
     personal_notes = db.Column(db.Text, nullable=True)
 
     source = db.Column(db.String(80), nullable=False, default="manual", index=True)
-    bootstrap_payload = db.Column(db.JSON, nullable=True)
 
     genres = db.relationship("Genre", secondary=media_genres, lazy="selectin", backref="media_items")
     people_links = db.relationship(
@@ -216,7 +215,6 @@ class MediaList(TimestampMixin, db.Model):
     __tablename__ = "media_lists"
 
     id = db.Column(db.Integer, primary_key=True)
-    tvtime_id = db.Column(db.String(100), unique=True, nullable=True, index=True)
     name = db.Column(db.String(180), nullable=False)
     description = db.Column(db.Text, nullable=True)
     is_public = db.Column(db.Boolean, nullable=False, default=False)
@@ -299,9 +297,26 @@ def get_or_create_person(name: str, tmdb_id: int | None = None) -> Person:
     return person
 
 
+def date_year_expression(column: ColumnElement):
+    if _active_database_dialect() == "postgresql":
+        return func.to_char(column, "YYYY")
+    return func.strftime("%Y", column)
+
+
+def date_month_expression(column: ColumnElement):
+    if _active_database_dialect() == "postgresql":
+        return func.to_char(column, "YYYY-MM")
+    return func.strftime("%Y-%m", column)
+
+
 def watched_year_expression():
-    return func.strftime("%Y", MediaItem.watched_date)
+    return date_year_expression(MediaItem.watched_date)
 
 
 def watched_month_expression():
-    return func.strftime("%Y-%m", WatchEvent.watched_at)
+    return date_month_expression(MediaItem.watched_date)
+
+
+def _active_database_dialect() -> str:
+    bind = db.session.get_bind()
+    return bind.dialect.name if bind is not None else "sqlite"

@@ -23,8 +23,8 @@
         <a class="{{ 'active' if active_page == 'library' else '' }}" href="{{ url_for('main.library') }}">Library</a>
         <a class="{{ 'active' if active_page == 'favorites' else '' }}" href="{{ url_for('main.favorites') }}">Favorites</a>
         <a class="{{ 'active' if active_page == 'search' else '' }}" href="{{ url_for('main.search') }}">Search</a>
+        <a class="{{ 'active' if active_page == 'check' else '' }}" href="{{ url_for('main.check_start') }}">Check</a>
         <a class="{{ 'active' if active_page == 'statistics' else '' }}" href="{{ url_for('main.statistics') }}">Statistics</a>
-        <a class="{{ 'active' if active_page == 'metadata' else '' }}" href="{{ url_for('main.metadata') }}">Metadata</a>
       </nav>
       <div class="sidebar-actions">
         <button class="icon-button" type="button" data-theme-toggle aria-label="Toggle color theme" title="Theme">

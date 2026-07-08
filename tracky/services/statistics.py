@@ -6,7 +6,7 @@ from typing import Any
 from sqlalchemy import func
 
 from ..extensions import db
-from ..models import Genre, MediaItem, WatchEvent, media_genres
+from ..models import Genre, MediaItem, date_month_expression, date_year_expression, media_genres
 
 
 @dataclass(frozen=True)
@@ -28,7 +28,6 @@ def build_statistics() -> dict[str, Any]:
         MediaItem.media_type == "tv",
         MediaItem.watched_date.is_not(None),
     ).count()
-    episodes_watched = WatchEvent.query.filter(WatchEvent.episode_id.is_not(None)).count()
     favorites_count = MediaItem.query.filter_by(favorite=True).count()
 
     avg_personal = db.session.query(func.avg(MediaItem.personal_rating)).filter(
@@ -36,22 +35,25 @@ def build_statistics() -> dict[str, Any]:
     ).scalar()
     avg_tmdb = db.session.query(func.avg(MediaItem.tmdb_rating)).filter(MediaItem.tmdb_rating.is_not(None)).scalar()
 
+    watched_year = date_year_expression(MediaItem.watched_date)
+    watched_month = date_month_expression(MediaItem.watched_date)
+
     movies_by_year = db.session.query(
-        func.strftime("%Y", MediaItem.watched_date),
+        watched_year,
         func.count(MediaItem.id),
     ).filter(MediaItem.media_type == "movie", MediaItem.watched_date.is_not(None)).group_by(
-        func.strftime("%Y", MediaItem.watched_date)
+        watched_year
     ).order_by(
-        func.strftime("%Y", MediaItem.watched_date)
+        watched_year
     ).all()
 
     shows_by_year = db.session.query(
-        func.strftime("%Y", MediaItem.watched_date),
+        watched_year,
         func.count(MediaItem.id),
     ).filter(MediaItem.media_type == "tv", MediaItem.watched_date.is_not(None)).group_by(
-        func.strftime("%Y", MediaItem.watched_date)
+        watched_year
     ).order_by(
-        func.strftime("%Y", MediaItem.watched_date)
+        watched_year
     ).all()
 
     genre_counts = db.session.query(Genre.name, func.count(MediaItem.id)).join(
@@ -74,23 +76,22 @@ def build_statistics() -> dict[str, Any]:
     ).limit(10).all()
 
     activity_by_month = db.session.query(
-        func.strftime("%Y-%m", WatchEvent.watched_at),
-        func.count(WatchEvent.id),
-    ).group_by(func.strftime("%Y-%m", WatchEvent.watched_at)).order_by(
-        func.strftime("%Y-%m", WatchEvent.watched_at)
+        watched_month,
+        func.count(MediaItem.id),
+    ).filter(MediaItem.watched_date.is_not(None)).group_by(watched_month).order_by(
+        watched_month
     ).all()
 
     activity_by_year = db.session.query(
-        func.strftime("%Y", WatchEvent.watched_at),
-        func.count(WatchEvent.id),
-    ).group_by(func.strftime("%Y", WatchEvent.watched_at)).order_by(
-        func.strftime("%Y", WatchEvent.watched_at)
+        watched_year,
+        func.count(MediaItem.id),
+    ).filter(MediaItem.watched_date.is_not(None)).group_by(watched_year).order_by(
+        watched_year
     ).all()
 
     return {
         "total_movies": total_movies,
         "total_shows": total_shows,
-        "episodes_watched": episodes_watched,
         "favorites_count": favorites_count,
         "average_personal_rating": round(float(avg_personal), 2) if avg_personal else None,
         "average_tmdb_rating": round(float(avg_tmdb), 2) if avg_tmdb else None,

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import shutil
 from pathlib import Path
 
 from flask import Flask, abort, flash, redirect, request, session, url_for
@@ -9,16 +8,13 @@ from werkzeug.exceptions import HTTPException
 from .config import BASE_DIR, Config
 from .extensions import db
 from .models import User
-from .services.bootstrap import bootstrap_from_tvtime, enrich_missing_metadata, run_bootstrap_if_needed
-from .services.tmdb import TMDbClient
 from .utils import ensure_csrf_token, image_url, join_names, score_range
 
 
 def create_app(config_object: type[Config] = Config) -> Flask:
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config_object)
-    database_path = _prepare_sqlite_path(app)
-    _copy_seed_database_if_needed(app, database_path)
+    _prepare_sqlite_path(app)
 
     db.init_app(app)
 
@@ -87,30 +83,9 @@ def create_app(config_object: type[Config] = Config) -> Flask:
             500,
         )
 
-    @app.cli.command("bootstrap")
-    def bootstrap_command() -> None:
-        """Import the bundled TV Time export and enrich it with TMDb metadata."""
-        report = bootstrap_from_tvtime()
-        client = TMDbClient(
-            app.config.get("TMDB_API_KEY"),
-            language=app.config.get("TRACKY_TMDB_LANGUAGE", "it-IT"),
-        )
-        if client.configured:
-            report.enriched = enrich_missing_metadata(client)
-        else:
-            report.add_warning("TMDb enrichment skipped because TMDB_API_KEY is not configured.")
-        print(report)
-
     with app.app_context():
         db.create_all()
         _ensure_configured_user(app)
-        if app.config.get("TRACKY_AUTO_BOOTSTRAP", True):
-            try:
-                report = run_bootstrap_if_needed()
-                for warning in report.warnings or []:
-                    app.logger.warning(warning)
-            except RuntimeError as exc:
-                app.logger.warning("Bootstrap skipped: %s", exc)
 
     return app
 
@@ -134,18 +109,6 @@ def _sqlite_database_path(app: Flask) -> Path | None:
     return database_path
 
 
-def _copy_seed_database_if_needed(app: Flask, database_path: Path | None) -> None:
-    if database_path is None or not app.config.get("TRACKY_USE_SEED_DATABASE", False):
-        return
-    if database_path.exists():
-        return
-    seed_path = Path(str(app.config.get("TRACKY_SEED_DATABASE_PATH", "")))
-    if not seed_path.is_absolute():
-        seed_path = BASE_DIR / seed_path
-    if seed_path.exists() and seed_path.resolve() != database_path.resolve():
-        shutil.copy2(seed_path, database_path)
-
-
 def _ensure_configured_user(app: Flask) -> None:
     username = app.config.get("APP_USERNAME")
     if not username:
@@ -161,6 +124,8 @@ def _configuration_warnings(app: Flask) -> list[str]:
         warnings.append("Authentication is not configured. Set APP_USERNAME and APP_PASSWORD_HASH.")
     if not app.config.get("TMDB_API_KEY"):
         warnings.append("TMDb integration is disabled until TMDB_API_KEY is configured.")
+    if app.config.get("RUNNING_ON_VERCEL") and not app.config.get("DATABASE_URL_CONFIGURED"):
+        warnings.append("Set DATABASE_URL to a persistent external database before using Tracky on Vercel.")
     if app.config.get("SECRET_KEY") == "change-me-in-production":
         warnings.append("SECRET_KEY is using the development fallback.")
     if app.config["PERSONAL_SCORE_MIN"] > app.config["PERSONAL_SCORE_MAX"]:
