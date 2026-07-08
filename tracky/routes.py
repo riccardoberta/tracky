@@ -4,7 +4,7 @@ import re
 from datetime import datetime
 
 from flask import Blueprint, current_app, flash, redirect, render_template, request, url_for
-from sqlalchemy import func, or_
+from sqlalchemy import and_, func, or_
 
 from .extensions import db
 from .models import Genre, MediaItem, MediaListItem, Setting, WatchEvent, watched_year_expression
@@ -382,20 +382,28 @@ def _ordered_check_items():
 
 def _next_unchecked_item() -> MediaItem | None:
     checked_ids = _checked_item_ids()
-    for item in _ordered_check_items():
-        if item.id not in checked_ids:
-            return item
-    return None
+    query = _ordered_check_items()
+    if checked_ids:
+        query = query.filter(MediaItem.id.not_in(checked_ids))
+    return query.first()
 
 
 def _check_neighbors(item: MediaItem) -> tuple[MediaItem | None, MediaItem | None]:
-    items = _ordered_check_items().all()
-    for index, candidate in enumerate(items):
-        if candidate.id == item.id:
-            previous_item = items[index - 1] if index > 0 else None
-            next_item = items[index + 1] if index + 1 < len(items) else None
-            return previous_item, next_item
-    return None, None
+    item_title = item.title.lower()
+    title_sort = func.lower(MediaItem.italian_title)
+    previous_item = MediaItem.query.filter(
+        or_(
+            title_sort < item_title,
+            and_(title_sort == item_title, MediaItem.id < item.id),
+        )
+    ).filter(MediaItem.id != item.id).order_by(title_sort.desc(), MediaItem.id.desc()).first()
+    next_item = MediaItem.query.filter(
+        or_(
+            title_sort > item_title,
+            and_(title_sort == item_title, MediaItem.id > item.id),
+        )
+    ).filter(MediaItem.id != item.id).order_by(title_sort.asc(), MediaItem.id.asc()).first()
+    return previous_item, next_item
 
 
 def _checked_item_ids() -> set[int]:
@@ -409,7 +417,7 @@ def _checked_item_ids() -> set[int]:
 
 
 def _checked_item_count() -> int:
-    return len(_checked_item_ids())
+    return Setting.query.filter(Setting.key.startswith(CHECK_SETTING_PREFIX)).count()
 
 
 def _mark_checked(item: MediaItem, status: str) -> None:

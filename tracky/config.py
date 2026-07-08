@@ -55,6 +55,19 @@ def _database_url() -> str:
     return normalize_database_url(configured_url)
 
 
+def _engine_options(database_url: str) -> dict[str, object]:
+    if not database_url.startswith("postgresql"):
+        return {}
+    return {
+        "pool_pre_ping": True,
+        "pool_recycle": 300,
+        "pool_size": 1,
+        "max_overflow": 2,
+        "pool_timeout": 10,
+        "connect_args": {"prepare_threshold": None},
+    }
+
+
 class Config:
     load_dotenv(BASE_DIR / ".env")
 
@@ -64,6 +77,7 @@ class Config:
     TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 
     SQLALCHEMY_DATABASE_URI = _database_url()
+    SQLALCHEMY_ENGINE_OPTIONS = _engine_options(SQLALCHEMY_DATABASE_URI)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     DATABASE_URL_CONFIGURED = bool(os.getenv("DATABASE_URL"))
     RUNNING_ON_VERCEL = _bool_env("VERCEL", False)

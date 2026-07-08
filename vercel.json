@@ -7,6 +7,14 @@
   ],
   "routes": [
     {
+      "src": "/static/(.*)",
+      "dest": "/tracky/static/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/tracky/static/img/favicon.svg"
+    },
+    {
       "src": "/(.*)",
       "dest": "api/index.py"
     }

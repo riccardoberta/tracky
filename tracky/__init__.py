@@ -5,7 +5,7 @@ from pathlib import Path
 from flask import Flask, abort, flash, redirect, render_template, request, session, url_for
 from werkzeug.exceptions import HTTPException
 
-from .config import BASE_DIR, Config
+from .config import BASE_DIR, Config, _engine_options
 from .extensions import db
 from .models import User
 from .utils import ensure_csrf_token, image_url, join_names, score_range
@@ -14,6 +14,7 @@ from .utils import ensure_csrf_token, image_url, join_names, score_range
 def create_app(config_object: type[Config] = Config) -> Flask:
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_object(config_object)
+    app.config["SQLALCHEMY_ENGINE_OPTIONS"] = _engine_options(app.config["SQLALCHEMY_DATABASE_URI"])
     _prepare_sqlite_path(app)
 
     db.init_app(app)
