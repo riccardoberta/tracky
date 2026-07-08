@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "macros.html" import trash_icon %}
 
 {% block title %}Edit {{ item.title }} &middot; Tracky{% endblock %}
 
@@ -8,7 +9,18 @@
       <p class="eyebrow">{{ 'Movie' if item.media_type == 'movie' else 'TV Show' }}</p>
       <h1>Edit {{ item.title }}</h1>
     </div>
-    <a class="button secondary" href="{{ return_url }}">Cancel</a>
+    <div class="page-actions">
+      <a class="button secondary" href="{{ return_url }}">Cancel</a>
+      <form action="{{ url_for('main.media_delete', item_id=item.id) }}" method="post">
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="next" value="{{ url_for('main.library') }}">
+        <button
+          class="button danger icon-label"
+          type="submit"
+          data-confirm="Delete {{ item.title }} permanently from Tracky?"
+        >{{ trash_icon() }} Delete</button>
+      </form>
+    </div>
   </header>
 
   <form class="edit-form" method="post">

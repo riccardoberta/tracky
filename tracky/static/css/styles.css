@@ -318,6 +318,10 @@ textarea {
   box-shadow: var(--shadow);
 }
 
+.poster-frame {
+  position: relative;
+}
+
 .poster-link {
   display: block;
   aspect-ratio: 2 / 3;
@@ -359,6 +363,50 @@ textarea {
   display: grid;
   gap: 8px;
   padding: 12px;
+}
+
+.card-actions {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: flex;
+  gap: 6px;
+}
+
+.card-actions form {
+  margin: 0;
+}
+
+.card-action {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid color-mix(in srgb, currentColor 42%, transparent);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surface) 90%, transparent);
+  color: var(--accent-strong);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(24, 24, 22, 0.18);
+}
+
+.card-action.delete {
+  color: var(--danger);
+}
+
+.card-action svg,
+.icon-label svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.icon-label {
+  gap: 8px;
 }
 
 .media-card h2,
@@ -548,11 +596,17 @@ textarea {
 }
 
 .detail-actions,
-.form-actions {
+.form-actions,
+.page-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin: 20px 0;
+}
+
+.page-actions {
+  align-items: center;
+  margin: 0;
 }
 
 .overview {
@@ -593,63 +647,6 @@ textarea {
 
 .subsection p {
   line-height: 1.7;
-}
-
-.check-layout {
-  display: grid;
-  grid-template-columns: minmax(180px, 320px) minmax(0, 1fr);
-  gap: clamp(18px, 4vw, 36px);
-  align-items: start;
-}
-
-.check-poster {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.check-poster img {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-}
-
-.check-panel {
-  min-width: 0;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: clamp(18px, 4vw, 30px);
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-
-.check-panel h2 {
-  margin: 12px 0 6px;
-  font-size: clamp(2rem, 5vw, 4rem);
-  line-height: 1;
-}
-
-.check-score {
-  max-width: 240px;
-  margin-top: 22px;
-}
-
-.check-actions {
-  align-items: center;
-}
-
-.check-correction {
-  display: none;
-  gap: 12px;
-  margin-top: 18px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
-}
-
-.check-correction.visible {
-  display: grid;
 }
 
 .edit-form {
@@ -800,9 +797,6 @@ textarea {
     grid-template-columns: minmax(130px, 220px) minmax(0, 1fr);
   }
 
-  .check-layout {
-    grid-template-columns: minmax(130px, 220px) minmax(0, 1fr);
-  }
 }
 
 @media (max-width: 680px) {
@@ -848,14 +842,6 @@ textarea {
   }
 
   .detail-poster {
-    width: min(220px, 72vw);
-  }
-
-  .check-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .check-poster {
     width: min(220px, 72vw);
   }
 

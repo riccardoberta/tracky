@@ -1,13 +1,12 @@
 from __future__ import annotations
 
-import re
 from datetime import datetime
 
 from flask import Blueprint, current_app, flash, redirect, render_template, request, url_for
-from sqlalchemy import and_, func, or_
+from sqlalchemy import func, or_
 
 from .extensions import db
-from .models import Genre, MediaItem, MediaListItem, Setting, WatchEvent, watched_year_expression
+from .models import Genre, MediaItem, MediaListItem, WatchEvent, watched_year_expression
 from .services.metadata import apply_tmdb_details
 from .services.statistics import build_statistics
 from .services.tmdb import TMDbClient, TMDbError
@@ -15,8 +14,6 @@ from .utils import parse_date_field, safe_float, safe_int, split_names, utc_now
 
 
 main_bp = Blueprint("main", __name__)
-CHECK_SETTING_PREFIX = "seed_review_item:"
-TMDB_REFERENCE_RE = re.compile(r"(?:themoviedb\.org/)?(movie|tv)/(\d+)", re.IGNORECASE)
 
 
 @main_bp.route("/")
@@ -191,111 +188,20 @@ def toggle_favorite(item_id: int):
     return redirect(request.referrer or url_for("main.media_detail", item_id=item.id))
 
 
+@main_bp.route("/media/<int:item_id>/delete", methods=["POST"])
+def media_delete(item_id: int):
+    item = MediaItem.query.get_or_404(item_id)
+    return_url = _safe_return_url(request.form.get("next")) or url_for("main.library")
+    title = item.title
+    _delete_media_item(item)
+    db.session.commit()
+    flash(f"{title} was deleted from Tracky.", "success")
+    return redirect(return_url)
+
+
 @main_bp.route("/statistics")
 def statistics():
     return render_template("statistics.html", stats=build_statistics(), active_page="statistics")
-
-
-@main_bp.route("/check")
-def check_start():
-    item = _next_unchecked_item()
-    if item is None:
-        item = _ordered_check_items().first()
-    if item is None:
-        return render_template(
-            "check.html",
-            item=None,
-            previous_item=None,
-            next_item=None,
-            checked_count=0,
-            total_count=0,
-            current_tmdb_url=None,
-            active_page="check",
-        )
-    return redirect(url_for("main.check_item", item_id=item.id))
-
-
-@main_bp.route("/check/<int:item_id>")
-def check_item(item_id: int):
-    item = MediaItem.query.get_or_404(item_id)
-    previous_item, next_item = _check_neighbors(item)
-    return render_template(
-        "check.html",
-        item=item,
-        previous_item=previous_item,
-        next_item=next_item,
-        checked_count=_checked_item_count(),
-        total_count=MediaItem.query.count(),
-        current_tmdb_url=_tmdb_url_for(item),
-        active_page="check",
-    )
-
-
-@main_bp.route("/check/<int:item_id>/ok", methods=["POST"])
-def check_mark_ok(item_id: int):
-    item = MediaItem.query.get_or_404(item_id)
-    if not _update_required_personal_rating(item):
-        return redirect(url_for("main.check_item", item_id=item.id))
-    _mark_checked(item, "ok")
-    db.session.commit()
-    return redirect(_next_check_url(item))
-
-
-@main_bp.route("/check/<int:item_id>/correct", methods=["POST"])
-def check_correct_item(item_id: int):
-    item = MediaItem.query.get_or_404(item_id)
-    if not _update_required_personal_rating(item):
-        return redirect(url_for("main.check_item", item_id=item.id))
-
-    parsed = _parse_tmdb_reference(request.form.get("tmdb_url", ""), item.media_type)
-    if parsed is None:
-        flash("Enter a valid TMDb URL such as https://www.themoviedb.org/movie/12345 or https://www.themoviedb.org/tv/12345.", "error")
-        return redirect(url_for("main.check_item", item_id=item.id))
-
-    media_type, tmdb_id = parsed
-    duplicate = MediaItem.query.filter(
-        MediaItem.media_type == media_type,
-        MediaItem.tmdb_id == tmdb_id,
-        MediaItem.id != item.id,
-    ).first()
-    if duplicate is not None:
-        flash(f"That TMDb item is already linked to {duplicate.title}.", "error")
-        return redirect(url_for("main.check_item", item_id=item.id))
-
-    client = _tmdb_client()
-    if not client.configured:
-        flash("TMDb correction requires TMDB_API_KEY.", "error")
-        return redirect(url_for("main.check_item", item_id=item.id))
-
-    try:
-        details = client.details(tmdb_id, media_type)
-    except TMDbError as exc:
-        flash(str(exc), "error")
-        return redirect(url_for("main.check_item", item_id=item.id))
-
-    item.media_type = media_type
-    apply_tmdb_details(item, details, assign_tmdb_id=True)
-    _mark_checked(item, f"corrected:{media_type}:{tmdb_id}")
-    db.session.commit()
-    flash(f"{item.title} was updated from TMDb.", "success")
-    return redirect(_next_check_url(item))
-
-
-@main_bp.route("/check/<int:item_id>/delete", methods=["POST"])
-def check_delete_item(item_id: int):
-    item = MediaItem.query.get_or_404(item_id)
-    previous_item, next_item = _check_neighbors(item)
-    title = item.title
-    MediaListItem.query.filter_by(media_item_id=item.id).delete(synchronize_session=False)
-    Setting.query.filter_by(key=f"{CHECK_SETTING_PREFIX}{item.id}").delete(synchronize_session=False)
-    db.session.delete(item)
-    db.session.commit()
-    flash(f"{title} was deleted from Tracky.", "success")
-    if next_item is not None:
-        return redirect(url_for("main.check_item", item_id=next_item.id))
-    if previous_item is not None:
-        return redirect(url_for("main.check_item", item_id=previous_item.id))
-    return redirect(url_for("main.check_start"))
 
 
 def _filtered_media_query():
@@ -376,92 +282,9 @@ def _default_personal_rating() -> int:
     return min(max(6, current_app.config["PERSONAL_SCORE_MIN"]), current_app.config["PERSONAL_SCORE_MAX"])
 
 
-def _ordered_check_items():
-    return MediaItem.query.order_by(func.lower(MediaItem.italian_title).asc(), MediaItem.id.asc())
-
-
-def _next_unchecked_item() -> MediaItem | None:
-    checked_ids = _checked_item_ids()
-    query = _ordered_check_items()
-    if checked_ids:
-        query = query.filter(MediaItem.id.not_in(checked_ids))
-    return query.first()
-
-
-def _check_neighbors(item: MediaItem) -> tuple[MediaItem | None, MediaItem | None]:
-    item_title = item.title.lower()
-    title_sort = func.lower(MediaItem.italian_title)
-    previous_item = MediaItem.query.filter(
-        or_(
-            title_sort < item_title,
-            and_(title_sort == item_title, MediaItem.id < item.id),
-        )
-    ).filter(MediaItem.id != item.id).order_by(title_sort.desc(), MediaItem.id.desc()).first()
-    next_item = MediaItem.query.filter(
-        or_(
-            title_sort > item_title,
-            and_(title_sort == item_title, MediaItem.id > item.id),
-        )
-    ).filter(MediaItem.id != item.id).order_by(title_sort.asc(), MediaItem.id.asc()).first()
-    return previous_item, next_item
-
-
-def _checked_item_ids() -> set[int]:
-    settings = Setting.query.filter(Setting.key.startswith(CHECK_SETTING_PREFIX)).all()
-    checked_ids: set[int] = set()
-    for setting in settings:
-        raw_id = setting.key.removeprefix(CHECK_SETTING_PREFIX)
-        if raw_id.isdigit():
-            checked_ids.add(int(raw_id))
-    return checked_ids
-
-
-def _checked_item_count() -> int:
-    return Setting.query.filter(Setting.key.startswith(CHECK_SETTING_PREFIX)).count()
-
-
-def _mark_checked(item: MediaItem, status: str) -> None:
-    Setting.set(f"{CHECK_SETTING_PREFIX}{item.id}", f"{status}:{utc_now().isoformat()}")
-
-
-def _next_check_url(item: MediaItem) -> str:
-    _, next_item = _check_neighbors(item)
-    if next_item is not None:
-        return url_for("main.check_item", item_id=next_item.id)
-    return url_for("main.check_start")
-
-
-def _tmdb_url_for(item: MediaItem | None) -> str | None:
-    if item is None or item.tmdb_id is None:
-        return None
-    return f"https://www.themoviedb.org/{item.media_type}/{item.tmdb_id}"
-
-
-def _parse_tmdb_reference(value: str, fallback_media_type: str) -> tuple[str, int] | None:
-    cleaned = value.strip()
-    if not cleaned:
-        return None
-    if cleaned.isdigit():
-        return fallback_media_type, int(cleaned)
-    match = TMDB_REFERENCE_RE.search(cleaned)
-    if match is None:
-        return None
-    return match.group(1).lower(), int(match.group(2))
-
-
-def _update_required_personal_rating(item: MediaItem) -> bool:
-    value = safe_float(request.form.get("personal_rating"))
-    if value is None:
-        flash("Add your score before moving to the next item.", "error")
-        return False
-    if value < current_app.config["PERSONAL_SCORE_MIN"] or value > current_app.config["PERSONAL_SCORE_MAX"]:
-        flash(
-            f"Your score must be between {current_app.config['PERSONAL_SCORE_MIN']} and {current_app.config['PERSONAL_SCORE_MAX']}.",
-            "error",
-        )
-        return False
-    item.personal_rating = value
-    return True
+def _delete_media_item(item: MediaItem) -> None:
+    MediaListItem.query.filter_by(media_item_id=item.id).delete(synchronize_session=False)
+    db.session.delete(item)
 
 
 def _safe_return_url(value: str | None) -> str | None:

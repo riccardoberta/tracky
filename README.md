@@ -1,6 +1,6 @@
 # Tracky
 
-Tracky is a personal movie and TV show tracker built with Python, Flask, SQLAlchemy, Jinja2, HTML, CSS, and minimal vanilla JavaScript. It is designed for one authenticated user and a persistent database, with timeline, library, favorites, search, item details, editing, check tools, and statistics.
+Tracky is a personal movie and TV show tracker built with Python, Flask, SQLAlchemy, Jinja2, HTML, CSS, and minimal vanilla JavaScript. It is designed for one authenticated user and a persistent database, with timeline, library, favorites, search, item details, editing, delete actions, and statistics.
 
 ## Features
 
@@ -9,7 +9,7 @@ Tracky is a personal movie and TV show tracker built with Python, Flask, SQLAlch
 - Persistent database support through SQLAlchemy.
 - TMDb search, manual imports, and correction from TMDb links.
 - Editable metadata and personal fields.
-- Check workflow for reviewing TMDb matches and personal scores.
+- Edit and delete actions from item cards and edit pages.
 - Configurable personal rating scale through `PERSONAL_SCORE_MIN` and `PERSONAL_SCORE_MAX`.
 - Dashboard, timeline, library, favorites, local/TMDb search, details, edit forms, and statistics.
 - Filters for media type, genre, favorites, personal rating, watched year, and title.
@@ -100,9 +100,12 @@ DATABASE_URL=postgresql://user:password@host/database?sslmode=require
 PERSONAL_SCORE_MIN=1
 PERSONAL_SCORE_MAX=10
 TRACKY_TMDB_LANGUAGE=it-IT
+TRACKY_CREATE_SCHEMA_ON_STARTUP=false
 ```
 
 `DATABASE_URL` can also be a local SQLite URL for development, for example `sqlite:///instance/tracky.sqlite3`. For Vercel production, use a persistent external database such as Neon Postgres.
+
+`TRACKY_CREATE_SCHEMA_ON_STARTUP` defaults to `true` for SQLite and `false` for Postgres. Keep it `false` on Vercel because the persistent database is initialized once with `scripts/load_initial_database.py`.
 
 ## TMDb API Key
 
@@ -126,6 +129,8 @@ By default in local development, Tracky uses `instance/tracky.sqlite3` when `DAT
 
 For production-like local testing, set `DATABASE_URL` to the same persistent database URL used on Vercel.
 
+When pointing local development at Neon/Postgres, keep `TRACKY_CREATE_SCHEMA_ON_STARTUP=false` so app startup does not run schema creation checks on every launch.
+
 ## Initial Database Load
 
 The historical SQLite database is local bootstrap data only. It is not required by the Flask app at runtime.
@@ -137,7 +142,7 @@ DATABASE_URL='postgresql://user:password@host/database?sslmode=require' \
 python scripts/load_initial_database.py --source-url sqlite:///data/tracky.seed.sqlite3
 ```
 
-The script creates the Tracky schema, copies the existing media data, preserves settings such as check progress, and creates the configured `APP_USERNAME` user if needed. It refuses to copy into a database that already contains Tracky data. Use `--force` only when you intentionally want to replace the target data tables.
+The script creates the Tracky schema, copies the existing media data, preserves settings, and creates the configured `APP_USERNAME` user if needed. It refuses to copy into a database that already contains Tracky data. Use `--force` only when you intentionally want to replace the target data tables.
 
 After the persistent database has been populated, keep `data/tracky.seed.sqlite3` local only. It should not be deployed or committed.
 
@@ -153,7 +158,7 @@ Set the same environment variables in Vercel project settings. The default Verce
 
 Use a persistent external `DATABASE_URL` in Vercel. A writable SQLite file inside a Vercel serverless function is not a permanent library.
 
-Future corrections can be made from Search, Check, or the item edit form. They are permanent when `DATABASE_URL` points to the persistent database.
+Future corrections can be made from Search or the item edit form. They are permanent when `DATABASE_URL` points to the persistent database.
 
 ## Testing
 

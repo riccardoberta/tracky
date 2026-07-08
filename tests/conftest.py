@@ -19,6 +19,7 @@ class TestConfig(Config):
     TMDB_API_KEY = None
     PERSONAL_SCORE_MIN = 1
     PERSONAL_SCORE_MAX = 10
+    TRACKY_CREATE_SCHEMA_ON_STARTUP = True
 
 
 @pytest.fixture()

@@ -64,8 +64,15 @@ def _engine_options(database_url: str) -> dict[str, object]:
         "pool_size": 1,
         "max_overflow": 2,
         "pool_timeout": 10,
-        "connect_args": {"prepare_threshold": None},
+        "connect_args": {"connect_timeout": 5, "prepare_threshold": None},
     }
+
+
+def create_schema_on_startup(database_url: str) -> bool:
+    configured_value = os.getenv("TRACKY_CREATE_SCHEMA_ON_STARTUP")
+    if configured_value is not None:
+        return configured_value.strip().lower() in {"1", "true", "yes", "on"}
+    return database_url.startswith("sqlite:")
 
 
 class Config:
@@ -79,6 +86,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = _database_url()
     SQLALCHEMY_ENGINE_OPTIONS = _engine_options(SQLALCHEMY_DATABASE_URI)
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    TRACKY_CREATE_SCHEMA_ON_STARTUP = create_schema_on_startup(SQLALCHEMY_DATABASE_URI)
     DATABASE_URL_CONFIGURED = bool(os.getenv("DATABASE_URL"))
     RUNNING_ON_VERCEL = _bool_env("VERCEL", False)
 

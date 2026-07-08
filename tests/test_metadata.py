@@ -18,7 +18,7 @@ def test_initial_database_loader_copies_local_sqlite_to_target(tmp_path, monkeyp
     source_app = create_app(SourceConfig)
     with source_app.app_context():
         db.session.add(MediaItem(media_type="movie", italian_title="Seed Movie", source="seed"))
-        Setting.set("seed_review_item:1", "ok:2026-07-07T00:00:00")
+        Setting.set("initial_load_marker", "copied")
         db.session.commit()
         db.session.remove()
 
@@ -35,7 +35,7 @@ def test_initial_database_loader_copies_local_sqlite_to_target(tmp_path, monkeyp
     with target_app.app_context():
         assert summary.copied_rows["media_items"] == 1
         assert MediaItem.query.filter_by(italian_title="Seed Movie").count() == 1
-        assert Setting.get("seed_review_item:1") == "ok:2026-07-07T00:00:00"
+        assert Setting.get("initial_load_marker") == "copied"
 
 
 def test_tmdb_enrichment_handles_duplicate_tmdb_matches(app):

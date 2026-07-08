@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import date, datetime
 
 from tracky.extensions import db
-from tracky.models import MediaItem, Setting, WatchEvent
+from tracky.models import MediaItem, WatchEvent
 from tracky.services.statistics import build_statistics
 from tracky.services.tmdb import TMDbSearchResult
 from tests.conftest import extract_csrf
@@ -148,124 +148,72 @@ def test_detail_links_to_tmdb_when_item_has_tmdb_id(app, client, login):
     assert b"Open on TMDb" in response.data
 
 
-def test_check_page_saves_score_and_moves_to_next_item(app, client, login):
+def test_collection_cards_include_edit_and_delete_actions(app, client, login):
     seed_items(app)
 
-    response = client.get("/check", follow_redirects=True)
-    assert response.status_code == 200
-    assert b"Check" in response.data
-    assert b"A Movie" in response.data
-    assert b"Previous" in response.data
-    token = extract_csrf(response.data)
-
-    with app.app_context():
-        item = MediaItem.query.filter_by(italian_title="A Movie").one()
-        item_id = item.id
-
-    response = client.post(
-        f"/check/{item_id}/ok",
-        data={"_csrf_token": token, "personal_rating": "9"},
-        follow_redirects=True,
-    )
+    response = client.get("/library")
 
     assert response.status_code == 200
-    assert b"Beta Show" in response.data
-    with app.app_context():
-        item = db.session.get(MediaItem, item_id)
-        assert item.personal_rating == 9
-        assert Setting.get(f"seed_review_item:{item_id}") is not None
+    assert b'title="Edit"' in response.data
+    assert b'title="Delete"' in response.data
+    assert b"/delete" in response.data
 
 
-def test_check_correction_updates_item_from_tmdb(app, client, login, monkeypatch):
+def test_media_delete_removes_item_and_returns_to_library(app, client, login):
     seed_items(app)
 
-    class FakeTMDbClient:
-        configured = True
-
-        def details(self, tmdb_id, media_type):
-            return {
-                "tmdb_id": tmdb_id,
-                "imdb_id": "tt999",
-                "italian_title": "Correct Movie",
-                "original_title": "Correct Original",
-                "overview": "Correct overview.",
-                "genres": ["Drama"],
-                "primary_people": [{"name": "Director One", "tmdb_id": 1}],
-                "cast": [{"name": "Actor One", "tmdb_id": 2}],
-                "date": "2024-01-01",
-                "tmdb_rating": 8.4,
-                "tmdb_vote_count": 900,
-                "poster_path": "/correct.jpg",
-                "backdrop_path": "/correct-backdrop.jpg",
-            }
-
-    import tracky.routes
-
-    monkeypatch.setattr(tracky.routes, "_tmdb_client", lambda: FakeTMDbClient())
-
-    response = client.get("/check", follow_redirects=True)
+    response = client.get("/library")
     token = extract_csrf(response.data)
     with app.app_context():
         item = MediaItem.query.filter_by(italian_title="A Movie").one()
         item_id = item.id
 
     response = client.post(
-        f"/check/{item_id}/correct",
-        data={
-            "_csrf_token": token,
-            "personal_rating": "8",
-            "tmdb_url": "https://www.themoviedb.org/movie/999",
-        },
+        f"/media/{item_id}/delete",
+        data={"_csrf_token": token, "next": "/library"},
         follow_redirects=True,
     )
 
     assert response.status_code == 200
-    with app.app_context():
-        item = db.session.get(MediaItem, item_id)
-        assert item.italian_title == "Correct Movie"
-        assert item.tmdb_id == 999
-        assert item.personal_rating == 8
-        assert item.poster_path == "/correct.jpg"
-
-
-def test_check_delete_removes_item_and_moves_to_neighbor(app, client, login):
-    seed_items(app)
-
-    response = client.get("/check", follow_redirects=True)
-    token = extract_csrf(response.data)
-    with app.app_context():
-        item = MediaItem.query.filter_by(italian_title="A Movie").one()
-        item_id = item.id
-        Setting.set(f"seed_review_item:{item_id}", "ok:2026-07-07T00:00:00")
-        db.session.commit()
-
-    response = client.post(
-        f"/check/{item_id}/delete",
-        data={"_csrf_token": token},
-        follow_redirects=True,
-    )
-
-    assert response.status_code == 200
-    assert b"Beta Show" in response.data
     with app.app_context():
         assert db.session.get(MediaItem, item_id) is None
-        assert Setting.get(f"seed_review_item:{item_id}") is None
 
 
-def test_edit_can_return_to_check_after_saving(app, client, login):
+def test_edit_page_can_delete_item(app, client, login):
     seed_items(app)
 
     with app.app_context():
         item = MediaItem.query.filter_by(italian_title="A Movie").one()
         item_id = item.id
 
-    response = client.get(f"/media/{item_id}/edit?next=/check/{item_id}")
+    response = client.get(f"/media/{item_id}/edit")
+    token = extract_csrf(response.data)
+
+    response = client.post(
+        f"/media/{item_id}/delete",
+        data={"_csrf_token": token, "next": "/library"},
+        follow_redirects=True,
+    )
+
+    assert response.status_code == 200
+    with app.app_context():
+        assert db.session.get(MediaItem, item_id) is None
+
+
+def test_edit_can_return_to_detail_after_saving(app, client, login):
+    seed_items(app)
+
+    with app.app_context():
+        item = MediaItem.query.filter_by(italian_title="A Movie").one()
+        item_id = item.id
+
+    response = client.get(f"/media/{item_id}/edit?next=/media/{item_id}")
     token = extract_csrf(response.data)
     response = client.post(
         f"/media/{item_id}/edit",
         data={
             "_csrf_token": token,
-            "next": f"/check/{item_id}",
+            "next": f"/media/{item_id}",
             "italian_title": "A Movie Edited",
             "original_title": "Alpha",
             "release_date": "2024-01-01",
@@ -287,7 +235,6 @@ def test_edit_can_return_to_check_after_saving(app, client, login):
 
     assert response.status_code == 200
     assert b"A Movie Edited" in response.data
-    assert b"Check" in response.data
     with app.app_context():
         item = db.session.get(MediaItem, item_id)
         assert item.italian_title == "A Movie Edited"

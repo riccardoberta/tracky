@@ -91,8 +91,9 @@ def create_app(config_object: type[Config] = Config) -> Flask:
         )
 
     with app.app_context():
-        db.create_all()
-        _ensure_configured_user(app)
+        if app.config["TRACKY_CREATE_SCHEMA_ON_STARTUP"]:
+            db.create_all()
+            _ensure_configured_user(app)
 
     return app
 

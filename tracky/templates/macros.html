@@ -1,12 +1,50 @@
+{% macro edit_icon() %}
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 20h9"/>
+    <path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/>
+  </svg>
+{% endmacro %}
+
+{% macro trash_icon() %}
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3 6h18"/>
+    <path d="M8 6V4h8v2"/>
+    <path d="M19 6l-1 14H6L5 6"/>
+    <path d="M10 11v5"/>
+    <path d="M14 11v5"/>
+  </svg>
+{% endmacro %}
+
 {% macro media_card(item) %}
   <article class="media-card">
-    <a class="poster-link" href="{{ url_for('main.media_detail', item_id=item.id) }}" aria-label="{{ item.title }}">
-      {% if item.poster_path %}
-        <img src="{{ item.poster_path|image_url('w342') }}" alt="{{ item.title }} poster" loading="lazy">
-      {% else %}
-        <div class="poster-placeholder">{{ item.title[:1] }}</div>
-      {% endif %}
-    </a>
+    <div class="poster-frame">
+      <a class="poster-link" href="{{ url_for('main.media_detail', item_id=item.id) }}" aria-label="{{ item.title }}">
+        {% if item.poster_path %}
+          <img src="{{ item.poster_path|image_url('w342') }}" alt="{{ item.title }} poster" loading="lazy">
+        {% else %}
+          <div class="poster-placeholder">{{ item.title[:1] }}</div>
+        {% endif %}
+      </a>
+      <div class="card-actions" aria-label="Item actions">
+        <a
+          class="card-action edit"
+          href="{{ url_for('main.media_edit', item_id=item.id, next=request.full_path if request.query_string else request.path) }}"
+          aria-label="Edit {{ item.title }}"
+          title="Edit"
+        >{{ edit_icon() }}</a>
+        <form action="{{ url_for('main.media_delete', item_id=item.id) }}" method="post">
+          <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
+          <input type="hidden" name="next" value="{{ request.full_path if request.query_string else request.path }}">
+          <button
+            class="card-action delete"
+            type="submit"
+            aria-label="Delete {{ item.title }}"
+            title="Delete"
+            data-confirm="Delete {{ item.title }} permanently from Tracky?"
+          >{{ trash_icon() }}</button>
+        </form>
+      </div>
+    </div>
     <div class="media-card-body">
       <div class="media-card-topline">
         <span class="pill">{{ 'Movie' if item.media_type == 'movie' else 'TV Show' }}</span>
