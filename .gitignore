@@ -10,3 +10,5 @@ instance/*.db
 data/*.sqlite3
 data/*.sqlite
 data/*.db
+.env.local
+.vercel/

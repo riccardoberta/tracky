@@ -324,7 +324,7 @@ def _filtered_media_query():
                 MediaItem.original_title.ilike(f"%{search_text}%"),
             )
         )
-    return query.distinct()
+    return query
 
 
 def _all_genres() -> list[Genre]:

@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from flask import Flask, abort, flash, redirect, request, session, url_for
+from flask import Flask, abort, flash, redirect, render_template, request, session, url_for
 from werkzeug.exceptions import HTTPException
 
 from .config import BASE_DIR, Config
@@ -26,7 +26,7 @@ def create_app(config_object: type[Config] = Config) -> Flask:
 
     @app.before_request
     def require_authentication() -> None:
-        allowed_endpoints = {"auth.login", "static", "health"}
+        allowed_endpoints = {"auth.login", "static", "health", "favicon"}
         if request.endpoint in allowed_endpoints or request.endpoint is None:
             return
         if not session.get("authenticated"):
@@ -61,12 +61,17 @@ def create_app(config_object: type[Config] = Config) -> Flask:
     def health() -> tuple[dict[str, str], int]:
         return {"status": "ok"}, 200
 
+    @app.route("/favicon.ico")
+    def favicon():
+        return app.send_static_file("img/favicon.svg")
+
     @app.errorhandler(Exception)
     def handle_error(exc: Exception):
         db.session.rollback()
         if isinstance(exc, HTTPException):
             return (
-                app.jinja_env.get_template("errors/error.html").render(
+                render_template(
+                    "errors/error.html",
                     status_code=exc.code,
                     title=exc.name,
                     message=exc.description,
@@ -75,7 +80,8 @@ def create_app(config_object: type[Config] = Config) -> Flask:
             )
         app.logger.exception("Unhandled application error")
         return (
-            app.jinja_env.get_template("errors/error.html").render(
+            render_template(
+                "errors/error.html",
                 status_code=500,
                 title="Application error",
                 message="Tracky could not complete the request. Check the server logs for details.",
