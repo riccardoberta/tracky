@@ -87,6 +87,13 @@ textarea {
   background: color-mix(in srgb, var(--surface) 86%, var(--bg));
 }
 
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -139,6 +146,40 @@ textarea {
   background: var(--surface-raised);
   color: var(--text);
   cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  flex: 0 0 auto;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.menu-icon {
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  position: absolute;
+  left: 0;
+  content: "";
+}
+
+.menu-icon::before {
+  top: -6px;
+}
+
+.menu-icon::after {
+  top: 6px;
 }
 
 .sun-icon {
@@ -771,16 +812,43 @@ textarea {
     position: static;
     z-index: 5;
     height: auto;
+    gap: 0;
+    padding: 16px 18px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
 
+  .menu-toggle {
+    display: grid;
+  }
+
   .nav {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: none;
+    grid-template-columns: 1fr;
+    margin-top: 16px;
   }
 
   .nav a {
-    text-align: center;
+    text-align: left;
+  }
+
+  .sidebar-actions {
+    display: none;
+    margin-top: 14px;
+  }
+
+  .sidebar.is-open .nav,
+  .sidebar.is-open .sidebar-actions {
+    display: grid;
+  }
+
+  .sidebar.is-open .sidebar-actions {
+    grid-template-columns: auto 1fr;
+  }
+
+  .sidebar.is-open .text-button {
+    width: 100%;
+    text-align: left;
   }
 
   .metric-grid,
@@ -806,15 +874,10 @@ textarea {
 
   .sidebar {
     padding: 16px 12px;
-    gap: 16px;
   }
 
   .brand {
     padding-left: 2px;
-  }
-
-  .nav {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .page-header,

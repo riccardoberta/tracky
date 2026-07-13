@@ -1,20 +1,33 @@
 # Tracky
 
-Tracky is a personal movie and TV show tracker built with Python, Flask, SQLAlchemy, Jinja2, HTML, CSS, and minimal vanilla JavaScript. It is designed for one authenticated user and a persistent database, with timeline, library, favorites, search, item details, editing, delete actions, and statistics.
+Tracky is a private movie and TV show tracker built with Python, Flask, SQLAlchemy, Jinja2, HTML, CSS, and minimal vanilla JavaScript. It is designed for one authenticated user, a persistent database, and a focused personal workflow: search, import, correct, rate, browse, analyze, and export a media library.
 
 ## Features
 
 - Session-based authentication with credentials from configuration.
 - No public registration.
-- Persistent database support through SQLAlchemy.
-- TMDb search, manual imports, and correction from TMDb links.
-- Editable metadata and personal fields.
+- Persistent database support through SQLAlchemy, with SQLite for local development and Postgres for production.
+- Dashboard, timeline, library, favorites, local/TMDb search, item details, edit forms, and statistics.
+- TMDb search and imports for movies and TV shows.
+- Editable metadata, personal ratings, watched dates, favorite markers, notes, posters, backdrops, genres, directors or creators, and cast.
 - Edit and delete actions from item cards and edit pages.
-- Configurable personal rating scale through `PERSONAL_SCORE_MIN` and `PERSONAL_SCORE_MAX`.
-- Dashboard, timeline, library, favorites, local/TMDb search, details, edit forms, and statistics.
 - Filters for media type, genre, favorites, personal rating, watched year, and title.
+- Configurable personal rating scale through `PERSONAL_SCORE_MIN` and `PERSONAL_SCORE_MAX`.
+- Full JSON export of the application data from the Dashboard.
+- Letterboxd CSV export for movies from the Dashboard.
 - Light mode and dark mode.
-- Responsive UI for desktop, tablet, and phone.
+- Responsive UI for desktop, tablet, and phone, with a collapsed mobile/tablet menu.
+- Home Screen app metadata and PNG icons for iPhone/iOS saved web apps.
+- Safe startup behavior for unknown URLs: unauthenticated users go to login, authenticated users go to the dashboard.
+
+## Exports
+
+Tracky exposes two authenticated export endpoints and links to both from the Dashboard:
+
+- `GET /export.json` downloads `tracky-export-YYYYMMDD-HHMMSS.json`.
+  This is a complete structured export with users, genres, people, media items, media-genre links, media-person links, episodes, watch events, media lists, media list items, settings, row counts, and export metadata.
+- `GET /export/letterboxd.csv` downloads `tracky-letterboxd-YYYYMMDD-HHMMSS.csv`.
+  This includes only movies and uses Letterboxd-compatible CSV columns: `tmdbID`, `imdbID`, `Title`, `Year`, `Directors`, `Rating`, `WatchedDate`, `Rewatch`, `Tags`, and `Review`. Tracky personal ratings are normalized to Letterboxd's 0.5-5 scale.
 
 ## Visual Identity
 
@@ -22,7 +35,10 @@ Tracky uses a minimal media-timeline mark:
 
 - Logo: `tracky/static/img/logo.svg`
 - Favicon: `tracky/static/img/favicon.svg`
-- Application icon: `tracky/static/img/app-icon.svg`
+- SVG application icon source: `tracky/static/img/app-icon.svg`
+- iOS/Home Screen icons: `tracky/static/img/app-icon-180.png`, `tracky/static/img/app-icon-192.png`, `tracky/static/img/app-icon-512.png`
+- Web app manifest: `tracky/static/manifest.webmanifest`
+- Shared app icon metadata partial: `tracky/templates/_app_icons.html`
 
 Palette:
 
@@ -34,7 +50,7 @@ Palette:
 - Green signal: `#3F7D5A`
 - Blue secondary: `#4E718B`
 
-Typography suggestion:
+Typography:
 
 - Primary: Inter
 - Fallback: system UI stack
@@ -46,18 +62,25 @@ Typography suggestion:
 api/index.py                  Vercel Python entry point
 run.py                        Local Flask entry point
 tracky/
-  __init__.py                 App factory and error handling
-  auth.py                     Login and logout routes
+  __init__.py                 App factory, request guards, error handling, health route
+  auth.py                     Login, logout, and safe next-url handling
   config.py                   Environment-driven configuration
   extensions.py               Flask-SQLAlchemy instance
   models.py                   SQLAlchemy models and relationships
-  routes.py                   Application routes and forms
+  routes.py                   Application pages, mutations, and export routes
   services/
+    export.py                 JSON and Letterboxd CSV export builders
     metadata.py               TMDb metadata enrichment helpers
     statistics.py             Aggregated statistics
     tmdb.py                   TMDb API client
-  static/                     CSS, JavaScript, logo, favicon, app icon
-  templates/                  Jinja2 templates
+  static/
+    css/styles.css            Responsive UI styling
+    js/app.js                 Theme toggle, confirmations, mobile menu behavior
+    img/                      Logo, favicon, SVG source icon, PNG app icons
+    manifest.webmanifest      Home Screen / install metadata
+  templates/
+    _app_icons.html           Shared favicon, manifest, and iOS icon tags
+    *.html                    Jinja2 pages, layout, macros, and errors
 scripts/
   load_initial_database.py    One-time local SQLite to persistent DB loader
 tests/                        Automated tests
@@ -131,6 +154,17 @@ For production-like local testing, set `DATABASE_URL` to the same persistent dat
 
 When pointing local development at Neon/Postgres, keep `TRACKY_CREATE_SCHEMA_ON_STARTUP=false` so app startup does not run schema creation checks on every launch.
 
+## iPhone Home Screen
+
+Tracky includes the metadata Safari needs when using Share -> Add to Home Screen on iPhone:
+
+- `apple-touch-icon` points to `tracky/static/img/app-icon-180.png`.
+- `manifest.webmanifest` references the `192x192` and `512x512` PNG icons.
+- The app title is set to `Tracky`.
+- The manifest uses `display: standalone` and starts at `/`.
+
+If an older Home Screen shortcut was created before these assets existed, remove that shortcut and add Tracky again from Safari so iOS refreshes the cached icon.
+
 ## Initial Database Load
 
 The historical SQLite database is local bootstrap data only. It is not required by the Flask app at runtime.
@@ -168,16 +202,21 @@ pytest
 
 The suite covers:
 
-- Authentication.
+- Authentication and safe redirect behavior.
+- Home Screen icon metadata and manifest references.
 - TMDb client mapping.
 - SQLAlchemy model relationships.
 - Local search by Italian and original title.
 - Favorites filtering.
 - Alphabetical sorting.
 - Statistics aggregation.
+- Full JSON export.
+- Letterboxd CSV export.
 
 ## Future Improvements
 
+- Import from JSON backups.
+- Import from Letterboxd exports.
 - Background TMDb enrichment jobs for very large libraries.
 - Advanced charts with a small progressive-enhancement JavaScript layer.
-- CSV or JSON export from the persistent library.
+- CSV or JSON backup scheduling for production databases.

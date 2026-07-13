@@ -3,6 +3,8 @@ from __future__ import annotations
 from urllib.parse import urlparse
 
 from flask import Blueprint, current_app, flash, redirect, render_template, request, session, url_for
+from werkzeug.exceptions import MethodNotAllowed, NotFound
+from werkzeug.routing import RequestRedirect
 from werkzeug.security import check_password_hash
 
 
@@ -45,4 +47,20 @@ def logout():
 
 def _is_safe_next(target: str) -> bool:
     parsed = urlparse(target)
-    return parsed.netloc == "" and parsed.scheme == ""
+    if parsed.netloc or parsed.scheme or not parsed.path.startswith("/") or parsed.path.startswith("//"):
+        return False
+    endpoint = _match_get_endpoint(parsed.path)
+    return endpoint is not None and endpoint.startswith("main.")
+
+
+def _match_get_endpoint(path: str) -> str | None:
+    try:
+        endpoint, _ = current_app.url_map.bind("").match(path, method="GET")
+    except RequestRedirect as exc:
+        redirected_path = urlparse(exc.new_url).path
+        if not redirected_path or redirected_path == path:
+            return None
+        return _match_get_endpoint(redirected_path)
+    except (MethodNotAllowed, NotFound):
+        return None
+    return endpoint

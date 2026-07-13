@@ -3,7 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from flask import Flask, abort, flash, redirect, render_template, request, session, url_for
-from werkzeug.exceptions import HTTPException
+from werkzeug.exceptions import HTTPException, NotFound
 
 from .config import BASE_DIR, Config, _engine_options
 from .extensions import db
@@ -69,6 +69,10 @@ def create_app(config_object: type[Config] = Config) -> Flask:
     @app.errorhandler(Exception)
     def handle_error(exc: Exception):
         db.session.rollback()
+        if isinstance(exc, NotFound) and request.url_rule is None and request.method in {"GET", "HEAD"}:
+            if session.get("authenticated"):
+                return redirect(url_for("main.dashboard"))
+            return redirect(url_for("auth.login"))
         if isinstance(exc, HTTPException):
             return (
                 render_template(

@@ -1,12 +1,14 @@
 from __future__ import annotations
 
+import json
 from datetime import datetime
 
-from flask import Blueprint, current_app, flash, redirect, render_template, request, url_for
+from flask import Blueprint, Response, current_app, flash, redirect, render_template, request, url_for
 from sqlalchemy import func, or_
 
 from .extensions import db
 from .models import Genre, MediaItem, MediaListItem, WatchEvent, watched_year_expression
+from .services.export import build_export_payload, build_letterboxd_csv
 from .services.metadata import apply_tmdb_details
 from .services.statistics import build_statistics
 from .services.tmdb import TMDbClient, TMDbError
@@ -202,6 +204,35 @@ def media_delete(item_id: int):
 @main_bp.route("/statistics")
 def statistics():
     return render_template("statistics.html", stats=build_statistics(), active_page="statistics")
+
+
+@main_bp.route("/export.json")
+def export_json():
+    exported_at = utc_now()
+    payload = build_export_payload(exported_at=exported_at)
+    filename = f"tracky-export-{exported_at.strftime('%Y%m%d-%H%M%S')}.json"
+    return Response(
+        json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        mimetype="application/json",
+        headers={
+            "Content-Disposition": f'attachment; filename="{filename}"',
+            "X-Content-Type-Options": "nosniff",
+        },
+    )
+
+
+@main_bp.route("/export/letterboxd.csv")
+def export_letterboxd_csv():
+    exported_at = utc_now()
+    filename = f"tracky-letterboxd-{exported_at.strftime('%Y%m%d-%H%M%S')}.csv"
+    return Response(
+        build_letterboxd_csv(current_app.config["PERSONAL_SCORE_MAX"]),
+        mimetype="text/csv",
+        headers={
+            "Content-Disposition": f'attachment; filename="{filename}"',
+            "X-Content-Type-Options": "nosniff",
+        },
+    )
 
 
 def _filtered_media_query():

@@ -9,7 +9,11 @@
       <p class="eyebrow">Personal library</p>
       <h1>Dashboard</h1>
     </div>
-    <a class="button primary" href="{{ url_for('main.search') }}">Add watched item</a>
+    <div class="page-actions">
+      <a class="button secondary" href="{{ url_for('main.export_letterboxd_csv') }}">Export Letterboxd</a>
+      <a class="button secondary" href="{{ url_for('main.export_json') }}">Export JSON</a>
+      <a class="button primary" href="{{ url_for('main.search') }}">Add watched item</a>
+    </div>
   </header>
 
   <section class="metric-grid">

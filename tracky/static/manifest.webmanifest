@@ -1,0 +1,22 @@
+{
+  "name": "Tracky",
+  "short_name": "Tracky",
+  "description": "Tracky personal movie and TV show library",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f6f2",
+  "theme_color": "#181816",
+  "icons": [
+    {
+      "src": "/static/img/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -5,19 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Tracky{% endblock %}</title>
   <meta name="description" content="Tracky personal movie and TV show library">
-  <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/app-icon.svg') }}">
+  {% include "_app_icons.html" %}
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
 </head>
 <body>
   <div class="app-shell">
-    <aside class="sidebar">
-      <a class="brand" href="{{ url_for('main.dashboard') }}" aria-label="Tracky dashboard">
-        <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="34" height="34">
-        <span>Tracky</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
+    <aside class="sidebar" data-mobile-menu>
+      <div class="sidebar-header">
+        <a class="brand" href="{{ url_for('main.dashboard') }}" aria-label="Tracky dashboard">
+          <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="" width="34" height="34">
+          <span>Tracky</span>
+        </a>
+        <button
+          class="icon-button menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+          aria-label="Open menu"
+          title="Menu"
+        >
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav class="nav" id="primary-navigation" aria-label="Primary">
         <a class="{{ 'active' if active_page == 'dashboard' else '' }}" href="{{ url_for('main.dashboard') }}">Dashboard</a>
         <a class="{{ 'active' if active_page == 'timeline' else '' }}" href="{{ url_for('main.timeline') }}">Timeline</a>
         <a class="{{ 'active' if active_page == 'library' else '' }}" href="{{ url_for('main.library') }}">Library</a>
